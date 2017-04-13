@@ -76,11 +76,13 @@ of those sections to manage the look and feel of the site. */
 
 .about-section .bio-info .row .row {
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .about-section .bio-info ul {
     list-style: none;
     font-size: 16px;
+    margin: 0;
 }
 
 .about-section .bio-info span {
