@@ -130,7 +130,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .awards-section .awards-info .date {
-    text-align: center;
+    text-align: left;
 }
 
 .footer > .container .text-muted {
