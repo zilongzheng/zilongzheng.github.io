@@ -57,7 +57,7 @@ of those sections to manage the look and feel of the site. */
 
 .about-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 50px;
     text-align: center;
     background: #eee;
 }
@@ -71,30 +71,36 @@ of those sections to manage the look and feel of the site. */
 }
 
 .about-section .bio-info h2 {
+    padding-top: 20px;
     text-decoration: underline;
     text-transform: uppercase;
 }
 
 .about-section .bio-info ul {
     list-style: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .about-section .bio-info span {
-    font-size: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.about-section .bio-info .detail {
+    font-size: 16px;
 }
 
 .projects-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 50px;
     text-align: center;
     background: #fff;
 }
 
 .awards-section {
     height: 100%;
-    padding-top: 150px;
     text-align: center;
+    padding-top: 50px;
     background: #eee;
 }
 
@@ -106,20 +112,22 @@ of those sections to manage the look and feel of the site. */
     width: 80%;
 }
 
-.awards-section .awards-info ul {
-    list-style: none;
+.awards-section .awards-info {
     text-align: left;
     font-size: 18px;
     padding-top: 10px;
 }
 
+.awards-section .awards-info ul {
+    list-style: none;
+}
 
+.awards-section .awards-info ul li{
+    padding-top: 20px;
+}
 
-.contact-section {
-    height: 100%;
-    padding-top: 150px;
+.awards-section .awards-info .date {
     text-align: center;
-    background: #fff;
 }
 
 .footer > .container .text-muted {
