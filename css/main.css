@@ -64,7 +64,7 @@ img {
 }
 
 .about-section {
-    padding: 20px 0 20px 0;
+    padding: 10px 0 20px 0;
     text-align: left;
 }
 
@@ -81,7 +81,7 @@ img {
 
 .projects-section {
     height: 30%;
-    padding-top: 2s0px;
+    padding: 10px 0 20px 0;
     text-align: left;
 }
 
@@ -91,7 +91,7 @@ img {
 
 .publications-section {
     height: 30%;
-    padding-top: 20px;
+    padding: 10px 0 20px 0;
     text-align: left;
 }
 
@@ -101,7 +101,7 @@ img {
 
 .awards-section {
     text-align: left;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 20px 0;
 }
 
 .awards-section .container {
