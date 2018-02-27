@@ -99,6 +99,27 @@ img {
     width: 75%;
 }
 
+.patents-section {
+    text-align: left;
+    padding: 10px 0 20px 0;
+}
+
+.patents-section .container {
+    width: 75%;
+}
+
+.patents-section .contents {
+    margin: auto;
+    width: 95%;
+    text-align: left;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.patents-section .detail{
+    font-size: 16px;
+}
+
 .awards-section {
     text-align: left;
     padding: 10px 0 20px 0;
@@ -116,9 +137,6 @@ img {
     font-size: 18px;
 }
 
-.awards-section .detail{
-    font-size: 16px;
-}
 
 .footer {
     background: #212121;
