@@ -26,31 +26,33 @@ html {
     }
 }
 
-/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
-The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
-of those sections to manage the look and feel of the site. */
-
 h1 {
     font-size: 28px;
 }
 
 hr {
+    display: block;
+    border-top: 1px solid #ccc;
     width: 75%;
-    color: #800000;
-    size: 5
+}
+
+img {
+    max-width: auto;
 }
 
 .intro-section {
-    padding: 130px 0 30px 0;
-    text-align: center;
-    background: #fff;
+    padding: 120px 0 30px 0;
 }
 
+.intro-section .container {
+    width: 75%;
+}
 
 .intro-section .personal-intro {
     text-align: left;
     font-size: 18px;
-    margin-bottom: 0;
+    margin: auto;
+    padding-bottom: 0;
 }
 
 .intro-section .personal-intro h2{
@@ -73,39 +75,13 @@ hr {
 .about-section .bio-info {
     text-align: left;
     font-size: 18px;
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
-.about-section .bio-info h2 {
-    padding-top: 15px;
-    text-decoration: underline;
-    text-transform: uppercase;
-}
-
-.about-section .bio-info .row .row {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.about-section .bio-info ul {
-    list-style: none;
-    font-size: 16px;
-    margin: 0;
-}
-
-.about-section .bio-info span {
-    font-size: 18px;
-    text-transform: uppercase;
-}
-
-.about-section .bio-info .detail {
-    font-size: 16px;
+    margin: auto;
+    width: 95%;
 }
 
 .projects-section {
     height: 30%;
-    padding-top: 30px;
+    padding-top: 2s0px;
     text-align: left;
 }
 
@@ -126,32 +102,22 @@ hr {
 .awards-section {
     text-align: left;
     padding: 20px 0 20px 0;
-        font-size: 18px;
 }
 
 .awards-section .container {
     width: 75%;
 }
 
-.awards-section .awards-info {
+.awards-section .contents {
+    margin: auto;
+    width: 95%;
     text-align: left;
     padding-top: 10px;
+    font-size: 18px;
 }
 
-.awards-section .awards-info ul {
-    list-style: none;
-}
-
-.awards-section .awards-info ul li{
-    padding-top: 10px;
-}
-
-.awards-section p {
+.awards-section .detail{
     font-size: 16px;
-}
-
-.awards-section .awards-info .date {
-    text-align: left;
 }
 
 .footer {
