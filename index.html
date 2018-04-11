@@ -63,9 +63,9 @@
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
-                    <li>
+<!--                     <li>
                         <a class="page-scroll" href="#projects">Projects</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a class="page-scroll" href="#publications">Publications</a>
                     </li>
@@ -138,7 +138,7 @@
     <hr></hr>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+<!--     <section id="projects" class="projects-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -147,7 +147,7 @@
             </div>
         </div>
     </section>
-    <hr></hr>
+    <hr></hr> -->
 
 
     <section id="publications" class="publications-section">
@@ -155,6 +155,39 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Publications</h1>
+                        <div class="contents">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-4 col-lg-2">
+                                            <img src="projects/3DDescriptorNet/3ddescriptor.png" class="img-responsive img-fluid"/>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8 col-lg-10">
+                                        <h4 class="list-group-item-heading">Learning Descriptor Networks for 3D Shape Synthesis and Analysis 
+                                        <span class="badge">
+                                            <a class="conf" href="http://cvpr2018.thecvf.com/">CVPR'18</a>
+                                        </span></h4>
+                                        <p class="detail">
+                                            <a href="http://www.stat.ucla.edu/~jxie/">Jianwen Xie</a><sup>*</sup>, 
+                                            <strong>Zilong Zheng</strong><sup>*</sup>, 
+                                            <a href="http://gaoruiqipku.wixsite.com/ruiqigao">Ruiqi Gao</a>, 
+                                            <a href="https://sites.google.com/site/wenguanwangwwg/">Wenguan Wang</a>, 
+                                            <a href="http://www.stat.ucla.edu/~sczhu/">Song-Chun Zhu</a>, 
+                                            <a href="http://www.stat.ucla.edu/~ywu/">Ying Nian Wu</a> (* equal contributions)<br>
+                                            <em>IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>)</em> 2018 <span>(Oral)</span>
+                                        </p>
+                                        <button class="btn btn-success btn-xs" data-toggle="collapse" data-target='#3ddescriptor-abs'>Abstract</button>
+                                        <a class="btn btn-primary btn-xs" role="button" href="https://arxiv.org/pdf/1804.00586.pdf">PDF</a> 
+                                        <a class="btn btn-info btn-xs" role="button" href="http://www.stat.ucla.edu/~jxie/3DDescriptorNet/3DDescriptorNet.html">Code</a> 
+                                        <a class="btn btn-warning btn-xs" role="button" href="http://www.stat.ucla.edu/~jxie/3DDescriptorNet/3DDescriptorNet.html">Website</a> 
+                                        </div>
+                                    </div>
+                                    <div id="3ddescriptor-abs" class="collapse abstract">
+                                        This paper proposes a 3D shape descriptor network, which is a deep convolutional energy-based model, for modeling volumetric shape patterns. The maximum likelihood training of the model follows an “analysis by synthesis” scheme and can be interpreted as a mode seeking and mode shifting process. The model can synthesize 3D shape patterns by sampling from the probability distribution via MCMC such as Langevin dynamics. The model can be used to train a 3D generator network via MCMC teaching. The conditional version of the 3D shape descriptor net can be used for 3D object recovery and 3D object super-resolution. Experiments demonstrate that the proposed model can generate realistic 3D shape patterns and can be useful for 3D shape analysis.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                 </div>
             </div>
         </div>
@@ -187,7 +220,7 @@
                                 Patent Publication No.: <a href="https://patents.google.com/patent/CN204394527U/en">CN204394527U</a>, Priority-date: 2014-12-02. <a class="btn btn-primary btn-xs" role="button" href="https://patentimages.storage.googleapis.com/0a/d6/02/15ac8e6e31995e/CN204394527U.pdf">PDF</a> 
                             </p>
                         </li>
-                    </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
