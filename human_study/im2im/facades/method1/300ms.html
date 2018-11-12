@@ -1,0 +1,931 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+	<head>
+		<link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet" />
+
+		<script src="https://s3.amazonaws.com/MTurks/jquery-1.11.2.min.js"></script>
+		<script src="https://s3.amazonaws.com/MTurks/jquery-ui.min.js"></script>
+		<script src="https://s3.amazonaws.com/MTurks/image-picker.min.js"></script>
+
+
+		<style>
+			body {
+				margin: 0px 50px;
+				font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				font-size: 14pt;
+			}
+
+			#content_div {
+				margin: auto;
+				width: 900px;
+			}
+
+			h3 {
+			}
+
+			#long_info {
+			}
+
+			#couhes {
+				color: #777;
+				font-style: italic;
+				margin: 20px 0px;
+				font-size: 12pt;
+			}
+
+			#start_button, #continue_button {
+				width:300px;
+				height:80px;
+				font-size:30px;
+				border: 2px solid #AAA;
+				border-radius: 25px;
+				background-color: #EEE;
+			}
+			#start_button:hover {
+				border: 2px solid #999;
+				background-color: #CCC;
+			}
+
+			button, #submit_button {
+				width:200px;
+				height:50px;
+				font-size:24px;
+				border: 1px solid #CCC;
+				border-radius: 10px;
+				background-color: #EEE;
+			}
+			button:hover {
+				border: 1px solid #AAA;
+				background-color: #CCC;
+			}
+
+			#images_div {
+				margin: 100px 0px 40px 0px;
+			}
+
+			#trial_num {
+				margin: 20px 0px 0px 0px;
+				font-size:16px;
+				color:#777;
+				font-style:italic;
+			}
+
+			#feedback {
+			}
+
+			#experiment_start {
+				font-size: 20px;
+			}
+
+			table.demo_imgs {
+				text-align: center;
+				font-size: 12pt;
+				margin-top: 20px;
+			}
+			table.demo_imgs td {
+				padding: 2px 10px 0px 10px;
+			}
+		</style>
+
+<script type="text/javascript">
+
+// from http://stackoverflow.com/questions/15589764/how-to-hide-the-link-to-an-external-web-page-in-a-hit-before-workers-accept-the
+$.extend({
+  getUrlVars: function(){
+    // From http://code.google.com/p/js-uri/source/browse/trunk/lib/URI.js
+    var parser = /^(?:([^:\/?\#]+):)?(?:\/\/([^\/?\#]*))?([^?\#]*)(?:\?([^\#]*))?(?:\#(.*))?/;
+    var result = window.location.href.match(parser);
+    var scheme    = result[1] || null;
+    var authority = result[2] || null;
+    var path      = result[3] || null;
+    var query     = result[4] || null;
+    var fragment  = result[5] || null
+    if (query === null || query === undefined) {
+      return {};
+    }
+    var vars = [], hash;
+    var hashes = query.split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+      hash = hashes[i].split('=');
+      vars.push(hash[0]);
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  },
+  getUrlVar: function(name){
+    return $.getUrlVars()[name];
+  }
+});
+
+function setBodyHeight() {
+  var wh = $(window).height();
+  $('body').height(wh); // body height = window height
+}
+
+function sequence_helper(gt_side,image_left,image_right) {
+	var curr_im = null;
+	p.gt_side.push(gt_side);
+	curr_im = new Image();
+	curr_im.src = image_left;
+	p.images_left.push(curr_im);
+	curr_im = new Image();
+	curr_im.src = image_right;
+	p.images_right.push(curr_im);
+}
+
+function makeExperiment() {
+    p.is_practice = false;
+	p.im_num = 0;
+    p.initialized = false;
+    p.practice_intro_shown = false;
+    p.experiment_intro_shown = false;
+	p.npractice = 10;
+	p.total_num_ims = 228;
+
+	p.gt_side = [];
+	p.images_left = [];
+	p.images_right = [];
+
+
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0083.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_083_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0032.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_032_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_195_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0195.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0202.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_202_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0208.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_208_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0066.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_066_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_171_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0171.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0223.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_223_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_150_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0150.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_050_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0050.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_046_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0046.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0121.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_121_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0030.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_030_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_090_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0090.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_146_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0146.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0126.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_126_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_020_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0020.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_116_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0116.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0134.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_134_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0065.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_065_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0219.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_219_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0085.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_085_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_042_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0042.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_213_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0213.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_072_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0072.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0002.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_002_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0153.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_153_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_123_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0123.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0227.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_227_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0068.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_068_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0156.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_156_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_015_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0015.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_055_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0055.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0199.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_199_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0120.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_120_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0026.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_026_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0203.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_203_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_200_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0200.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0191.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_191_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0187.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_187_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0164.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_164_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0182.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_182_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_058_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0058.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0165.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_165_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0211.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_211_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_087_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0087.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0098.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_098_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_076_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0076.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_141_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0141.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0091.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_091_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0172.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_172_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_122_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0122.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_113_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0113.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0054.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_054_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0052.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_052_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0079.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_079_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0221.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_221_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0137.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_137_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0151.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_151_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_019_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0019.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0040.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_040_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0100.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_100_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_013_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0013.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0108.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_108_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_028_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0028.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_070_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0070.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_097_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0097.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_008_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0008.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0045.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_045_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_089_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0089.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_063_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0063.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0179.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_179_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_033_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0033.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_095_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0095.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_130_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0130.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_166_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0166.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0193.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_193_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_073_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0073.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_167_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0167.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_080_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0080.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0017.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_017_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_088_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0088.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_106_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0106.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_047_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0047.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0114.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_114_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_158_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0158.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0212.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_212_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0064.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_064_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0025.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_025_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0163.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_163_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_006_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0006.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_060_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0060.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_168_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0168.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_136_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0136.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_084_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0084.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_075_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0075.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_036_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0036.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_043_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0043.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0135.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_135_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0162.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_162_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0094.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_094_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_188_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0188.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_110_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0110.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_129_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0129.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_218_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0218.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0102.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_102_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_152_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0152.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_220_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0220.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_140_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0140.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_204_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0204.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_161_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0161.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_034_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0034.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0198.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_198_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0127.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_127_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_029_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0029.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0005.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_005_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0109.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_109_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_069_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0069.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0039.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_039_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_145_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0145.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_222_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0222.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0144.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_144_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0077.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_077_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0082.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_082_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0190.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_190_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0205.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_205_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_011_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0011.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0021.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_021_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0105.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_105_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0196.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_196_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_048_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0048.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_226_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0226.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0053.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_053_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0206.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_206_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0157.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_157_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_081_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0081.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0044.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_044_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0160.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_160_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0009.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_009_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0012.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_012_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0174.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_174_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0124.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_124_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0007.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_007_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_001_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0001.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0155.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_155_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0018.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_018_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0074.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_074_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0142.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_142_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_186_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0186.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_173_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0173.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_215_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0215.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_118_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0118.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_133_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0133.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0112.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_112_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0185.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_185_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0228.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_228_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_049_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0049.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_169_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0169.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0099.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_099_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_197_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0197.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0180.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_180_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0031.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_031_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0224.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_224_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0111.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_111_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0115.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_115_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0210.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_210_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0078.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_078_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0170.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_170_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0092.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_092_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_093_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0093.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_010_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0010.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_149_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0149.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_003_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0003.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_061_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0061.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_147_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0147.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0181.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_181_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0056.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_056_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_096_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0096.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0132.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_132_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_107_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0107.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_022_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0022.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0038.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_038_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_225_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0225.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0154.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_154_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_117_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0117.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_035_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0035.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0183.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_183_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0103.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_103_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0101.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_101_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0037.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_037_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_139_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0139.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_014_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0014.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_207_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0207.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_192_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0192.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_086_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0086.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_148_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0148.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_016_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0016.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0004.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_004_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_041_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0041.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_071_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0071.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0201.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_201_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0119.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_119_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0131.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_131_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0051.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_051_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0024.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_024_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0178.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_178_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_125_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0125.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0057.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_057_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0175.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_175_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0184.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_184_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_189_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0189.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_062_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0062.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0104.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_104_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0143.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_143_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_217_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0217.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0138.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_138_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_128_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0128.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0023.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_023_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_214_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0214.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_027_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0027.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_194_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0194.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_059_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0059.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0216.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_216_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_176_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0176.jpg");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_177_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0177.jpg");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0067.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_067_des.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0209.jpg","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_209_des.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/CoopNets/test_159_des.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/cmp_b0159.jpg");
+
+    return this;
+}
+
+
+var p = {};
+var first_trial = true;
+var num_correct = 0;
+
+function assert(x, msg) { if (!x) { throw("Assertion failed: " + msg); } }
+
+function now() { return (new Date()).getTime() / 1000.; }
+
+function end() {
+    $('#short_instructions').hide();
+	var score = Math.round(100*(num_correct/(p.total_num_ims)));
+	$('#score_div').html("You got " + (score) + "% correct.<br><br>");
+	$('#score').val(score + '%');
+    $('#done').show();
+	$("#submit_button").show();
+}
+
+function showFixation() {
+    document.im.src = p.fixation_im.src;
+}
+function showBlank() {
+    document.im.src = "images/start_image.png";
+}
+
+function continue_to_main_expt() {
+	$('#experiment_start').hide();
+	next();
+}
+
+function next() {
+
+	$('#feedbackA').html('');
+	$('#feedbackB').html('');
+
+	$('#imageA').css('border','0px solid black');
+	$('#imageB').css('border','0px solid black');
+
+    if (p.is_practice && (p.im_num == p.npractice)) {
+
+		p.is_practice = false;
+
+    	$('#feedback').hide();
+    	$('#imageA').hide();
+    	$('#imageB').hide();
+    	$('#imageA_div').hide();
+    	$('#imageB_div').hide();
+    	$('#short_instructions').html("");
+
+    	$('#experiment_start').show();
+
+    	return;
+    }
+	else if (p.im_num == p.total_num_ims) {
+
+		end();
+
+		return;
+	}
+
+	var display_time = 300;
+	var isi = 300;
+
+	var offset_time = 0;
+
+    $('#feedback').hide();
+	$('#imageA').hide();
+	$('#imageB').hide();
+	$('#short_instructions').html("");
+	$('#short_instructions').show();
+	$('#imageA_div').show();
+	$('#imageB_div').show();
+
+	if (p.is_practice) {
+		$('#trial_num').html("<br><center>Practice trial " + (p.im_num+1) + " out of " + p.npractice + "</center>");
+	}
+	else {
+		$('#trial_num').html("<br><center>Trial " + (p.im_num+1-p.npractice) + " out of " + (p.total_num_ims-p.npractice) + "</center>");
+	}
+
+	var imageA = document.getElementById('imageA');
+	imageA.src = p.images_left[p.im_num].src;
+
+	if (first_trial) {
+		offset_time += isi;
+		first_trial = false;
+	}
+	$('#imageA').delay(offset_time+isi*3).fadeIn(0).delay(display_time).fadeOut(0); offset_time += isi*3+display_time;
+
+	var imageB = document.getElementById('imageB');
+	imageB.src = p.images_right[p.im_num].src;
+
+	$('#imageB').delay(offset_time+isi*2).fadeIn(0).delay(display_time).fadeOut(0); offset_time += isi*2+display_time;
+
+	var fade_time = 50;
+	setTimeout(function() {
+		$('#trial_num').show();
+		$('#short_instructions').html("Which video do you think was <b>fake</b>?");
+		$('#buttonA').fadeIn(fade_time);
+		$('#buttonB').fadeIn(fade_time);
+	}, offset_time+100);
+}
+
+
+function submitAnswer(answer) {
+
+	$('#buttonA').hide();
+	$('#buttonB').hide();
+	$('#trial_num').hide();
+
+	if (p.is_practice) {
+		   var is_correct = (p.gt_side[p.im_num]!=answer);
+		   num_correct += is_correct;
+		   if (is_correct) {
+	       	   $('#feedback').html('<img width=24px src="http://web.mit.edu/phillipi/Public/colorization/check.png"/><br><span style="color:green;">You are correct!</span>');
+		   }
+		   else {
+			   $('#feedback').html('<span style="color:#cc0000">Incorrect. That image was real.</span>');
+		   }
+
+		   if (answer=='left') {
+			   if (is_correct) {
+	      	   		$('#imageA').css('border','6px solid green');
+		   	   }
+			   else {
+			   		$('#imageA').css('border','6px solid #cc0000');
+			   }
+		   }
+		   else {
+			   if (is_correct) {
+	      	   		$('#imageB').css('border','6px solid green');
+		   	   }
+			   else {
+			   		$('#imageB').css('border','6px solid #cc0000');
+			   }
+		   }
+
+		$('#feedback').show();
+		$('#short_instructions').html('');
+		if (p.gt_side[p.im_num]=='left') {
+			$('#feedbackA').html('Real');
+			$('#feedbackB').html('Fake');
+		}
+		else {
+			$('#feedbackA').html('Fake');
+			$('#feedbackB').html('Real');
+		}
+   		$('#imageA').show();
+   		$('#imageB').show();
+   		$('#imageA_div').show();
+   		$('#imageB_div').show();
+
+		$("#selection"+(p.im_num+1)).val(is_correct ? 1 : 0);
+
+		p.im_num = p.im_num+1;
+
+		setTimeout(function() { next(); }, 2400);
+	}
+	else {
+		var is_correct = (p.gt_side[p.im_num]!=answer);
+		num_correct += is_correct;
+
+		$('#imageA').hide();
+		$('#imageB').hide();
+		$('#imageA_div').hide();
+		$('#imageB_div').hide();
+
+		$("#selection"+(p.im_num+1)).val(is_correct ? 1 : 0);
+
+		p.im_num = p.im_num+1;
+
+		next();
+	}
+}
+
+function submit() {
+    $('#submit_button').prop('disabled', true);
+    var url = 'https://script.google.com/macros/s/AKfycbzH2LL-3p43DoMOtfo_gTF0TlYgrXBpXOEHlM-_rb03STbsxWw5/exec';
+	var form_data = $('#result_form').serializeArray();
+
+	var jqxhr = $.ajax({
+		url: url,
+		method: "GET",
+		dataType: "json",
+		data: $('#result_form').serializeArray()
+	}).success(
+		function(data) {
+			$('#done').hide();
+			$('#final_page').show();
+		}
+	);
+}
+
+function startExperiment() {
+
+    if (p == null) {
+        return;
+    }
+
+    p.is_practice = true;
+
+    $('#buttons_start').hide();
+    $('#long_info').hide();
+    $('#couhes').hide();
+    $('#teaser').hide();
+
+    $('#images_div').show();
+
+    next();
+}
+
+
+function init() {
+
+	$(window).bind('resize', function() { setBodyHeight(); });
+
+	makeExperiment();
+
+	$('#imageA').hide();
+	$('#imageB').hide();
+	$('#buttonA').hide();
+	$('#buttonB').hide();
+
+	$("#submit_button").hide();
+	$("#results").hide();
+}
+
+$(document).ready(init);
+
+function restartExperiment() {
+}
+
+</script>
+
+  </head>
+
+
+  <body>
+  <div id = "content_div">
+	<div id="images_div" style = "display:none" width = "100%" align = "center">
+	  <div id="short_instructions" style="display:none;"></div>
+      <div id="imageA_div" style="height:258px; width:258px; display:inline-block; border:0px solid black;">
+		  <div id="feedbackA" style="display:block; height: 30px"></div><img id="imageA" style="display:block;" width="256px" height="256px"/>
+		  <div id="buttonA" style="position:relative; width:100%; height:100%"><button type="button" onclick="submitAnswer('left')" style="position:absolute; width:100%; height:100%; top:0; left:0; z-index: 10; font-size:14pt">Left image</button></div>
+	  </div>
+	  <div id="imageB_div" style="height:258px; width:258px; display:inline-block; border:0px solid black;">
+		  <div id="feedbackB" style="display:block; height: 30px"]></div><img id="imageB" style="display:block;" width="256px" height="256px"/>
+		  <div id="buttonB" style="position:relative; width:100%; height:100%"><button type="button" onclick="submitAnswer('right')" style="position:absolute; width:100%; height:100%; top:0; left:0; z-index: 10; font-size:14pt">Right image</button></div>
+	  </div>
+    </div>
+
+    <div id= "feedback" align=center style="display:none"></div>
+
+    <div id = "experiment_start" style="width: 800px; margin: 0 auto; text-align: left; display:none">
+      <br>You've completed the practice exercise!  Click "Continue" to continue on to the main task. The main task will be identical except that you won't be told whether or not your guess was correct.</br>
+	  <div id = "buttons_continue" align=center>
+		  <button id="continue_button" type="button" onClick="continue_to_main_expt()">Continue!</button>
+	  </div>
+    </div>
+
+	<div id="trial_num" style="display:none"></div>
+
+    <div id="short_info" align="center" style="width: 80%; margin: 0 auto; text-align: left; display:none" align = center>
+    </div>
+
+    <br>
+    <br>
+
+
+    <div id="long_info" style = "width:100%">
+        <b>About this Experiment:</b><br><br>
+<ul>
+    <li><b>Please only participate in this experiment if you have normal color vision.</b></li><br>
+    
+    <li>It should take about 5-10 minutes.</li><br>
+    
+    <li>You will take part in an experiment involving visual perception. You'll see a series of pairs of videos. In each pair, one video is a real video from Internet while the other video is a "fake" video generated using a computer program. Your task is to determine which video is <b>fake</b>. Sometimes the fake videos may look very plausible.<br><br>
+    
+    <li>You will complete a short practice (less than 1 minute) before starting the main task.</li>
+</ul>
+    </div>
+
+
+	  <div id = "buttons_start" align=center>
+      	<br>
+      	<button id="start_button" type="button" onClick="startExperiment()" ><span style='font-size:16pt'>Start!</span></button>
+	  </div>
+
+    <div id="done" align = "center" style = "display:none">
+		Thank you! You have completed the experiment.<br><br>
+		<div id="score_div"></div>
+		<form id="result_form" name="results">
+			<input type="hidden" name="score" id="score" value="unset">
+			<input type="hidden" name="selection1" id="selection1" value="unset">
+<input type="hidden" name="selection2" id="selection2" value="unset">
+<input type="hidden" name="selection3" id="selection3" value="unset">
+<input type="hidden" name="selection4" id="selection4" value="unset">
+<input type="hidden" name="selection5" id="selection5" value="unset">
+<input type="hidden" name="selection6" id="selection6" value="unset">
+<input type="hidden" name="selection7" id="selection7" value="unset">
+<input type="hidden" name="selection8" id="selection8" value="unset">
+<input type="hidden" name="selection9" id="selection9" value="unset">
+<input type="hidden" name="selection10" id="selection10" value="unset">
+<input type="hidden" name="selection11" id="selection11" value="unset">
+<input type="hidden" name="selection12" id="selection12" value="unset">
+<input type="hidden" name="selection13" id="selection13" value="unset">
+<input type="hidden" name="selection14" id="selection14" value="unset">
+<input type="hidden" name="selection15" id="selection15" value="unset">
+<input type="hidden" name="selection16" id="selection16" value="unset">
+<input type="hidden" name="selection17" id="selection17" value="unset">
+<input type="hidden" name="selection18" id="selection18" value="unset">
+<input type="hidden" name="selection19" id="selection19" value="unset">
+<input type="hidden" name="selection20" id="selection20" value="unset">
+<input type="hidden" name="selection21" id="selection21" value="unset">
+<input type="hidden" name="selection22" id="selection22" value="unset">
+<input type="hidden" name="selection23" id="selection23" value="unset">
+<input type="hidden" name="selection24" id="selection24" value="unset">
+<input type="hidden" name="selection25" id="selection25" value="unset">
+<input type="hidden" name="selection26" id="selection26" value="unset">
+<input type="hidden" name="selection27" id="selection27" value="unset">
+<input type="hidden" name="selection28" id="selection28" value="unset">
+<input type="hidden" name="selection29" id="selection29" value="unset">
+<input type="hidden" name="selection30" id="selection30" value="unset">
+<input type="hidden" name="selection31" id="selection31" value="unset">
+<input type="hidden" name="selection32" id="selection32" value="unset">
+<input type="hidden" name="selection33" id="selection33" value="unset">
+<input type="hidden" name="selection34" id="selection34" value="unset">
+<input type="hidden" name="selection35" id="selection35" value="unset">
+<input type="hidden" name="selection36" id="selection36" value="unset">
+<input type="hidden" name="selection37" id="selection37" value="unset">
+<input type="hidden" name="selection38" id="selection38" value="unset">
+<input type="hidden" name="selection39" id="selection39" value="unset">
+<input type="hidden" name="selection40" id="selection40" value="unset">
+<input type="hidden" name="selection41" id="selection41" value="unset">
+<input type="hidden" name="selection42" id="selection42" value="unset">
+<input type="hidden" name="selection43" id="selection43" value="unset">
+<input type="hidden" name="selection44" id="selection44" value="unset">
+<input type="hidden" name="selection45" id="selection45" value="unset">
+<input type="hidden" name="selection46" id="selection46" value="unset">
+<input type="hidden" name="selection47" id="selection47" value="unset">
+<input type="hidden" name="selection48" id="selection48" value="unset">
+<input type="hidden" name="selection49" id="selection49" value="unset">
+<input type="hidden" name="selection50" id="selection50" value="unset">
+<input type="hidden" name="selection51" id="selection51" value="unset">
+<input type="hidden" name="selection52" id="selection52" value="unset">
+<input type="hidden" name="selection53" id="selection53" value="unset">
+<input type="hidden" name="selection54" id="selection54" value="unset">
+<input type="hidden" name="selection55" id="selection55" value="unset">
+<input type="hidden" name="selection56" id="selection56" value="unset">
+<input type="hidden" name="selection57" id="selection57" value="unset">
+<input type="hidden" name="selection58" id="selection58" value="unset">
+<input type="hidden" name="selection59" id="selection59" value="unset">
+<input type="hidden" name="selection60" id="selection60" value="unset">
+<input type="hidden" name="selection61" id="selection61" value="unset">
+<input type="hidden" name="selection62" id="selection62" value="unset">
+<input type="hidden" name="selection63" id="selection63" value="unset">
+<input type="hidden" name="selection64" id="selection64" value="unset">
+<input type="hidden" name="selection65" id="selection65" value="unset">
+<input type="hidden" name="selection66" id="selection66" value="unset">
+<input type="hidden" name="selection67" id="selection67" value="unset">
+<input type="hidden" name="selection68" id="selection68" value="unset">
+<input type="hidden" name="selection69" id="selection69" value="unset">
+<input type="hidden" name="selection70" id="selection70" value="unset">
+<input type="hidden" name="selection71" id="selection71" value="unset">
+<input type="hidden" name="selection72" id="selection72" value="unset">
+<input type="hidden" name="selection73" id="selection73" value="unset">
+<input type="hidden" name="selection74" id="selection74" value="unset">
+<input type="hidden" name="selection75" id="selection75" value="unset">
+<input type="hidden" name="selection76" id="selection76" value="unset">
+<input type="hidden" name="selection77" id="selection77" value="unset">
+<input type="hidden" name="selection78" id="selection78" value="unset">
+<input type="hidden" name="selection79" id="selection79" value="unset">
+<input type="hidden" name="selection80" id="selection80" value="unset">
+<input type="hidden" name="selection81" id="selection81" value="unset">
+<input type="hidden" name="selection82" id="selection82" value="unset">
+<input type="hidden" name="selection83" id="selection83" value="unset">
+<input type="hidden" name="selection84" id="selection84" value="unset">
+<input type="hidden" name="selection85" id="selection85" value="unset">
+<input type="hidden" name="selection86" id="selection86" value="unset">
+<input type="hidden" name="selection87" id="selection87" value="unset">
+<input type="hidden" name="selection88" id="selection88" value="unset">
+<input type="hidden" name="selection89" id="selection89" value="unset">
+<input type="hidden" name="selection90" id="selection90" value="unset">
+<input type="hidden" name="selection91" id="selection91" value="unset">
+<input type="hidden" name="selection92" id="selection92" value="unset">
+<input type="hidden" name="selection93" id="selection93" value="unset">
+<input type="hidden" name="selection94" id="selection94" value="unset">
+<input type="hidden" name="selection95" id="selection95" value="unset">
+<input type="hidden" name="selection96" id="selection96" value="unset">
+<input type="hidden" name="selection97" id="selection97" value="unset">
+<input type="hidden" name="selection98" id="selection98" value="unset">
+<input type="hidden" name="selection99" id="selection99" value="unset">
+<input type="hidden" name="selection100" id="selection100" value="unset">
+<input type="hidden" name="selection101" id="selection101" value="unset">
+<input type="hidden" name="selection102" id="selection102" value="unset">
+<input type="hidden" name="selection103" id="selection103" value="unset">
+<input type="hidden" name="selection104" id="selection104" value="unset">
+<input type="hidden" name="selection105" id="selection105" value="unset">
+<input type="hidden" name="selection106" id="selection106" value="unset">
+<input type="hidden" name="selection107" id="selection107" value="unset">
+<input type="hidden" name="selection108" id="selection108" value="unset">
+<input type="hidden" name="selection109" id="selection109" value="unset">
+<input type="hidden" name="selection110" id="selection110" value="unset">
+<input type="hidden" name="selection111" id="selection111" value="unset">
+<input type="hidden" name="selection112" id="selection112" value="unset">
+<input type="hidden" name="selection113" id="selection113" value="unset">
+<input type="hidden" name="selection114" id="selection114" value="unset">
+<input type="hidden" name="selection115" id="selection115" value="unset">
+<input type="hidden" name="selection116" id="selection116" value="unset">
+<input type="hidden" name="selection117" id="selection117" value="unset">
+<input type="hidden" name="selection118" id="selection118" value="unset">
+<input type="hidden" name="selection119" id="selection119" value="unset">
+<input type="hidden" name="selection120" id="selection120" value="unset">
+<input type="hidden" name="selection121" id="selection121" value="unset">
+<input type="hidden" name="selection122" id="selection122" value="unset">
+<input type="hidden" name="selection123" id="selection123" value="unset">
+<input type="hidden" name="selection124" id="selection124" value="unset">
+<input type="hidden" name="selection125" id="selection125" value="unset">
+<input type="hidden" name="selection126" id="selection126" value="unset">
+<input type="hidden" name="selection127" id="selection127" value="unset">
+<input type="hidden" name="selection128" id="selection128" value="unset">
+<input type="hidden" name="selection129" id="selection129" value="unset">
+<input type="hidden" name="selection130" id="selection130" value="unset">
+<input type="hidden" name="selection131" id="selection131" value="unset">
+<input type="hidden" name="selection132" id="selection132" value="unset">
+<input type="hidden" name="selection133" id="selection133" value="unset">
+<input type="hidden" name="selection134" id="selection134" value="unset">
+<input type="hidden" name="selection135" id="selection135" value="unset">
+<input type="hidden" name="selection136" id="selection136" value="unset">
+<input type="hidden" name="selection137" id="selection137" value="unset">
+<input type="hidden" name="selection138" id="selection138" value="unset">
+<input type="hidden" name="selection139" id="selection139" value="unset">
+<input type="hidden" name="selection140" id="selection140" value="unset">
+<input type="hidden" name="selection141" id="selection141" value="unset">
+<input type="hidden" name="selection142" id="selection142" value="unset">
+<input type="hidden" name="selection143" id="selection143" value="unset">
+<input type="hidden" name="selection144" id="selection144" value="unset">
+<input type="hidden" name="selection145" id="selection145" value="unset">
+<input type="hidden" name="selection146" id="selection146" value="unset">
+<input type="hidden" name="selection147" id="selection147" value="unset">
+<input type="hidden" name="selection148" id="selection148" value="unset">
+<input type="hidden" name="selection149" id="selection149" value="unset">
+<input type="hidden" name="selection150" id="selection150" value="unset">
+<input type="hidden" name="selection151" id="selection151" value="unset">
+<input type="hidden" name="selection152" id="selection152" value="unset">
+<input type="hidden" name="selection153" id="selection153" value="unset">
+<input type="hidden" name="selection154" id="selection154" value="unset">
+<input type="hidden" name="selection155" id="selection155" value="unset">
+<input type="hidden" name="selection156" id="selection156" value="unset">
+<input type="hidden" name="selection157" id="selection157" value="unset">
+<input type="hidden" name="selection158" id="selection158" value="unset">
+<input type="hidden" name="selection159" id="selection159" value="unset">
+<input type="hidden" name="selection160" id="selection160" value="unset">
+<input type="hidden" name="selection161" id="selection161" value="unset">
+<input type="hidden" name="selection162" id="selection162" value="unset">
+<input type="hidden" name="selection163" id="selection163" value="unset">
+<input type="hidden" name="selection164" id="selection164" value="unset">
+<input type="hidden" name="selection165" id="selection165" value="unset">
+<input type="hidden" name="selection166" id="selection166" value="unset">
+<input type="hidden" name="selection167" id="selection167" value="unset">
+<input type="hidden" name="selection168" id="selection168" value="unset">
+<input type="hidden" name="selection169" id="selection169" value="unset">
+<input type="hidden" name="selection170" id="selection170" value="unset">
+<input type="hidden" name="selection171" id="selection171" value="unset">
+<input type="hidden" name="selection172" id="selection172" value="unset">
+<input type="hidden" name="selection173" id="selection173" value="unset">
+<input type="hidden" name="selection174" id="selection174" value="unset">
+<input type="hidden" name="selection175" id="selection175" value="unset">
+<input type="hidden" name="selection176" id="selection176" value="unset">
+<input type="hidden" name="selection177" id="selection177" value="unset">
+<input type="hidden" name="selection178" id="selection178" value="unset">
+<input type="hidden" name="selection179" id="selection179" value="unset">
+<input type="hidden" name="selection180" id="selection180" value="unset">
+<input type="hidden" name="selection181" id="selection181" value="unset">
+<input type="hidden" name="selection182" id="selection182" value="unset">
+<input type="hidden" name="selection183" id="selection183" value="unset">
+<input type="hidden" name="selection184" id="selection184" value="unset">
+<input type="hidden" name="selection185" id="selection185" value="unset">
+<input type="hidden" name="selection186" id="selection186" value="unset">
+<input type="hidden" name="selection187" id="selection187" value="unset">
+<input type="hidden" name="selection188" id="selection188" value="unset">
+<input type="hidden" name="selection189" id="selection189" value="unset">
+<input type="hidden" name="selection190" id="selection190" value="unset">
+<input type="hidden" name="selection191" id="selection191" value="unset">
+<input type="hidden" name="selection192" id="selection192" value="unset">
+<input type="hidden" name="selection193" id="selection193" value="unset">
+<input type="hidden" name="selection194" id="selection194" value="unset">
+<input type="hidden" name="selection195" id="selection195" value="unset">
+<input type="hidden" name="selection196" id="selection196" value="unset">
+<input type="hidden" name="selection197" id="selection197" value="unset">
+<input type="hidden" name="selection198" id="selection198" value="unset">
+<input type="hidden" name="selection199" id="selection199" value="unset">
+<input type="hidden" name="selection200" id="selection200" value="unset">
+<input type="hidden" name="selection201" id="selection201" value="unset">
+<input type="hidden" name="selection202" id="selection202" value="unset">
+<input type="hidden" name="selection203" id="selection203" value="unset">
+<input type="hidden" name="selection204" id="selection204" value="unset">
+<input type="hidden" name="selection205" id="selection205" value="unset">
+<input type="hidden" name="selection206" id="selection206" value="unset">
+<input type="hidden" name="selection207" id="selection207" value="unset">
+<input type="hidden" name="selection208" id="selection208" value="unset">
+<input type="hidden" name="selection209" id="selection209" value="unset">
+<input type="hidden" name="selection210" id="selection210" value="unset">
+<input type="hidden" name="selection211" id="selection211" value="unset">
+<input type="hidden" name="selection212" id="selection212" value="unset">
+<input type="hidden" name="selection213" id="selection213" value="unset">
+<input type="hidden" name="selection214" id="selection214" value="unset">
+<input type="hidden" name="selection215" id="selection215" value="unset">
+<input type="hidden" name="selection216" id="selection216" value="unset">
+<input type="hidden" name="selection217" id="selection217" value="unset">
+<input type="hidden" name="selection218" id="selection218" value="unset">
+<input type="hidden" name="selection219" id="selection219" value="unset">
+<input type="hidden" name="selection220" id="selection220" value="unset">
+<input type="hidden" name="selection221" id="selection221" value="unset">
+<input type="hidden" name="selection222" id="selection222" value="unset">
+<input type="hidden" name="selection223" id="selection223" value="unset">
+<input type="hidden" name="selection224" id="selection224" value="unset">
+<input type="hidden" name="selection225" id="selection225" value="unset">
+<input type="hidden" name="selection226" id="selection226" value="unset">
+<input type="hidden" name="selection227" id="selection227" value="unset">
+<input type="hidden" name="selection228" id="selection228" value="unset">
+			<div><textarea id="comments" name="comments" rows="3" cols="31" placeholder="Comments?"></textarea></div>
+		</form>
+		<br><br>
+		Please click the submit button below to finish. It takes 2-3 seconds to record your results. Please wait until it goes to next page.
+		<br><br>
+		<button id="submit_button" type="button" onClick="submit()" ><span style='font-size:16pt'>Submit</span></button>
+	</div>
+	
+	<div id="final_page" align = "center" style = "display:none">
+		<br>Your answer has been successfully recorded. <br><br> Thank you for your participation!
+	</div>	
+
+    <div id="couhes">
+      <br>
+      <span id="informed_consent_text">By making judgments about these videos, you are participating in a study being performed by scientists at VCLA. Your participation in this research is voluntary. You may decline further participation, at any time, without adverse consequences. Your anonymity is assured; the researchers who have requested your participation will not receive any personal information about you.</span>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </div>
+
+</body>
+
+
+</html>
