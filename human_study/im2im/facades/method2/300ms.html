@@ -140,7 +140,7 @@ function makeExperiment() {
     p.initialized = false;
     p.practice_intro_shown = false;
     p.experiment_intro_shown = false;
-	p.npractice = 10;
+	p.npractice = 3;
 	p.total_num_ims = 21;
 
 	p.gt_side = [];
@@ -148,27 +148,27 @@ function makeExperiment() {
 	p.images_right = [];
 
 
-	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/004.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/004.png");
-	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/018.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/018.png");
-	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/005.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/005.png");
-	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/016.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/016.png");
-	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/011.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/011.png");
-	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/013.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/013.png");
 	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/010.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/010.png");
-	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/001.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/001.png");
-	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/015.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/015.png");
-	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/009.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/009.png");
-	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/021.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/021.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/004.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/004.png");
 	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/017.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/017.png");
-	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/019.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/019.png");
-	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/002.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/002.png");
-	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/020.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/020.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/009.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/009.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/001.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/001.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/018.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/018.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/008.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/008.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/011.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/011.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/005.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/005.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/002.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/002.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/003.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/003.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/019.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/019.png");
 	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/014.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/014.png");
 	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/012.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/012.png");
-	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/007.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/007.png");
-	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/008.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/008.png");
-	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/003.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/003.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/013.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/013.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/015.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/015.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/021.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/021.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/016.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/016.png");
 	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/006.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/006.png");
+	sequence_helper("right","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/007.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/007.png");
+	sequence_helper("left","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/gt/020.png","https://s3-us-west-1.amazonaws.com/mturk-images-zilongzheng/im2im/facades/pix2pix/020.png");
 
     return this;
 }
