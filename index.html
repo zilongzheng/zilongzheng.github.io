@@ -73,7 +73,7 @@
                         <a class="page-scroll" href="#awards">Awards</a>
                     </li>
 -->                 <li>
-                        <a href="files/Zilong_CV.pdf">CV</a>
+                        <a href="files/zilong_cv.pdf">CV</a>
                     </li>
                  </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -109,11 +109,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
-                        <img src="img/IMG_6594.jpg" class="img-responsive img-circle img-fluid" width="300" />
+                        <img src="img/zlz.jpg" class="img-responsive img-circle img-fluid" width="200" />
                 </div>
                 <div class="col-xs-12 col-md-6 col-md-7 col-lg-8 personal-intro">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <h2 class="text-uppercase">Zilong Zheng</h2>
+                        <h2>Zilong Zheng</h2>
                         <h2><small>Ph.D. Candidate in Computer Science at UCLA</small></h2>
                         <address>
                             Engineering VI 491<br>
@@ -121,7 +121,7 @@
                             University of California, Los Angeles<br>
                             Los Angeles, CA, 90095
                         </address>
-                        <span><strong>Email: </strong>zilongzheng0318 at ucla dot edu</span>
+                        <span><strong>Email: </strong>z.zheng [at] ucla [dot] edu</span>
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@
         <div class="container">
             <h1>About</h1>
             <div class="bio-info">
-                <p>I am a third year Ph.D. candidate in the Department of Computer Science, UCLA. I am currently doing research on machine learning at <a href="http://vcla.stat.ucla.edu/">Center for Vision, Cognition, Learning, and Autonomy (VCLA)</a>, under the supervision of <a href="http://www.stat.ucla.edu/~sczhu/">Prof. Song-chun Zhu</a>. Before that, I obtained bachelor degree of Computer Science at University of Minnesota. I also received B.E. degree in Micro-electronic Technology from <a href="https://www.uestc.edu.cn/">University of Electronic Science and Technology of China (UESTC)</a>. My research interests lie in Machine Learning and Cognitive Science.</p>
+                <p>I am a fourth year Ph.D. candidate in the Department of Computer Science, UCLA. I am currently doing research on machine learning at <a href="http://vcla.stat.ucla.edu/">Center for Vision, Cognition, Learning, and Autonomy (VCLA)</a>, under the supervision of <a href="http://www.stat.ucla.edu/~sczhu/">Prof. Song-chun Zhu</a>. Before that, I obtained bachelor degree of Computer Science at University of Minnesota. I also received B.E. degree in Micro-electronic Technology from <a href="https://www.uestc.edu.cn/">University of Electronic Science and Technology of China (UESTC)</a>. My research interests lie in Machine Learning and Cognitive Science.</p>
             </div>
         </div>
     </section>
@@ -159,6 +159,88 @@
                     <h1>Publications</h1>
                         <div class="contents">
                             <ul class="list-group">
+
+                                <!-- TomICRA20 -->
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-4 col-lg-2">
+                                            <img src="projects/TomICRA20/tom_icra20.png" class="img-responsive img-fluid"/>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8 col-lg-10">
+                                        <h4 class="list-group-item-heading"> Joint Inference of States, Robot Knowledge, and Human (False-)Beliefs
+                                        
+                                            <a class="conf" href="https://www.icra2020.org/"><span class="badge">ICRA'20</span></a>
+                                        </h4>
+                                        <p class="detail">
+                                            <a href="https://ytyt.yt/">Tao Yuan</a>,
+                                            <a href="https://liuhx111.github.io/">Hangxin Liu</a>,  
+                                            <a href="https://lifengfan.github.io/">Lifeng Fan</a>,  
+                                            <strong>Zilong Zheng</strong>, 
+                                            <a href="http://www.stat.ucla.edu/~taogao/">Tao Gao</a>,  
+                                            <a href="https://yzhu.io/">Yixin Zhu</a>,  
+                                            <a href="http://www.stat.ucla.edu/~sczhu/">Song-Chun Zhu</a> <br>
+                                            <em>In Proceedings of the IEEE International Conference on Robotics and Automation (<strong>ICRA</strong>)</em> 2020 <span></span>
+                                        </p>
+                                        <button class="btn btn-success btn-xs" data-toggle="collapse" data-target='#yuan2020joint-abs'>Abstract</button>
+                                        <a class="btn btn-primary btn-xs" role="button" href="projects/TomICRA20/icra20_tom.pdf">PDF</a> 
+                                        <a class="btn btn-danger btn-xs" role="button" href="https://vimeo.com/391734593">Video</a> 
+                                        <!-- <a class="btn btn-info btn-xs" role="button" href="https://github.com/zilongzheng/visdial-gnn">Code</a>  -->
+                                        <button class="btn btn-bib btn-xs" data-toggle="collapse" data-target='#yuan2020joint-bib'>BibTex</button>
+                                        </div>
+                                    </div>
+                                    <div id="yuan2020joint-abs" class="collapse abstract">
+                                        Aiming to understand how human (false-)belief—a core socio-cognitive ability—would affect human interactions with robots, this paper proposes to adopt a graphical model to unify the representation of object states, robot knowledge, and human (false-)beliefs. Specifically, a parse graph (PG) is learned from a single-view spatiotemporal parsing by aggregating various object states along the time; such a learned representation is accumulated as the robot’s knowledge. An inference algorithm is derived to fuse individual PG from all robots across multi-views into a joint PG, which affords more effective reasoning and inference capability to overcome the errors originated from a single view. In the experiments, through the joint inference over PGs, the system correctly recognizes human (false-)belief in various settings and achieves better cross-view accuracy on a challenging small object tracking dataset.                                    </div>
+                                    <div id="yuan2020joint-bib" class="collapse abstract">
+<pre>
+@inproceedings{yuan2020joint,
+    title={Joint Inference of States, Robot Knowledge, and Human (False-)Beliefs},
+    author={Yuan, Tao and Liu, Hangxin and Fan, Lifeng and Zheng, Zilong and Gao, Tao and Zhu, Yixin and Zhu, Song-Chun},
+    booktitle={ICRA},
+    year={2020}
+}
+</pre>
+
+
+                                <!-- Motion-DynGen -->
+                                <li class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-4 col-lg-2">
+                                            <img src="projects/Motion-DynGen/deform.gif" class="img-responsive img-fluid"/>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8 col-lg-10">
+                                        <h4 class="list-group-item-heading"> Motion-Based Generator Model: Unsupervised Disentanglement of Appearance, Trackable and Intrackable Motions in Dynamic Patterns
+                                        
+                                            <a class="conf" href="https://aaai.org/Conferences/AAAI-20/"><span class="badge">AAAI'20</span></a>
+                                        </h4>
+                                        <p class="detail">
+                                            <a href="http://www.stat.ucla.edu/~jxie/">Jianwen Xie</a><sup>*</sup>,
+                                            <a href="http://www.stat.ucla.edu/~ruiqigao/">Ruiqi Gao</a><sup>*</sup>,  
+                                            <strong>Zilong Zheng</strong>, 
+                                            <a href="http://www.stat.ucla.edu/~sczhu/">Song-Chun Zhu</a>, 
+                                            <a href="http://www.stat.ucla.edu/~ywu/">Ying Nian Wu</a> (* equal contributions)<br>
+                                            <em>The Thirty-Third AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>)</em> 2020 <span>(Oral)</span>
+                                        </p>
+                                        <button class="btn btn-success btn-xs" data-toggle="collapse" data-target='#motion-dygen-abs'>Abstract</button>
+                                        <a class="btn btn-primary btn-xs" role="button" href="https://arxiv.org/pdf/1911.11294.pdf">PDF</a> 
+                                        <a class="btn btn-warning btn-xs" role="button" href="http://www.stat.ucla.edu/~jxie/MotionBasedGenerator/MotionBasedGenerator.html">Website</a> 
+                                        <!-- <a class="btn btn-info btn-xs" role="button" href="https://github.com/zilongzheng/visdial-gnn">Code</a>  -->
+                                        <button class="btn btn-bib btn-xs" data-toggle="collapse" data-target='#motion-dygen-bib'>BibTex</button>
+                                        </div>
+                                    </div>
+                                    <div id="motion-dygen-abs" class="collapse abstract">
+                                        Dynamic patterns are characterized by complex spatial and motion patterns. Understanding dynamic patterns requires a disentangled representational model that separates the factorial components. A commonly used model for dynamic patterns is the state space model, where the state evolves over time according to a transition model and the state generates the observed image frames according to an emission model. To model the motions explicitly, it is natural for the model to be based on the motions or the displacement fields of the pixels. Thus in the emission model, we let the hidden state generate the displacement field, which warps the trackable component in the previous image frame to generate the next frame while adding a simultaneously emitted residual image to account for the change that cannot be explained by the deformation. The warping of the previous image is about the trackable part of the change of image frame, while the residual image is about the intrackable part of the image. We use a maximum likelihood algorithm to learn the model parameters that iterates between inferring latent noise vectors that drive the transition model and updating the parameters given the inferred latent vectors. Meanwhile we adopt a regularization term to penalize the norms of the residual images to encourage the model to explain the change of image frames by trackable motion. Unlike existing methods on dynamic patterns, we learn our model in unsupervised setting without ground truth displacement fields or optical flows. In addition, our model defines a notion of intrackability by the separation of warped component and residual component in each image frame. We show that our method can synthesize realistic dynamic pattern, and disentangling appearance, trackable and intrackable motions. The learned models can be useful for motion transfer, and it is natural to adopt it to define and measure intrackability of a dynamic pattern.                               
+                                    </div>
+                                    <div id="motion-dygen-bib" class="collapse abstract">
+                                        <pre>
+@inproceedings{xie2020motion,
+    title={Motion-Based Generator Model: Unsupervised Disentanglement of Appearance, Trackable and Intrackable Motions in Dynamic Patterns},
+    author={Xie, Jianwen and Gao, Ruiqi and Zheng, Zilong and Zhu, Song-Chun and Wu, Ying Nian},
+    booktitle={The Thirty-Third AAAI Conference on Artificial Intelligence (AAAI)},
+    year={2020}
+} 
+</pre>
+                                    </div>
+                                </li>
 
                                 <!-- VisDial-GNN -->
                                 <li class="list-group-item">
@@ -249,9 +331,9 @@
                                     </div>
                                     <div id="dynamic_generator-bib" class="collapse abstract">
                                         <pre>
-@article{DG,
-    author = {Xie, Jianwen and Gao, Ruiqi and Zheng, Zilong and Zhu, Song-Chun and Wu, Ying Nian},
+@article{xie2019DG,
     title = {Learning Dynamic Generator Model by Alternating Back-Propagation Through Time},
+    author = {Xie, Jianwen and Gao, Ruiqi and Zheng, Zilong and Zhu, Song-Chun and Wu, Ying Nian},
     journal={The Thirty-Third AAAI Conference on Artificial Intelligence (AAAI)},
     year = {2019}
 }                                        </pre>
@@ -290,7 +372,7 @@
                                     </div>
                                     <div id="3ddescriptor-bib" class="collapse abstract">
                                         <pre>
-@inproceedings{3DDesNet,
+@inproceedings{xie20183DDesNet,
     title={Learning Descriptor Networks for 3D Shape Synthesis and Analysis},
     author={Xie, Jianwen and Zheng, Zilong and Gao, Ruiqi and Wang, Wenguan and Zhu Song-Chun and Wu, Ying Nian},
     booktitle={The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
