@@ -12,7 +12,7 @@ html {
 @media(min-width:767px) {
     .navbar {
         font-size: 18px;
-        padding: 20px 0;
+        padding: 10px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -30,7 +30,7 @@ h1 {
 hr {
     display: block;
     border-top: 1px solid #ccc;
-    width: 55%;
+    width: 50%;
 }
 
 img {
@@ -89,6 +89,12 @@ img {
 .publications-section {
     padding: 10px 0 20px 0;
     text-align: left;
+}
+
+.publications-section h2 {
+    padding-left: 30px;
+    text-align: left;
+    font-size: 24px;
 }
 
 .publications-section .container{
@@ -163,6 +169,23 @@ img {
 }
 
 .awards-section .contents {
+    margin: auto;
+    width: 95%;
+    text-align: left;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.other-section {
+    text-align: left;
+    padding: 10px 0 20px 0;
+}
+
+.other-section .container {
+    width: 50%;
+}
+
+.other-section .contents {
     margin: auto;
     width: 95%;
     text-align: left;
