@@ -5,6 +5,7 @@ key: dyngen
 title: >
     Motion-Based Generator Model: Unsupervised Disentanglement of Appearance, Trackable and Intrackable Motions in Dynamic Patterns
 author: Xie, Jianwen and Gao, Ruiqi and Zheng, Zilong and Zhu, Song-Chun and Wu, Ying Nian
+equalauthor: Xie, Jianwen and Gao, Ruiqi
 website: http://www.stat.ucla.edu/~jxie/MotionBasedGenerator/MotionBasedGenerator.html
 pdf: https://arxiv.org/pdf/1911.11294.pdf
 abbr: AAAI'20

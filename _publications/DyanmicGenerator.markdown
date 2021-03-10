@@ -5,6 +5,7 @@ key: dyngen
 title: >
     Learning Dynamic Generator Model by Alternating Back-Propagation Through Time
 author: Xie, Jianwen and Gao, Ruiqi and Zheng, Zilong and Zhu, Song-Chun and Wu, Ying Nian
+equalauthor: Xie, Jianwen and Gao, Ruiqi
 website: http://www.stat.ucla.edu/~jxie/DynamicGenerator/DynamicGenerator.html
 pdf: https://arxiv.org/pdf/1812.10587.pdf
 abbr: AAAI'19

@@ -1,6 +1,7 @@
 <div class="publications" id="publications">
     <h2 class="section_title">Publications</h2>
-
+    <div class="notes"> <code>*: Equal contribution</code></div>
+   
     {% assign highlight_publications = site.publications | where: "sticky", "true" | sort: "year" | reverse %}
     <h4>Latest</h4>
     <ol class="bibliography">

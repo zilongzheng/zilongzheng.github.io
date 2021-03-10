@@ -5,6 +5,7 @@ key: gvoxelnet
 title: >
     Generative VoxelNet: Learning Energy-Based Models for 3D Shape Synthesis and Analysis
 author: Xie, Jianwen and Zheng, Zilong and Gao, Ruiqi and Wang, Wenguan and Zhu, Song-Chun and Wu, Ying Nian
+equalauthor: Xie, Jianwen and Zheng, Zilong
 website: http://www.stat.ucla.edu/~jxie/3DEBM/
 pdf: 3DDescriptorNet/3DGConvNet_pami.pdf
 abbr: TPAMI

@@ -5,6 +5,7 @@ key: xie2021cooperative
 title: >
     Cooperative Training of Fast Thinking Initializer and Slow Thinking Solver for Multi-Modal Conditional Learning
 author: Xie, Jianwen and Zheng, Zilong and Fang, Xiaolin and Zhu, Song-Chun and Wu, Ying Nian
+equalauthor: Xie, Jianwen and Zheng, Zilong
 pdf: 3DDescriptorNet/3DGConvNet_pami.pdf
 abbr: TPAMI
 pdf: https://arxiv.org/pdf/1902.02812.pdf

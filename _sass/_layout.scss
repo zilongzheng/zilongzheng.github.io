@@ -58,6 +58,12 @@
 
 // TODO: redefine publications layout.
 .publications {
+  .notes {
+    margin-bottom: .5rem;
+    code {
+      color: $black-color;
+    }
+  }
   .award {
     color: $red-color;
     font-weight: bold;

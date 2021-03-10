@@ -52,7 +52,9 @@
           {% assign is_equal_author = false %}
           {% assign author_name = last_name | append: ', ' | append: first_name %}
           {% if page.equalauthor %}
-            {% for eauthor in page.equalauthor %}
+            {% assign equal_author_array = page.equalauthor | split: 'and' %}
+            {% for e in equal_author_array %}
+              {% assign eauthor = e | strip %}
               {% if eauthor == author_name %}
                   {% assign is_equal_author = true %}
                   {% break %}
@@ -90,9 +92,6 @@
             {% endunless %}
           {% endif %}
         {% endfor %}
-        {% if page.equalauthor %}
-        (* equal contributions)
-        {% endif %}
 
       </div>
 

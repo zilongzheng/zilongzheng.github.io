@@ -5,6 +5,7 @@ key: visdial-gnn
 title: >
     Reasoning Visual Dialogs with Structural and Partial Observations
 author: Zheng, Zilong and Wang, Wenguan and Qi, Siyuan and Zhu, Song-Chun
+equalauthor: Zheng, Zilong and Wang, Wenguan and Qi, Siyuan
 pdf: https://arxiv.org/pdf/1904.05548.pdf
 abbr: CVPR'19
 award: Oral

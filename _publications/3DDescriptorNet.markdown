@@ -5,6 +5,7 @@ key: 3ddescriptornet
 title: >
     Learning Descriptor Networks for 3D Shape Synthesis and Analysis
 author: Xie, Jianwen and Zheng, Zilong and Gao, Ruiqi and Wang, Wenguan and Zhu, Song-Chun and Wu, Ying Nian
+equalauthor: Xie, Jianwen and Zheng, Zilong
 website: http://www.stat.ucla.edu/~jxie/3DDescriptorNet/3DDescriptorNet.html
 pdf: https://arxiv.org/pdf/1804.00586.pdf
 abbr: CVPR'18
