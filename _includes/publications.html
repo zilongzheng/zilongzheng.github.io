@@ -1,0 +1,25 @@
+<div class="publications" id="publications">
+    <h2 class="section_title">Publications</h2>
+
+    {% assign highlight_publications = site.publications | where: "sticky", "true" | sort: "year" | reverse %}
+    <h4>Latest</h4>
+    <ol class="bibliography">
+    {% for item in highlight_publications %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ol>
+    {% assign years = site.publications | group_by: "year" %}
+    {% assign yearsSorted = years | sort: "name" %}
+    {% for y in yearsSorted reversed %}
+        <h4>{{y.name}}</h4>
+        <ol class="bibliography">
+        {% assign yearConfSorted = y.items | sort: "abbr" | reverse %}
+        {% for item in yearConfSorted %}
+        {% if item.sticky != true %}
+            <li>{{item}}</li>
+        {% endif %}
+        {% endfor %}
+        </ol>
+    {% endfor %}
+</div>
+  

@@ -1,0 +1,77 @@
+/******************************************************************************
+ * Content
+ ******************************************************************************/
+
+ body {
+   padding-bottom: 70px;
+   color: var(--global-text-color);
+   background-color: var(--global-bg-color);
+ }
+
+ body.fixed-top-nav {
+   // Add some padding for the nav-bar.
+   padding-top: 56px;
+ }
+
+ body.sticky-bottom-footer {
+   // Remove padding below footer.
+   padding-bottom: 0;
+ }
+
+.container {
+  max-width: $max-content-width;
+}
+
+// Profile
+.profile {
+  img {
+    width: 100%;
+  }
+}
+
+// TODO: redefine content layout.
+
+.section_title {
+  font-style: bold;
+}
+
+// News
+
+.news {
+  margin-top: 2rem;
+  table {
+    color: var(--global-text-color);
+    padding-bottom: .3rem;
+    padding-top: 0;
+    td {
+      font-size: 1rem;
+    }
+    th {
+
+    }
+  }  
+}
+
+/******************************************************************************
+ * Publications
+ ******************************************************************************/
+
+// TODO: redefine publications layout.
+.publications {
+  .award {
+    color: $red-color;
+    font-weight: bold;
+  }
+
+  .conf {
+    color: var(--global-theme-color) !important;
+    border: 1px solid var(--global-theme-color);
+  }
+}
+
+
+/*****************************************************************************
+* Projects
+*****************************************************************************/
+
+// TODO: redefine projects layout.
