@@ -102,11 +102,11 @@
         <em>{{page.journal}}</em>
       {% endif %}
       ,
-      {% if page.award%}
-      <span class="award">({{page.award}})</span>
-      {% endif %}
       {% if page.year %}
         {{ page.year }}
+      {% endif %}
+      {% if page.award%}
+      <span class="award">({{page.award}})</span>
       {% endif %}
       </div>
     {% endif %}
