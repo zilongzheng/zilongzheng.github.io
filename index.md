@@ -11,7 +11,7 @@ profile:
     <p>Engineering VI 491, 404 Westwood Plaza</p>
     <p>University of California, Los Angeles</p>
   email: >
-    <p><b>Email:</b> z.zheng<code>[at]</code>ucla<code>[dot]</code>edu</p>
+    <p>Email: z.zheng<code>[at]</code>ucla<code>[dot]</code>edu</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"

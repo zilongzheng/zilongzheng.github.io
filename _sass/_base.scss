@@ -61,22 +61,24 @@ b {
 
 .info {
   .desc {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: $grey-color;
     margin-bottom: .5rem;  
   }
   margin-bottom: .5rem;
-}
-
-.address {
   font-family: monospace;
-  font-size: 1.2rem;
-  margin-bottom: .5rem;  
-  p {
-    display: inline-block;
-    margin: 0;
+  .address {
+    font-family: monospace;
+    font-size: 1rem;
+    margin-bottom: .5rem;  
+    p {
+      display: inline-block;
+      margin: 0;
+    }
   }
 }
+
+
 
 @media (min-width: 576px) {
   .profile {
