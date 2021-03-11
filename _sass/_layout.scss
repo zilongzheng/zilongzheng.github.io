@@ -73,6 +73,11 @@
     color: var(--global-theme-color) !important;
     border: 1px solid var(--global-theme-color);
   }
+
+  .bibtex pre {
+    display: block;
+    background-color: $grey-color-light;
+  }
 }
 
 

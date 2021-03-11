@@ -22,7 +22,8 @@ layout: default
 
     <div class="post-header">
       <h1 class="post-title">
-       {% if site.title == "blank" %}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{% else %}{{ site.title }}{% endif %}
+       <!-- <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }} -->
+       {{ site.first_name }} {% if site.middle_name != "blank" %}{{ site.middle_name }}{% endif %} {{ site.last_name }}
       </h1>
        <div class="info">
          <p class="desc">{{ page.description }}</p>
@@ -56,18 +57,18 @@ layout: default
 </div>
 
 {% if page.news %}
-<div class="post">
+<div id="news" class="post">
   {% include news.html %}
 </div>
 {% endif %}
 
 {% if page.selected_papers %}
-<div class="post">
+<div id="publications" class="post">
   {% include publications.html %}
 </div>
 {% endif %}
 
-<div class="post">
+<div id="services" class="post">
   {% include service.html %}
 </div>
 

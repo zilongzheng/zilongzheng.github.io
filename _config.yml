@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title:  Zilong Zheng # the website title (if blank, full name will be used instead)
+title:  Zilong Zheng | UCLA CS PhD # the website title (if blank, full name will be used instead)
 first_name: Zilong
 middle_name:
 last_name: Zheng
@@ -58,6 +58,7 @@ blogger_url: # your blogger URL
 work_url: # work page URL
 keybase_username: # your keybase user name
 wikidata_id: # your wikidata id
+cv: zilong_cv.pdf
 
 contact_note: 
 

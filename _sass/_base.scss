@@ -128,7 +128,7 @@ b {
       color: var(--global-hover-color);
     }
   }
-  .navbar-nav .nav-item.active>.nav-link {
+  .navbar-nav .nav-item>.nav-link.active {
       background-color: inherit;
       font-weight: bolder;
       color: var(--global-theme-color);
