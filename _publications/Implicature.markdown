@@ -7,7 +7,7 @@ title: >
 author: Zheng, Zilong and Qiu, Shuwen and Fan, Lifeng and Zhu, Yixin and Zhu, Song-Chun
 abbr: ACL'21
 img: Implicature/grice.png
-journal: Findings of ACL, ACL-IJCNLP 2021
+journal: Findings of ACL, ACL-IJCNLP
 year: 2021
 sticky: true
 abstract: >
