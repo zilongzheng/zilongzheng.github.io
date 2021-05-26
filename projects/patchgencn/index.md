@@ -9,7 +9,7 @@ paper: PatchGenCN/CVPR21_PatchGenCN.pdf
 ---
 
 <div class="project_info">
-<span><a href="https://www.cs.ucla.edu/~zilongzheng" class="active" >Zilong Zheng</a> <sup>1</sup></span>  
+<span><a href="https://zilongzheng.github.io" class="active" >Zilong Zheng</a> <sup>1</sup></span>  
 <span><a href="http://www.stat.ucla.edu/~jxie/">Jianwen Xie</a> <sup>2</sup></span>  
 <span><a href="http://research.baidu.com/People/index-view?id=111">Ping Li</a> <sup>2</sup></span>
 </div>
