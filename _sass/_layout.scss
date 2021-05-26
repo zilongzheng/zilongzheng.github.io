@@ -104,3 +104,110 @@
     }
   }
 }
+
+
+.project {
+  font-family: Georgia, "New Century Schoolbook", Times, serif;
+  font-size: 1rem;
+
+  .container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .content {
+    margin-top: 1.5rem;
+  }
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  h3 {
+    padding-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+
+  .project_info {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    h2 {
+      font-weight: normal;
+    }
+    span {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .active {
+      color: black;
+    }
+
+    .award {
+      color: #990000;
+    }
+  }
+
+  .section_title {
+    font-size: 1.2rem;
+  }
+
+  .section {
+    margin-top: 1.5rem;
+    text-align: justify;
+    display: block;
+  }
+
+  .paper {
+    float: left;
+    padding-top: 10px;
+    margin-right: 40px;
+    border: none;
+    box-shadow: 10px 10px 5px #ccc;
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    -khtml-box-shadow: 10px 10px 5px #ccc;
+  }
+
+  .paper_info {
+    padding-top: 1rem;
+  }
+
+  .figure {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    img {
+      display:block;
+      margin-left:auto;
+      margin-right:auto;
+      padding-bottom: 10px;
+    }
+  }
+  
+}

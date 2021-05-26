@@ -1,13 +1,15 @@
 ---
 layout: pub
 type: inproceedings
-key: zheng2021PatchGConvNet
+key: zheng2021PatchGenCN
 title: >
     Patchwise Generative ConvNet: Training Energy-Based Models from a Single Natural Image for Internal Learning
 author: Zheng, Zilong and Xie, Jianwen and Li, Ping
 abbr: CVPR'21
 img: PatchGenCN/pipeline.png
 pdf: PatchGenCN/CVPR21_PatchGenCN.pdf
+supp: PatchGenCN/CVPR21_PatchGenCN_supp.pdf
+website: zilongzheng.github.io/PatchGenCN/
 booktitle: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
 year: 2021
 award: Oral
