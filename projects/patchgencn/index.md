@@ -36,7 +36,7 @@ paper: PatchGenCN/CVPR21_PatchGenCN.pdf
 <br>
 
 <a href="{{ page.paper | prepend: '/assets/projects/' | relative_url }}">
-    <img class="paper" alt="paper thumbnail" src="{{ page.thumbnail | prepend: '/projects/' | relative_url }}" width="170px">
+    <img class="paper" alt="paper thumbnail" src="/projects/patchgencn/images/paper_thumbnail.png" width="170px">
 </a>
 
 ## Paper
