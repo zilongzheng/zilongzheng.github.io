@@ -7,15 +7,16 @@ permalink: /Grice/
 ---
 
 <div class="project_info">
-<span><a href="https://zilongzheng.github.io" class="active" >Zilong Zheng</a> </span>  
-<span><a href="https://janetalready.github.io/" >Shuwen Qiu</a> </span>  
-<span><a href="https://lifengfan.github.io/" >Lifeng Fan</a> </span>  
-<span><a href="https://yzhu.io/" >Yixin Zhu</a> </span>  
-<span><a href="http://www.stat.ucla.edu/~sczhu/" >Song-Chun Zhu</a> </span>  
+<span><a href="https://zilongzheng.github.io" class="active" >Zilong Zheng</a> <sup>1</sup></span>  
+<span><a href="https://janetalready.github.io/" >Shuwen Qiu</a> <sup>1</sup></span>  
+<span><a href="https://lifengfan.github.io/" >Lifeng Fan</a> <sup>1</sup></span>  
+<span><a href="https://yzhu.io/" >Yixin Zhu</a> <sup>1</sup></span>  
+<span><a href="http://www.stat.ucla.edu/~sczhu/" >Song-Chun Zhu</a> <sup>2</sup></span>  
 </div>
 
 <div class="project_info">
-<h2>Center for Vision, Cognition, Learning, and Autonomy (VCLA)</h2>
+<h2><sup>1</sup> Center for Vision, Cognition, Learning, and Autonomy (VCLA)</h2>
+<h2><sup>2</sup> Peking University</h2>
 </div>
 <div class="project_info">
 <h2>Findings of ACL 2021</h2>
