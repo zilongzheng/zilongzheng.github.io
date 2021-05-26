@@ -9,7 +9,7 @@ abbr: CVPR'21
 img: PatchGenCN/pipeline.png
 pdf: PatchGenCN/CVPR21_PatchGenCN.pdf
 supp: PatchGenCN/CVPR21_PatchGenCN_supp.pdf
-website: zilongzheng.github.io/PatchGenCN/
+website: https://zilongzheng.github.io/PatchGenCN/
 booktitle: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
 year: 2021
 award: Oral
