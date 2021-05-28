@@ -166,7 +166,7 @@
       <a href="{{ page.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>
     {% endif %}
     {% if page.bibtex %}
-      <a class="bibtex btn btn-sm z-depth-0" role="button">Bibtex</a>
+      <a class="bibtex btn btn-sm z-depth-0" role="button" data-toggle="modal" data-target="#bibtex-modal">Bibtex</a>
     {% endif %}
     </div>
 
@@ -176,10 +176,10 @@
       <p>{{ page.abstract }}</p>
     </div>
     {% endif %}
-    <!-- Hidden abstract block -->
+    <!-- Hidden bibtex block -->
     {% if page.bibtex %}
     <div class="bibtex hidden">
-      <pre>{{ page.bibtex }}</pre>
+      {{ page.bibtex }}
     </div>
     {% endif %}
   </div>

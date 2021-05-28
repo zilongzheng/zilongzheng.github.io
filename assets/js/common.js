@@ -2,9 +2,9 @@ $(document).ready(function() {
     $('a.abstract').click(function() {
         $(this).parent().parent().find(".abstract.hidden").toggleClass('open');
     });
-    $('a.bibtex').click(function() {
-        $(this).parent().parent().find(".bibtex.hidden").toggleClass('open');
-    });
+    // $('a.bibtex').click(function() {
+    //     $(this).parent().parent().find(".bibtex.hidden").toggleClass('open');
+    // });
     $('.navbar-nav').find('a').removeClass('waves-effect waves-light');
 
     $('body').scrollspy({
@@ -27,5 +27,14 @@ $(function() {
         $('html, body').stop().animate({
             scrollTop: offset
         }, 1500, 'easeInOutExpo');
+    })
+});
+
+//bibtex popup
+$(function(){
+    $('#bibtex-modal').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget)
+        var bibdata = $.trim(button.parent().parent().find(".bibtex.hidden").text())
+        $(this).find('#bibtex-content').text(bibdata)
     })
 });
