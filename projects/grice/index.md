@@ -4,6 +4,13 @@ project: GRICE Dataset
 title: >
     G<small>RICE</small>: A <u>G</u>rammar-based Dataset for <u>R</u>ecovering <u>I</u>mplicature and <u>C</u>onversational r<u>E</u>asoning
 permalink: /Grice/
+bibtex: >
+    @article{zheng2021implicature,
+        title={GRICE: A Grammar-based Dataset for Recovering Implicature and Conversational r{E}asoning},
+        author={Zheng, Zilong and Qiu, Shuwen and Fan, Lifeng and Zhu, Yixin and Zhu, Song-Chun},
+        journal={Findings of ACL, ACL-IJCNLP},
+        year={2021}
+    }
 ---
 
 <div class="project_info">
@@ -36,8 +43,19 @@ permalink: /Grice/
 
 
 ## Paper
+
+
+<a href="">
+    <img class="paper" alt="paper thumbnail" src="/projects/grice/images/ACL21_Implicature_thumbnail.jpg" width="170px">
+</a>
+
+## Paper
+<a href="">ACL paper</a>.
+
 ### Citation
 Zilong Zheng, Shuwen Qiu, Lifeng Fan, Yixin Zhu, Song-Chun Zhu. "G<small>RICE</small>: A <u>G</u>rammar-based Dataset for <u>R</u>ecovering <u>I</u>mplicature and <u>C</u>onversational r<u>E</u>asoning." Findings of ACL, 2021.
+
+<a role="button" data-toggle="modal" data-target="#bibtex-modal">Bibtex</a>
 
 <br>
 <br>
