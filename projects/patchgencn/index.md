@@ -49,6 +49,8 @@ bibtex: >
 ## Paper
 <a href="{{ page.paper | prepend: '/assets/projects/' | relative_url }}">CVPR 2021 paper</a>.
 
+<a href="https://github.com/zilongzheng/PatchGenCN">Code</a>.
+
 ### Citation
 Zilong Zheng, Jianwen Xie, Ping Li. "Patchwise Generative ConvNet: Training Energy-Based Models from a Single Natural Image for Internal Learning", in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021.
 
