@@ -42,6 +42,17 @@
 
   {% include scripts/bootstrap.html %}
   {% include scripts/mansory.html %}
-  {% include scripts/misc.html %}
+
+  <script>
+
+    //bibtex popup
+    $(function(){
+        $('#bibtex-modal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget)
+            var bibdata = $.trim(button.parent().parent().parent().parent().find(".bibtex.hidden").text())
+            $(this).find('#bibtex-content').text(bibdata)
+        })
+    });
+  </script>
 
 </html>

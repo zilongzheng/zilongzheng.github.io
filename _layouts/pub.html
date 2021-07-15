@@ -5,7 +5,7 @@
   <div class="col-sm-3">
 
     {% if page.img %}
-    <img class="img-fluid" src="{{ page.img | prepend: '/assets/projects/' | relative_url }}" alt="project thumbnail">
+    <img class="img-fluid" src="{{ page.img | prepend: '/projects/' | relative_url }}" alt="project thumbnail">
     {% elsif page.type == "journal" %}
     <span class="conf badge">Journal</span>
     {% endif %}    
@@ -125,14 +125,14 @@
       {% if page.pdf contains '://' %}
       <a href="{{ page.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
       {% else %}
-      <a href="{{ page.pdf | prepend: '/assets/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+      <a href="{{ page.pdf | prepend: '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
       {% endif %}
     {% endif %}
     {% if page.supp %}
       {% if page.supp contains '://' %}
       <a href="{{ page.supp }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Supp</a>
       {% else %}
-      <a href="{{ page.supp | prepend: '/assets/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Supp</a>
+      <a href="{{ page.supp | prepend: '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Supp</a>
       {% endif %}
     {% endif %}
     {% if page.blog %}
@@ -145,21 +145,21 @@
       {% if page.poster contains '://' %}
       <a href="{{ page.poster }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Poster</a>
       {% else %}
-      <a href="{{ page.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Poster</a>
+      <a href="{{ page.poster | prepend: '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Poster</a>
       {% endif %}
     {% endif %}
     {% if page.slides %}
       {% if page.slides contains '://' %}
       <a href="{{ page.slides }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Slides</a>
       {% else %}
-      <a href="{{ page.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Slides</a>
+      <a href="{{ page.slides | prepend: '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Slides</a>
       {% endif %}
     {% endif %}
     {% if page.video %}
       {% if page.video contains '://' %}
       <a href="{{ page.video }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Video</a>
       {% else %}
-      <a href="{{ page.video | prepend: '/assets/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Video</a>
+      <a href="{{ page.video | prepend: '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Video</a>
       {% endif %}
     {% endif %}
     {% if page.website %}

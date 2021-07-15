@@ -22,11 +22,11 @@ bibtex: >
 </div>
 
 <div class="project_info">
-<h2><sup>1</sup> Center for Vision, Cognition, Learning, and Autonomy (VCLA)</h2>
-<h2><sup>2</sup> Cognitive Computing Lab, Baidu Research, USA</h2>
+<span><sup>1</sup> Center for Vision, Cognition, Learning, and Autonomy (VCLA)</span> <br>
+<span><sup>2</sup> Cognitive Computing Lab, Baidu Research, USA</span>
 </div>
 <div class="project_info">
-<h2>In CVPR 2021 <span class="award">(Oral)</span></h2>
+In CVPR 2021 <span class="award">(Oral)</span>
 </div>
 
 <div class="figure">
@@ -34,28 +34,32 @@ bibtex: >
 </div>
 
 
-<div class="section">
-    <h2 class="seciton_title">Abstract</h2>
-    <p>
-    Exploiting internal statistics of a single natural image has long been recognized as a significant research paradigm where the goal is to learn the internal distribution of patches within the image without relying on external training data. Different from prior works that model such a distribution implicitly with a top-down latent variable model (<em>e.g.</em>, generator), this paper proposes to <em>explicitly</em> represent the statistical distribution within a single natural image by using an energy-based generative framework, where a pyramid of energy functions, each parameterized by a bottom-up deep neural network, are used to capture the distributions of patches at different resolutions. Meanwhile, a coarse-to-fine sequential training and sampling strategy is presented to train the model efficiently. Besides learning to generate random samples from white noise, the model can learn in parallel with a self-supervised task (<em>e.g.</em>, recover the input image from its corrupted version), which can further improve the descriptive power of the learned model. The proposed model is simple and natural in that it does not require an auxiliary model (<em>e.g.</em>, discriminator) to assist the training. Besides, it also unifies internal statistics learning and image generation in a single framework. Experimental results presented on various image generation and manipulation tasks, including super-resolution, image editing, harmonization, style transfer, <em>etc.</em>, have demonstrated the effectiveness of our model for internal learning.
-    </p>
-</div>
-<br>
+## Abstract
 
-<a href="{{ page.paper | prepend: '/assets/projects/' | relative_url }}">
-    <img class="paper" alt="paper thumbnail" src="/projects/patchgencn/images/paper_thumbnail.png" width="170px">
-</a>
+<p class="text-justify">
+Exploiting internal statistics of a single natural image has long been recognized as a significant research paradigm where the goal is to learn the internal distribution of patches within the image without relying on external training data. Different from prior works that model such a distribution implicitly with a top-down latent variable model (<em>e.g.</em>, generator), this paper proposes to <em>explicitly</em> represent the statistical distribution within a single natural image by using an energy-based generative framework, where a pyramid of energy functions, each parameterized by a bottom-up deep neural network, are used to capture the distributions of patches at different resolutions. Meanwhile, a coarse-to-fine sequential training and sampling strategy is presented to train the model efficiently. Besides learning to generate random samples from white noise, the model can learn in parallel with a self-supervised task (<em>e.g.</em>, recover the input image from its corrupted version), which can further improve the descriptive power of the learned model. The proposed model is simple and natural in that it does not require an auxiliary model (<em>e.g.</em>, discriminator) to assist the training. Besides, it also unifies internal statistics learning and image generation in a single framework. Experimental results presented on various image generation and manipulation tasks, including super-resolution, image editing, harmonization, style transfer, <em>etc.</em>, have demonstrated the effectiveness of our model for internal learning.
+</p>
 
-## Paper
+<div class="section container">
+    <div class="row">
+        <div class="col-lg-3">
+        <a href="{{ page.paper | prepend: '/projects/' | relative_url }}">
+        <img class="paper" alt="paper thumbnail" src="/projects/patchgencn/images/paper_thumbnail.png" width="170px">
+        </a>
+        </div>
+<div class="col-lg-9">
+<h2>Paper</h2>
 <a href="https://openaccess.thecvf.com/content/CVPR2021/html/Zheng_Patchwise_Generative_ConvNet_Training_Energy-Based_Models_From_a_Single_Natural_CVPR_2021_paper.html">CVPR</a> | <a href="https://github.com/zilongzheng/PatchGenCN">Code</a> | <a role="button" data-toggle="modal" data-target="#bibtex-modal">Bibtex</a>.
+    
+<h3>Citation</h3>
 
-### Citation
-Zilong Zheng, Jianwen Xie, Ping Li. "Patchwise Generative ConvNet: Training Energy-Based Models from a Single Natural Image for Internal Learning", in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021.
+<p class="text-justify">Zilong Zheng, Jianwen Xie, Ping Li. "Patchwise Generative ConvNet: Training Energy-Based Models from a Single Natural Image for Internal Learning", in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021.</p>
 
+<a role="button" data-toggle="modal" data-target="#bibtex-modal">BibTex</a>
+</div>
+</div>
+</div>
 
-<br>
-<br>
-<br>
 
 
 ## Methodology
@@ -66,7 +70,7 @@ Zilong Zheng, Jianwen Xie, Ping Li. "Patchwise Generative ConvNet: Training Ener
 
 <div class="figure">
 <img src="/projects/patchgencn/images/ms_model.png" alt="ms model" width="70%">
-<p>Figure 1. Multi-Scale EBM modeling.</p>
+<span>Figure 1. Multi-Scale EBM modeling.</span>
 </div>
 
 Let $$\{\mathbf{I}(s), s = 0, ..., S\}$$ denote the multi-scale versions of a training image $$\mathbf{I}$$, with $$s$$ indexing the scale, the multi-scale EBM (Figure 1) is modeled as
@@ -81,7 +85,7 @@ where $$f_\theta$$ is an energy network, $$Z(\theta)=\int \exp (f_\theta(\mathbf
 
 <div class="figure">
 <img src="/projects/patchgencn/images/ms_sample.png" alt="ms sample" width="70%">
-<p>Figure 2. Multi-Scale sequential sampling process.</p>
+<span>Figure 2. Multi-Scale sequential sampling process.</span>
 </div>
 
 The mutli-scale sequential sampling (Figure 2) can be represented as: for $$s=0,...,S$$,
@@ -96,9 +100,6 @@ $$\tilde{\mathbf{I}}^{(s)}_{t+1}= \tilde{\mathbf{I}}^{(s)}_{t} + \frac{\delta^2}
 
 where $$t=0,...,K^{(s)} - 1$$ indexes the timestep, $$\mathcal{U}_{d}((-1, 1)^{d})$$ the uniform distribution, $$\delta$$ the Langvein step size, $$\epsilon_t \sim \mathcal{N}(0, I)$$ a Gaussian noise.
 
-
-
-<br>
 
 ## Related Work
 1. Jianwen Xie\*, Zilong Zheng\*, Xiaolin Fang, Song-Chun Zhu, Ying Nian Wu. "Cooperative Training of Fast Thinking Initializer and Slow Thinking Solver for Conditional Learning." TPAMI, 2021.
