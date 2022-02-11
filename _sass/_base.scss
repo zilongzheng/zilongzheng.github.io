@@ -347,16 +347,32 @@ footer.sticky-bottom {
     margin-bottom: -2rem;
     text-align: right;
   }
+  div.bibliography {
+    border-top: 1px solid #eee;
+    margin-left: auto;
+    width: 98%;
+    h4 {
+      padding-top: 10px;
+    }
+  }
   ol.bibliography {
     width: 95%;
     margin-left: auto;
     list-style: none;
     padding: 0;
     margin-top: 0;
-    border-bottom: 1px solid #eee;
 
     li {
       margin-bottom: 1rem;
+      .award {
+        height: 2rem;
+        margin-bottom: 0.5rem;
+        abbr {
+          min-width: 3rem;
+          display: inline-block;
+          background-color: #990000;
+        }
+      }
       .abbr {
         height: 2rem;
         margin-bottom: 0.5rem;

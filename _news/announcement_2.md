@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2020/11
+date: 2021/12
 inline: true
 ---
 
-<b>Two</b> papers are accepted in **AAAI'21**!
+<b>One</b> paper is accepted in **AAAI'22**!

@@ -2,13 +2,13 @@
 layout: about
 title: about
 permalink: /
-description: Ph.D. in Computer Science at UCLA
+description: Research Scientist at BIGAI
 
 profile:
   align: right
-  image: IMG_6594.jpg
+  image: zilong.JPG
   email: >
-    <p>Email: z.zheng<code>[at]</code>ucla<code>[dot]</code>edu</p>
+    <p>Email: zlzheng<code>[at]</code>bigai<code>[dot]</code>ai</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"

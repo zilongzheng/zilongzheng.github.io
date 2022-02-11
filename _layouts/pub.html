@@ -2,7 +2,7 @@
 ---
 
 <div class="row">
-  <div class="col-sm-3">
+  <!-- <div class="col-sm-3">
 
     {% if page.img %}
     <img class="img-fluid" src="{{ page.img | prepend: '/projects/' | relative_url }}" alt="project thumbnail">
@@ -10,13 +10,16 @@
     <span class="conf badge">Journal</span>
     {% endif %}    
 
-  </div>
+  </div> -->
 
-  <div id="{{page.key}}" class="col-sm-9">
+  <div id="{{page.key}}">
     {% if page.type == "thesis" %}
       {{reference}}
     {% else %}
       <div class="title">{{page.title}}
+        {% if page.award%}
+        <span class="award"><abbr class="badge">{{page.award}}</abbr></span>
+        {% endif %}    
         <span class="abbr">
           {% if page.abbr %}
           {% if site.data.venues[page.abbr] %}
@@ -25,7 +28,6 @@
           <abbr class="badge">{{page.abbr}}</abbr>
           {% endif %}
           {% endif %}    
-  
         </span>
       </div>
       <div class="author">
@@ -104,9 +106,6 @@
       ,
       {% if page.year %}
         {{ page.year }}
-      {% endif %}
-      {% if page.award%}
-      <span class="award">({{page.award}})</span>
       {% endif %}
       </div>
     {% endif %}
