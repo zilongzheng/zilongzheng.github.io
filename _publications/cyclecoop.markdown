@@ -8,7 +8,8 @@ author: Xie, Jianwen and Zheng, Zilong and Fang, Xiaolin and Zhu, Song-Chun and 
 equalauthor: Xie, Jianwen and Zheng, Zilong
 abbr: AAAI'21
 img: CycleCoop/style_transfer.png
-pdf: CycleCoop/AAAI2021_CycleCoopNets.pdf
+pdf: https://ojs.aaai.org/index.php/AAAI/article/view/17249/17056
+arxiv: https://arxiv.org/pdf/2103.04285.pdf
 journal: The Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI)
 year: 2021
 website: http://www.stat.ucla.edu/~jxie/CycleCoopNets/

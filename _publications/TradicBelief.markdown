@@ -11,6 +11,7 @@ booktitle: Proceedings of the IEEE conference on computer vision and pattern rec
 year: 2021
 award: Oral
 code: https://github.com/LifengFan/Triadic-Belief-Dynamics
+arxiv: https://arxiv.org/pdf/2104.02841.pdf
 pdf: TriadicBelief/TBD_paper.pdf
 supp: TriadicBelief/TBD_supp.pdf
 video: https://www.dropbox.com/s/nqai1z32bi66zuy/04411-video.mp4?dl=0

@@ -70,7 +70,7 @@
   .notes {
     margin-bottom: .5rem;
     code {
-      color: $black-color;
+      color: var(--global-text-color);
     }
   }
   .award {
