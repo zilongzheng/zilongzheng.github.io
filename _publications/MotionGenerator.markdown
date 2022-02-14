@@ -7,7 +7,7 @@ title: >
 author: Xie, Jianwen and Gao, Ruiqi and Zheng, Zilong and Zhu, Song-Chun and Wu, Ying Nian
 equalauthor: Xie, Jianwen and Gao, Ruiqi
 website: http://www.stat.ucla.edu/~jxie/MotionBasedGenerator/MotionBasedGenerator.html
-pdf: https://arxiv.org/pdf/1911.11294.pdf
+arxiv: https://arxiv.org/pdf/1911.11294.pdf
 abbr: AAAI'20
 award: Oral
 img: Motion-DynGen/deform.gif
