@@ -9,6 +9,7 @@ arxiv: https://arxiv.org/pdf/2106.13389.pdf
 abbr: AAAI'22
 journal: The Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI)
 year: 2022
+award: Oral
 sticky: false
 code: https://github.com/JingZhang617/SalCoopNets
 abstract: >
