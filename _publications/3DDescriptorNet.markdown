@@ -7,7 +7,7 @@ title: >
 author: Xie, Jianwen and Zheng, Zilong and Gao, Ruiqi and Wang, Wenguan and Zhu, Song-Chun and Wu, Ying Nian
 equalauthor: Xie, Jianwen and Zheng, Zilong
 website: http://www.stat.ucla.edu/~jxie/3DDescriptorNet/3DDescriptorNet.html
-arxiv: https://arxiv.org/pdf/1804.00586.pdf
+arxiv: 1804.00586
 abbr: CVPR'18
 award: Oral
 img: 3DDescriptorNet/3ddescriptor.png

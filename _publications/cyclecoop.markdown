@@ -9,7 +9,7 @@ equalauthor: Xie, Jianwen and Zheng, Zilong
 abbr: AAAI'21
 img: CycleCoop/style_transfer.png
 pdf: https://ojs.aaai.org/index.php/AAAI/article/view/17249/17056
-arxiv: https://arxiv.org/pdf/2103.04285.pdf
+arxiv: 2103.04285
 journal: The Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI)
 year: 2021
 website: http://www.stat.ucla.edu/~jxie/CycleCoopNets/
