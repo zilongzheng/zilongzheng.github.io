@@ -83,7 +83,7 @@
               {% endif %}
             {% else %}
               {% if author_is_self %}
-                and <em>{{first_name}} {{last_name}}</em>{% if is_equal_author %}*{% endif %}
+                and <b>{{first_name}} {{last_name}}</b>{% if is_equal_author %}*{% endif %}
               {% else %}
                 {% if coauthor_url %}
                   and <a href="{{coauthor_url}}" target="_blank">{{first_name}} {{last_name}}</a>{% if is_equal_author %}*{% endif %}

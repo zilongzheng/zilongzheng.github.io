@@ -10,7 +10,7 @@ abbr: ICLR'22
 journal: The Tenth International Conference on Learning Representations (ICLR)
 year: 2022
 award: Oral
-sticky: true
+sticky: false
 abstract: >
     We introduce a new task, unsupervised vision-language (VL) grammar induction.
     Given an image-caption pair, the goal is to extract a shared hierarchical structure for both image and language simultaneously. We argue that such structured output, grounded in both modalities, is a clear step towards the high-level understanding of multimodal information. Besides challenges existing in conventional visually grounded grammar induction tasks, VL grammar induction requires a
