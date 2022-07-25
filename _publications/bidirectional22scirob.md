@@ -7,8 +7,11 @@ title: >
 author: Yuan, Luyao and Gao, Xiaofeng and Zheng, Zilong and Edmonds, Mark and Wu, Ying Nian and Rossano, Federico and Lu, Hongjing and Zhu, Yixin and Zhu, Song-Chun 
 equalauthor: Yuan, Luyao and Gao, Xiaofeng and Zheng, Zilong
 website: https://yzhu.io/publication/teaming2022scirob/
-abbr: ScienceRobotics'22
+abbr: ScienceRobotics
 journal: Science Robotics
+supp: https://www.science.org/action/downloadSupplement?doi=10.1126%2Fscirobotics.abm4183&file=scirobotics.abm4183_sm.pdf
+video: https://vimeo.com/730025438
+code: https://doi.org/10.5068/D1XT3V
 year: 2022
 sticky: true
 abstract: >
