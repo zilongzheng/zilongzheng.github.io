@@ -20,6 +20,9 @@
   - firstname: "Ruiqi"
     url: http://www.stat.ucla.edu/~ruiqigao/
 
+  - firstname: "Xiaofeng"
+    url: https://xfgao.github.io/
+
 "Wang":
   - firstname: "Wenguan"
     url: https://sites.google.com/view/wenguanwang/
@@ -43,6 +46,13 @@
 "Li":
   - firstname: "Ping"
     url: http://research.baidu.com/People/index-view?id=111
+  
+  - firstname: "Yanzeng"
+    url: https://liyanzeng.ac.cn/
+
+"Lu":
+  - firstname: "Hongjing"
+    url: https://www.psych.ucla.edu/faculty-page/hongjing/
 
 "Fang":
   - firstname: "Xiaolin"
@@ -68,6 +78,14 @@
   - firstname: "Wenjuan" 
     url: http://hanwenjuan.com/
 
+"Rossano":
+  - firstname: "Federico"
+    url: https://scholar.google.com/citations?user=tkbxHjsAAAAJ&hl=en
+
+"Tu":
+  - firstname: "Kewei"
+    url: https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/
+
 "Tuytelaars":
   - firstname: "Tinne" 
     url: https://homes.esat.kuleuven.be/~tuytelaa/
@@ -75,3 +93,19 @@
 "Wan":
   - firstname: Bo
     url: http://plus.sist.shanghaitech.edu.cn/author/bo-wan/
+
+"Yuan":
+  - firstname: Luyao
+    url: https://yuanluya.github.io/
+
+"Zou":
+  - firstname: Lei
+    url: https://www.icst.pku.edu.cn/leizou/en/index.htm
+
+"Edmonds":
+  - firstname: Mark
+    url: https://mjedmonds.com/
+
+  
+
+
