@@ -52,6 +52,7 @@
             {% endfor %}
           {% endif %}
           {% assign is_equal_author = false %}
+          {% assign is_corr_author = false %}
           {% assign author_name = last_name | append: ', ' | append: first_name %}
           {% if page.equalauthor %}
             {% assign equal_author_array = page.equalauthor | split: 'and' %}
@@ -63,6 +64,17 @@
               {% endif %}
             {% endfor %}
           {% endif %}
+          {% if page.correspondance %}
+            {% assign corr_author_array = page.correspondance | split: 'and' %}
+            {% for e in corr_author_array %}
+              {% assign cauthor = e | strip %}
+              {% if cauthor == author_name %}
+                  {% assign is_corr_author = true %}
+                  {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
 
           {% if forloop.length == 1 %}
             {% if author_is_self %}
@@ -73,12 +85,12 @@
           {% else %}
             {% unless forloop.last %}
               {% if author_is_self %}
-                <b>{{first_name}} {{last_name}}</b>{% if is_equal_author %}*{% endif %},
+                <b>{{first_name}} {{last_name}}</b>{% if is_equal_author %}*{% endif %}{% if is_corr_author %}<sup>&#x2709;</sup>{% endif %},
               {% else %}
                 {% if coauthor_url %}
-                  <a href="{{coauthor_url}}" target="_blank">{{first_name}} {{last_name}}</a>{% if is_equal_author %}*{% endif %},
+                  <a href="{{coauthor_url}}" target="_blank">{{first_name}} {{last_name}}</a>{% if is_equal_author %}*{% endif %}{% if is_corr_author %}<sup>&#x2709;</sup>{% endif %},
                 {% else %}
-                  {{first_name}} {{last_name}}{% if is_equal_author %}*{% endif %},
+                  {{first_name}} {{last_name}}{% if is_equal_author %}*{% endif %}{% if is_corr_author %}<sup>&#x2709;</sup>{% endif %},
                 {% endif %}
               {% endif %}
             {% else %}
@@ -86,9 +98,9 @@
                 and <b>{{first_name}} {{last_name}}</b>{% if is_equal_author %}*{% endif %}
               {% else %}
                 {% if coauthor_url %}
-                  and <a href="{{coauthor_url}}" target="_blank">{{first_name}} {{last_name}}</a>{% if is_equal_author %}*{% endif %}
+                  and <a href="{{coauthor_url}}" target="_blank">{{first_name}} {{last_name}}</a>{% if is_equal_author %}*{% endif %}{% if is_corr_author %}<sup>&#x2709;</sup>{% endif %}
                 {% else %}
-                  and {{first_name}} {{last_name}}{% if is_equal_author %}*{% endif %}
+                  and {{first_name}} {{last_name}}{% if is_equal_author %}*{% endif %}{% if is_corr_author %}<sup>&#x2709;</sup>{% endif %}
                 {% endif %}
               {% endif %}
             {% endunless %}

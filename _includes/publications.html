@@ -1,6 +1,6 @@
 <div class="publications">
     <h2 class="section_title">Publications</h2>
-    <div class="notes"> <code>*: Equal contribution</code></div>
+    <div class="notes"> <code>*: Equal contribution</code>, <code>&#x2709;: Correspondance author</code></div>
    
     {% assign highlight_publications = site.publications | where: "sticky", "true" | sort: "abbr" | reverse %}
     {% if highlight_publications != empty %}
