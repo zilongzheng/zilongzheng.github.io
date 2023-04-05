@@ -6,6 +6,7 @@ title: >
     In situ bidirectional human-robot value alignment
 author: Yuan, Luyao and Gao, Xiaofeng and Zheng, Zilong and Edmonds, Mark and Wu, Ying Nian and Rossano, Federico and Lu, Hongjing and Zhu, Yixin and Zhu, Song-Chun 
 equalauthor: Yuan, Luyao and Gao, Xiaofeng and Zheng, Zilong
+correspondance: Yuan, Luyao and Lu, Hongjing and Zhu, Yixin and Zhu, Song-Chun
 website: https://yzhu.io/publication/teaming2022scirob/
 abbr: ScienceRobotics
 journal: Science Robotics
