@@ -1,17 +1,18 @@
-"Zhu":
-  - firstname: "Song-Chun"
-    url: http://www.stat.ucla.edu/~sczhu/
-  
-  - firstname: "Yixin"
-    url: https://yzhu.io/
+"Barnes":
+  - firstname: "Nick" 
+    url: http://users.cecs.anu.edu.au/~nmb/
 
-"Wu":
-  - firstname: "Ying Nian"
-    url: http://www.stat.ucla.edu/~ywu/research.html
+"Edmonds":
+  - firstname: Mark
+    url: https://mjedmonds.com/
 
-"Xie":
-  - firstname: "Jianwen"
-    url: http://www.stat.ucla.edu/~jxie/
+"Fan":
+  - firstname: "Lifeng"
+    url: https://lifengfan.github.io/
+
+"Fang":
+  - firstname: "Xiaolin"
+    url: https://fang-xiaolin.github.io/
 
 "Gao":
   - firstname: "Tao"
@@ -23,25 +24,13 @@
   - firstname: "Xiaofeng"
     url: https://xfgao.github.io/
 
-"Wang":
-  - firstname: "Wenguan"
-    url: https://sites.google.com/view/wenguanwang/
+"Han":
+  - firstname: "Wenjuan" 
+    url: http://hanwenjuan.com/
 
-"Qi":
-  - firstname: "Siyuan"
-    url: https://web.cs.ucla.edu/~syqi/
-
-"Xu":
-  - firstname: "Yifei"
-    url: https://yfxu.me/
-
-"Fan":
-  - firstname: "Lifeng"
-    url: https://lifengfan.github.io/
-
-"Qiu":
-  - firstname: "Shuwen"
-    url: https://janetalready.github.io/
+"Huang":
+  - firstname: Siyuan
+    url: https://siyuanhuang.com/
 
 "Li":
   - firstname: "Ping"
@@ -50,33 +39,32 @@
   - firstname: "Yanzeng"
     url: https://liyanzeng.ac.cn/
 
-"Lu":
-  - firstname: "Hongjing"
-    url: https://www.psych.ucla.edu/faculty-page/hongjing/
+  - firstname: "Qing"
+    url: http://liqing-ustc.github.io/
 
-"Fang":
-  - firstname: "Xiaolin"
-    url: https://fang-xiaolin.github.io/
-
-"Yuan":
-  - firstname: "Tao"
-    url: https://ytyt.yt/
+"Liang":
+  - firstname: "Yitao"
+    url: https://web.cs.ucla.edu/~yliang/
 
 "Liu":
   - firstname: "Hangxin"
     url: https://liuhx111.github.io/
 
-"Zhang":
-  - firstname: "Jing"
-    url: https://jingzhang617.github.io/
+"Lu":
+  - firstname: "Hongjing"
+    url: https://www.psych.ucla.edu/faculty-page/hongjing/
 
-"Barnes":
-  - firstname: "Nick" 
-    url: http://users.cecs.anu.edu.au/~nmb/
+"Ma":
+  - firstname: "Xiaojian"
+    url: https://web.cs.ucla.edu/~xm/
 
-"Han":
-  - firstname: "Wenjuan" 
-    url: http://hanwenjuan.com/
+"Qi":
+  - firstname: "Siyuan"
+    url: https://web.cs.ucla.edu/~syqi/
+
+"Qiu":
+  - firstname: "Shuwen"
+    url: https://janetalready.github.io/
 
 "Rossano":
   - firstname: "Federico"
@@ -94,18 +82,40 @@
   - firstname: Bo
     url: http://plus.sist.shanghaitech.edu.cn/author/bo-wan/
 
+"Wang":
+  - firstname: "Wenguan"
+    url: https://sites.google.com/view/wenguanwang/
+
+"Wu":
+  - firstname: "Ying Nian"
+    url: http://www.stat.ucla.edu/~ywu/research.html
+
+"Xie":
+  - firstname: "Jianwen"
+    url: http://www.stat.ucla.edu/~jxie/
+
 "Yuan":
   - firstname: Luyao
     url: https://yuanluya.github.io/
+
+  - firstname: "Tao"
+    url: https://ytyt.yt/
+
+"Xu":
+  - firstname: "Yifei"
+    url: https://yfxu.me/
+
+"Zhang":
+  - firstname: "Jing"
+    url: https://jingzhang617.github.io/
 
 "Zou":
   - firstname: Lei
     url: https://www.icst.pku.edu.cn/leizou/en/index.htm
 
-"Edmonds":
-  - firstname: Mark
-    url: https://mjedmonds.com/
-
+"Zhu":
+  - firstname: "Song-Chun"
+    url: http://www.stat.ucla.edu/~sczhu/
   
-
-
+  - firstname: "Yixin"
+    url: https://yzhu.io/
