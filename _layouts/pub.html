@@ -64,8 +64,8 @@
               {% endif %}
             {% endfor %}
           {% endif %}
-          {% if page.correspondance %}
-            {% assign corr_author_array = page.correspondance | split: 'and' %}
+          {% if page.correspondence %}
+            {% assign corr_author_array = page.correspondence | split: 'and' %}
             {% for e in corr_author_array %}
               {% assign cauthor = e | strip %}
               {% if cauthor == author_name %}
@@ -95,7 +95,7 @@
               {% endif %}
             {% else %}
               {% if author_is_self %}
-                and <b>{{first_name}} {{last_name}}</b>{% if is_equal_author %}*{% endif %}
+                and <b>{{first_name}} {{last_name}}</b>{% if is_equal_author %}*{% endif %}{% if is_corr_author %}<sup>&#x2709;</sup>{% endif %}
               {% else %}
                 {% if coauthor_url %}
                   and <a href="{{coauthor_url}}" target="_blank">{{first_name}} {{last_name}}</a>{% if is_equal_author %}*{% endif %}{% if is_corr_author %}<sup>&#x2709;</sup>{% endif %}

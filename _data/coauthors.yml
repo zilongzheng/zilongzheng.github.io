@@ -26,11 +26,15 @@
 
 "Han":
   - firstname: "Wenjuan" 
-    url: http://hanwenjuan.com/
+    url: https://scholar.google.com/citations?user=rfVLLfAAAAAJ&hl=en
 
 "Huang":
   - firstname: Siyuan
     url: https://siyuanhuang.com/
+
+"Jia":
+  - firstname: Zixia
+    url: https://scholar.google.com/citations?user=FdwGDyoAAAAJ&hl=en
 
 "Li":
   - firstname: "Ping"
@@ -108,6 +112,10 @@
 "Zhang":
   - firstname: "Jing"
     url: https://jingzhang617.github.io/
+
+"Zhao":
+  - firstname: "Dongyan"
+    url: https://www.wict.pku.edu.cn/zhaodongyan/en/
 
 "Zou":
   - firstname: Lei
