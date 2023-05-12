@@ -11,6 +11,13 @@ $(document).ready(function() {
         target: ".navbar",
         offset: $('nav').outerHeight()
     });
+
+    var clipboard = new ClipboardJS('#copy-btn', {container: document.getElementById('bibtex-modal')});
+    clipboard.on('success', function(e) {
+        console.log('Copied Success!');
+        // console.log(e.text);
+    })
+
 });
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -36,5 +43,8 @@ $(function(){
         var button = $(event.relatedTarget)
         var bibdata = $.trim(button.parent().parent().find(".bibtex.hidden").text())
         $(this).find('#bibtex-content').text(bibdata)
+        // $(this).find('#copy-btn').attr('data-clipboard-text', bibdata)
+        // clipboard.destroy();
     })
 });
+
