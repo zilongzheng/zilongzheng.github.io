@@ -51,7 +51,7 @@ bibtex: >
 <div class="col-lg-9">
 <h2>Paper</h2>
 <a href="/projects/Grice/ACL21_GRICE.pdf">ACL paper</a>. <br>
-Code and Dataset will be released soon.
+Code and dataset are released <a href="https://github.com/zilongzheng/grice-dataset">here</a>.
     
 <h3>Citation</h3>
 
