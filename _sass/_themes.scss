@@ -1,10 +1,11 @@
 /*******************************************************************************
  * Themes
  ******************************************************************************/
- 
+
 :root {
   --global-bg-color: #{$white-color};
   --global-text-color: #{$black-color};
+  --global-text-color-secondary: #{$grey-color-dark};
   --global-theme-color: #{$blue-color};
   --global-hover-color: #{$blue-color-dark};
   --global-footer-bg-color: #{$grey-color-dark};
@@ -13,18 +14,20 @@
   --global-icon-color: #{$grey-color-dark};
 
   .fa-sun {
-    display : none;
+    display: none;
   }
+
   .fa-moon {
     padding-left: 10px;
     padding-top: 12px;
-    display : block;
+    display: block;
   }
 }
 
 html[data-theme='dark'] {
   --global-bg-color: #{$grey-color-dark};
   --global-text-color: #{$grey-color-light};
+  --global-text-color-secondary: #{$grey-color-light};
   --global-theme-color: #{$cyan-color};
   --global-hover-color: #{$light-cyan-color};
   --global-footer-bg-color: #{$grey-color-light};
@@ -35,9 +38,10 @@ html[data-theme='dark'] {
   .fa-sun {
     padding-left: 10px;
     padding-top: 12px;
-    display : block;
+    display: block;
   }
+
   .fa-moon {
-    display : none;
+    display: none;
   }
 }
