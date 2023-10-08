@@ -10,7 +10,7 @@ abbr: AAAI'22
 journal: The Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI)
 year: 2022
 award: Oral
-sticky: false
+selected: false
 code: https://github.com/JingZhang617/SalCoopNets
 abstract: >
     Conventional saliency prediction models typically learn

@@ -11,7 +11,7 @@ correspondence: Zhao, Dongyan and Zheng, Zilong
 year: 2023
 arxiv: 2305.18760
 code: https://github.com/patrick-tssn/cdbert
-sticky: false
+selected: false
 abstract: >
     We introduce CDB<small>ERT</small>, a new learning paradigm that enhances the semantics understanding ability of the Chinese PLMs with dictionary knowledge and structure of Chinese characters. We name the two core modules of CDB<small>ERT</small> as Shuowen and Jiezi, where Shuowen refers to the process of retrieving the most appropriate meaning from Chinese dictionaries and Jiezi refers to the process of enhancing characters' glyph representations with structure understanding. To facilitate dictionary understanding, we propose three pre-training tasks, <em>i.e.</em>, Masked Entry Modeling, Contrastive Learning for Synonym and Antonym, and Example Learning. We evaluate our method on both modern Chinese understanding benchmark CLUE and ancient Chinese benchmark CCLUE. Moreover, we propose a new polysemy discrimination task PolyMRC based on the collected dictionary of ancient Chinese. Our paradigm demonstrates consistent improvements on previous Chinese PLMs across all tasks. Moreover, our approach yields significant boosting on few-shot setting of ancient Chinese understanding.
 bibtex: >

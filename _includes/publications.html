@@ -1,18 +1,7 @@
 <div class="publications">
-    <h2 class="section_title">Publications</h2>
-    <div class="notes"> <code style="font-size: 18px;">*</code><code>: Equal contribution</code>, <code style="font-size: 20px;">&#x2709;</code><code>: Corresponding author</code></div>
-   
-    {% assign highlight_publications = site.publications | where: "sticky", "true" | sort: "abbr" | reverse %}
-    {% if highlight_publications != empty %}
-    <div class="bibliography">
-    <h4>Latest</h4>
-    <ol class="bibliography">
-    {% for item in highlight_publications %}
-    <li>{{item}}</li>
-    {% endfor %}
-    </ol>
-    </div>
-    {% endif %}
+    <div class="notes"> <code style="font-size: 18px;">*</code><code>: Equal contribution</code>, <code
+            style="font-size: 20px;">&#x2709;</code><code>: Corresponding author</code></div>
+
     {% assign years = site.publications | group_by: "year" %}
     {% assign yearsSorted = years | sort: "name" %}
     {% for y in yearsSorted reversed %}
@@ -21,14 +10,11 @@
     <div class="bibliography">
         <h4>{{y.name}}</h4>
         <ol class="bibliography">
-        {% for item in yearConfSorted %}
-        {% if item.sticky != true %}
+            {% for item in yearConfSorted %}
             <li>{{item}}</li>
-        {% endif %}
-        {% endfor %}
+            {% endfor %}
         </ol>
     </div>
     {% endif %}
     {% endfor %}
 </div>
-  
