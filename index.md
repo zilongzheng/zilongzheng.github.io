@@ -21,9 +21,9 @@ Before that, I obtained dual bachelor degree of Computer Science at [University 
 
 My research interests lie in the intersection of statistical machine learning, natural language processing and cognition. Current research themes include:
 - **General Multimodal Perception:** General multimodal understanding, parsing and explainable modeling.
-- **Language Reasoning:** Nerual-symbolic reasoning and planning with language models.
+- **Natural Language Reasoning:** Neural-symbolic reasoning and planning with language models.
 - **Generative Modeling:** Statistical generative modeling (e.g. EBMs, diffusions) on high-dimensional data.
-- **Human Robot Cooperation**: Building dialogue and planning models that are capable of reasoning and interating with humans in realisitc environments.
+- **Human Robot Cooperation**: Building dialogue and planning models that are capable of interating with humans in realisitc environments.
 
 I am always looking for self-motivated **interns** and long-term **collaborators**. Please contact me if you have excellent background or share similar research interests with me.
 
