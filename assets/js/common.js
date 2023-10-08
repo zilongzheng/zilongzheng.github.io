@@ -16,6 +16,7 @@ $(document).ready(function () {
     clipboard.on('success', function (e) {
         console.log('Copied Success!');
         // console.log(e.text);
+        toastr.success('Copied to Clipboard', { timeOut: 5000 })
     })
 
     if (window.location.hash) {

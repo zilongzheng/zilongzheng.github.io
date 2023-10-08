@@ -56,19 +56,3 @@ I am always looking for self-motivated **interns** and long-term **collaborators
 - <b>Conference reviewer</b> for ICML 2022-2023; ICLR 2022-2023; CVPR 2019-2022; NeurIPS 2020-2022; AAAI 2020-2022; ICCV 2019-2023; ECCV 2020-2022; BMVC 2020; WACV 2021
 - <b>Journal reviewer</b> for International Journal of Computer Vision (IJCV), Pattern Recognition (PR), Neurocomputing
 
-<div class="modal fade" id="bibtex-modal" tabindex="-1" role="dialog" aria-labelledby="bibtex-modal" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="bibtex-modal-title">BibTeX</h5>
-        <button id="copy-btn" class="btn copy-btn btn-outline-secondary btn-sm" data-clipboard-target="#bibtex-content"  type="button">Copy</button>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <pre id='bibtex-content'></pre>
-      </div>
-    </div>
-  </div>
-</div>
