@@ -9,7 +9,7 @@ abbr: ACL'23
 booktitle: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (ACL)
 correspondence: Zheng, Zilong and Tu, Kewei
 year: 2023
-selected: true
+selected: false
 code: https://github.com/bigai-nlco/CRFIE
 pdf: JointIE/acl23joint.pdf
 abstract: >

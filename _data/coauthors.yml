@@ -15,6 +15,9 @@
     url: https://fang-xiaolin.github.io/
 
 "Gao":
+  - firstname: "Jianfeng"
+    url: https://www.microsoft.com/en-us/research/people/jfgao/
+
   - firstname: "Tao"
     url: http://www.stat.ucla.edu/~taogao/
 
@@ -33,10 +36,16 @@
     url: https://siyuanhuang.com/
 
 "Jia":
+  - firstname: "Baoxiong"
+    url: https://baoxiongjia.github.io/
+
   - firstname: Zixia
     url: https://scholar.google.com/citations?user=FdwGDyoAAAAJ&hl=en
 
 "Li":
+  - firstname: "Fei-Fei"
+    url: https://profiles.stanford.edu/fei-fei-li
+
   - firstname: "Ping"
     url: http://research.baidu.com/People/index-view?id=111
   
@@ -77,6 +86,10 @@
 "Tu":
   - firstname: "Kewei"
     url: https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/
+  
+"Terzopoulos":
+  - firstname: "Demetri"
+    url: http://www.cs.ucla.edu/~dt/
 
 "Tuytelaars":
   - firstname: "Tinne" 
@@ -112,8 +125,12 @@
 "Zhang":
   - firstname: "Jing"
     url: https://jingzhang617.github.io/
+  - firstname: "Muhan"
+    url: https://muhanzhang.github.io/
 
 "Zhao":
+  - firstname: "Andrew"
+    url: https://andrewzh112.github.io/
   - firstname: "Dongyan"
     url: https://www.wict.pku.edu.cn/zhaodongyan/en/
 

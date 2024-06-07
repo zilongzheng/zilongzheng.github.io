@@ -1,8 +1,20 @@
 <div class="publications">
     <div class="notes"> <code style="font-size: 18px;">*</code><code>: Equal contribution</code>, <code
             style="font-size: 20px;">&#x2709;</code><code>: Corresponding author</code></div>
+    {% assign selected_publications = site.publications | where: "preprint", "true" | sort: year | reverse %}
+    {% if selected_publications != empty %}
+    <div class="bibliography">
+        <h4>Preprint</h4>
+        <ol class="bibliography">
+            {% for item in selected_publications %}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ol>
+    </div>
+    {% endif %}
 
-    {% assign years = site.publications | group_by: "year" %}
+
+    {% assign years = site.publications | where_exp: "page", "page.preprint != true " | group_by: "year" %}
     {% assign yearsSorted = years | sort: "name" %}
     {% for y in yearsSorted reversed %}
     {% assign yearConfSorted = y.items | sort: "abbr" | reverse %}
