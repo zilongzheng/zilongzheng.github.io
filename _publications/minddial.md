@@ -6,7 +6,8 @@ title: >
     MindDial: Belief Dynamics Tracking with Theory-of-Mind Modeling for Situated Neural Dialogue Generation
 author: Qiu, Shuwen and Zhu, Song-Chun and Zheng, Zilong
 abbr: ICML'23
-booktitle: Workshop on Theory-of-Mind at Fortieth International Conference on Machine Learning (ICML)
+# booktitle: Workshop on Theory-of-Mind at Fortieth International Conference on Machine Learning (ICML)
+booktitle: Workshop on Theory-of-Mind at ICML
 correspondence: Zheng, Zilong
 year: 2023
 selected: false

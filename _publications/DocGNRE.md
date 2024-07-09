@@ -7,7 +7,8 @@ author: Li, Junpeng and Jia, Zixia and Zheng, Zilong
 abbr: EMNLP'23
 correspondence: Zheng, Zilong
 equalauthor: Li, Junpeng and Jia, Zixia
-booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
+# booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
+booktitle: EMNLP
 year: 2023
 selected: false
 abstract: >

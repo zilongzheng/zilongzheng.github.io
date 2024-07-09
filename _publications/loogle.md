@@ -6,8 +6,9 @@ title: >
 author: Li, Jiaqi and Wang, Mengmeng and Zheng, Zilong and Zhang, Muhan
 year: 2024
 correspondence: Zheng, Zilong and Zhang, Muhan
-booktitle: >
-    Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL
+# booktitle: >
+#     Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL
+booktitle: ACL
 arxiv: 2311.04939
 selected: true
 abbr: ACL'24

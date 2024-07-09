@@ -12,7 +12,8 @@ abbr: CVPR'18
 award: Oral
 img: 3DDescriptorNet/3ddescriptor.png
 code: https://github.com/jianwen-xie/3DDescriptorNet
-booktitle: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
+# booktitle: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
+booktitle: CVPR
 year: 2018
 selected: true
 abstract: >

@@ -6,10 +6,12 @@ title: >
 author: Wang, Shenzhi and Liu, Chang and Zheng, Zilong and Qi, Siyuan and Chen, Shuo and Yang, Qisen and Zhao, Andrew and Wang, Shaofei and Song, Shiji and Huang, Gao
 year: 2024
 correspondence: Zheng, Zilong and Huang, Gao
-booktitle: >
-    Findings of the Annual Meeting of the Association for Computational Linguistics: ACL-Findings
+# booktitle: >
+#     Findings of the Annual Meeting of the Association for Computational Linguistics: ACL-Findings
+booktitle: ACL-Findings
 abbr: ACL'24
-arxiv: 2310.01320
+arxiv: >
+    2310.01320
 selected: true
 code: https://github.com/bigai-nlco/LooGLE
 abstract: >
@@ -18,7 +20,7 @@ bibtex: >
     @inproceedings{wang2024avalon,
         title={Boosting LLM Agents with Recursive Contemplation for Effective Deception Handling},
         author={Wang, Shenzhi and Liu, Chang and Zheng, Zilong and Qi, Siyuan and Chen, Shuo and Yang, Qisen and Zhao, Andrew and Wang, Shaofei and Song, Shiji and Huang, Gao},
-        booktitle={Findings of the Annual Meeting of the Association for Computational Linguistics: ACL-Findings,
+        booktitle={Findings of the Association for Computational Linguistics: ACL-Findings,
         year={2024}
     }
 ---

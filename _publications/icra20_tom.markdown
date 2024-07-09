@@ -8,7 +8,8 @@ author: Yuan, Tao and Liu, Hangxin and Fan, Lifeng and Zheng, Zilong and Gao, Ta
 pdf: TomICRA20/icra20_tom.pdf
 abbr: ICRA'20
 img: TomICRA20/tom_icra20.png
-booktitle: Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)
+# booktitle: Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)
+booktitle: ICRA
 year: 2020
 video: https://vimeo.com/420949549
 abstract: >

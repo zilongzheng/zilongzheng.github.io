@@ -11,7 +11,8 @@ equalauthor: Ma, Xiaojian and Yong, Silong
 correspondence: Zheng, Zilong and Huang, Siyuan
 arxiv: 2210.07474
 code: https://github.com/SilongYong/SQA3D
-journal: The Tenth International Conference on Learning Representations (ICLR)
+# journal: The Tenth International Conference on Learning Representations (ICLR)
+journal: ICLR
 year: 2023
 website: https://sqa3d.github.io/
 selected: false

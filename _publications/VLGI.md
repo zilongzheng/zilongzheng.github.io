@@ -7,7 +7,8 @@ title: >
 author: Wan, Bo and Han, Wenjuan and Zheng, Zilong and  Tuytelaars, Tinne
 pdf: https://openreview.net/pdf?id=N0n_QyQ5lBF
 abbr: ICLR'22
-journal: The Tenth International Conference on Learning Representations (ICLR)
+# journal: The Tenth International Conference on Learning Representations (ICLR)
+journal: ICLR
 year: 2022
 award: Oral
 selected: true

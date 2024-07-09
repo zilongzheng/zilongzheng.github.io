@@ -112,23 +112,16 @@
       {% endunless %}
       {% endif %}
       {% endfor %}
+      {% if page.preprint != true %}
+      <div class="periodical">
+        {% if page.type == "inproceedings" %}, in <em>{{page.booktitle}}</em>{% elsif page.type == "journal" %},
+        <em>{{page.journal}}</em>{% else %}, in <em>{{page.journal}}</em>{% endif %}{% if page.year %}, {{page.year}}{%
+        endif %}
+      </div>
+      {% endif %}
+      {% endif %}
 
     </div>
-
-    {% if page.preprint != true %}
-    <div class="periodical">
-      {% if page.type == "inproceedings" %}
-      <em>In {{page.booktitle}}</em>
-      {% else %}
-      <em>{{page.journal}}</em>
-      {% endif %}
-      ,
-      {% if page.year %}
-      {{ page.year }}
-      {% endif %}
-    </div>
-    {% endif %}
-    {% endif %}
 
     <div class="links">
       {% if page.abstract %}

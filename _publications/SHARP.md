@@ -6,7 +6,7 @@ title: >
     SHARP: Search-Based Adversarial Attack for Structured Prediction
 author: Zhang, Liwen and Jia, Zixia and Han, Wenjuan and Zheng, Zilong and Tu, Kewei
 abbr: NAACL'22
-booktitle: Findings of Annual Conference of the North American Chapter of the Association for Computational Linguistics (NACCL)
+booktitle: NAACL-Findings
 year: 2022
 pdf: https://aclanthology.org/2022.findings-naacl.71.pdf
 selected: false
@@ -16,7 +16,7 @@ bibtex: >
     @inproceedings{zhang2022sharp,
         title={SHARP: Search-Based Adversarial Attack for Structured Prediction},
         author={Zhang, Liwen and Jia, Zixia and Han, Wenjuan and Zheng, Zilong and Tu, Kewei},
-        booktitle={Findings of Annual Conference of the North American Chapter of the Association for Computational Linguistics},
+        booktitle={Findings of the Association for Computational Linguistics: NAACL-Findings},
         year={2021}
     }
 ---

@@ -10,7 +10,8 @@ abbr: AAAI'21
 img: CycleCoop/style_transfer.png
 pdf: https://ojs.aaai.org/index.php/AAAI/article/view/17249/17056
 arxiv: 2103.04285
-journal: The Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI)
+# journal: The Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI)
+journal: AAAI
 year: 2021
 website: http://www.stat.ucla.edu/~jxie/CycleCoopNets/
 abstract: >

@@ -6,7 +6,8 @@ title: >
     VSTAR: A Video-grounded Dialogue Dataset for Situated Semantic Understanding with Scene and Topic Transitions
 author: Wang, Yuxuan and Zheng, Zilong and Zhao, Xueliang and Li, Jinpeng and Wang, Yueqian, and Zhao, Dongyan
 abbr: ACL'23
-booktitle: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (ACL)
+# booktitle: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (ACL)
+booktitle: ACL
 correspondence: Zheng, Zilong and Zhao, Dongyan
 year: 2023
 arxiv: 2305.18756

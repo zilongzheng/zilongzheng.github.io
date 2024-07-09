@@ -6,7 +6,8 @@ title: >
     Modeling Instance Interactions for Joint Information Extraction with Neural High-Order Conditional Random Field
 author: Jia, Zixia and Yan, Zhaohui and Han, Wenjuan and Zheng, Zilong and Tu, Kewei
 abbr: ACL'23
-booktitle: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (ACL)
+# booktitle: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (ACL)
+booktitle: ACL
 correspondence: Zheng, Zilong and Tu, Kewei
 year: 2023
 selected: false

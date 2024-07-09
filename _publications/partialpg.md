@@ -6,8 +6,11 @@ title: >
 author: Jia, Zixia and Li, Junpeng and Zhang, Shichuan and Zheng, Zilong
 year: 2024
 correspondence: Zheng, Zilong
-booktitle: >
-    Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL
+# booktitle: >
+#     Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL
+arxiv: >
+    2406.16293
+booktitle: ACL
 abbr: ACL'24
 selected: true
 abstract: >

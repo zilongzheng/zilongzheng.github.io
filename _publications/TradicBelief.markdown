@@ -7,7 +7,8 @@ title: >
 author: Fan, Lifeng and Qiu, Shuwen and Zheng, Zilong and Gao, Tao and Zhu, Song-Chun and Zhu, Yixin
 abbr: CVPR'21
 img: TriadicBelief/pg.png
-booktitle: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
+# booktitle: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
+booktitle: CVPR
 year: 2021
 award: Oral
 code: https://github.com/LifengFan/Triadic-Belief-Dynamics

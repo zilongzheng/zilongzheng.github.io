@@ -8,8 +8,11 @@ year: 2024
 abbr: ACL'24
 correspondence: Zheng, Zilong
 selected: true
-booktitle: >
-    Findings of the Annual Meeting of the Association for Computational Linguistics: ACL-Findings
+# booktitle: >
+#     Findings of the Annual Meeting of the Association for Computational Linguistics: ACL-Findings
+booktitle: ACL-Findings
+arxiv: >
+    2406.16294
 code: https://github.com/bigai-nlco/langsuite
 abstract: >
     Recent advances in Large Language Models (LLMs) have shown inspiring achievements in constructing autonomous agents that rely on language descriptions as inputs. However, it remains unclear how well LLMs can function as few-shot or zero-shot embodied agents in dynamic interactive environments. To address this gap, we introduce LangSuit·E, a versatile and simulation-free testbed featuring 6 representative embodied tasks in textual embodied worlds. Compared with previous LLM-based testbeds, LangSuit·E (i) offers adaptability to diverse environments without multiple simulation engines, (ii) evaluates agents’ capacity to develop “internalized world knowledge” with embodied observations, and (iii) allows easy customization of communication and action strategies. To address the embodiment challenge, we devise a novel chain-of-thought (CoT) schema, EmMem, which summarizes embodied states w.r.t. history information. Comprehensive benchmark results illustrate challenges and insights of embodied planning. LangSuit·E represents a significant step toward building embodied generalists in the context of language models.
