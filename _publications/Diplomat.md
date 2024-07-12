@@ -8,7 +8,7 @@ arxiv: '2306.09030'
 abbr: NeurIPS'23
 correspondence: Zheng, Zilong
 website: https://diplomat-dataset.github.io/
-booktitle: NeurIPS D&B
+booktitle: NeurIPS D&B Track
 # booktitle: The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B Track)
 year: 2023
 selected: false

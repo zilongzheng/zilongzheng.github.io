@@ -7,8 +7,11 @@ author: Li, Junpeng and Jia, Zixia and Zheng, Zilong
 abbr: EMNLP'23
 correspondence: Zheng, Zilong
 equalauthor: Li, Junpeng and Jia, Zixia
+pdf: https://aclanthology.org/2023.emnlp-main.334.pdf
 # booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
 booktitle: EMNLP
+arxiv: 2311.07314
+code: https://github.com/bigai-nlco/DocGNRE
 year: 2023
 selected: false
 abstract: >
@@ -18,6 +21,6 @@ bibtex: >
         title={Semi-automatic Data Enhancement for Document-Level Relation Extraction with Distant Supervision from Large Language Models},
         author={Li, Junpeng and Jia, Zixia and Zheng, Zilong},
         booktitle={The 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-        year={2021}
+        year={2023}
     }
 ---

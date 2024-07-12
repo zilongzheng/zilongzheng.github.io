@@ -32,6 +32,8 @@
     url: https://scholar.google.com/citations?user=rfVLLfAAAAAJ&hl=en
 
 "Huang":
+  - firstname: Gao
+    url: http://www.gaohuang.net/
   - firstname: Siyuan
     url: https://siyuanhuang.com/
 
@@ -83,6 +85,10 @@
   - firstname: "Federico"
     url: https://scholar.google.com/citations?user=tkbxHjsAAAAJ&hl=en
 
+"Song":
+  - firstname: "Shiji"
+    url: https://www.au.tsinghua.edu.cn/info/1075/3206.htm
+
 "Tu":
   - firstname: "Kewei"
     url: https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/
@@ -102,6 +108,9 @@
 "Wang":
   - firstname: "Wenguan"
     url: https://sites.google.com/view/wenguanwang/
+  
+  - firstname: "Yuxuan"
+    url: https://patrick-tssn.github.io/
 
 "Wu":
   - firstname: "Ying Nian"

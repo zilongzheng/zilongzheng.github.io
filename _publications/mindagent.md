@@ -7,7 +7,7 @@ author: Gong, Ran and Huang, Qiuyuan and Ma, Xiaojian and Vo, Hoi and Durante, Z
 year: 2024
 # booktitle: >
 #     Findings of the North American Chapter of the Association for Computational Linguistics: NAACL-Findings
-booktitle: NAACL-Findings
+booktitle: NAACL Findings
 arxiv: 2309.09971
 website: https://mindagent.github.io/
 abstract: >

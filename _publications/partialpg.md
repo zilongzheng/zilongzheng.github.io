@@ -19,7 +19,7 @@ bibtex: >
     @inproceedings{jia2024combining,
         title={Combining Supervised Learning and Reinforcement Learning for Multi-Label Classification Tasks with Partial Labels},
         author={Jia, Zixia and Li, Junpeng and Zhang, Shichuan and Zheng, Zilong},
-        booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers),
+        booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
         year={2024}
     }
 ---

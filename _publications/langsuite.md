@@ -10,7 +10,7 @@ correspondence: Zheng, Zilong
 selected: true
 # booktitle: >
 #     Findings of the Annual Meeting of the Association for Computational Linguistics: ACL-Findings
-booktitle: ACL-Findings
+booktitle: ACL Findings
 arxiv: >
     2406.16294
 code: https://github.com/bigai-nlco/langsuite
@@ -19,7 +19,7 @@ abstract: >
 
 bibtex: >
     @inproceedings{jia2024langsuite,
-        title={LangSuit⋅E: Controlling, Planning, and Interacting with Large Language Models in Embodied Text Environments},
+        title={LangSuit$\cdot$E: Controlling, Planning, and Interacting with Large Language Models in Embodied Text Environments},
         author={Jia, Zixia and Wang, Mengmeng and Tong, Baichen and Zhu, Song-Chun and Zheng, Zilong},
         booktitle={Findings of the Association for Computational Linguistics: ACL-Findings 2024},
         year={2024}

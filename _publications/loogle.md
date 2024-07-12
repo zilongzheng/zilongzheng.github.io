@@ -19,7 +19,7 @@ bibtex: >
     @inproceedings{li2024loogle,
         title={LooGLE: Can Long-Context Language Models Understand Long Contexts?},
         author={Li, Jiaqi and Wang, Mengmeng and Zheng, Zilong and Zhang, Muhan},
-        booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers),
+        booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
         year={2024}
     }
 ---
