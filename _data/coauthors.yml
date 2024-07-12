@@ -57,6 +57,9 @@
   - firstname: "Qing"
     url: http://liqing-ustc.github.io/
 
+  - firstname: "Zhuowan"
+    url: https://lizw14.github.io/
+
 "Liang":
   - firstname: "Yitao"
     url: https://web.cs.ucla.edu/~yliang/
@@ -130,6 +133,10 @@
 "Xu":
   - firstname: "Yifei"
     url: https://yfxu.me/
+
+"Yuille"
+  - firstname: "Alan"
+    url: http://www.cs.jhu.edu/~ayuille/
 
 "Zhang":
   - firstname: "Jing"
