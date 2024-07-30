@@ -6,6 +6,7 @@ title: >
 author: Jia, Zixia and Wang, Mengmeng and Tong, Baichen and Zhu, Song-Chun and Zheng, Zilong
 year: 2024
 abbr: ACL'24
+misc: (also in SpLU-RoboNLP Workshop at ACL 2024)
 correspondence: Zheng, Zilong
 selected: true
 # booktitle: >
