@@ -14,14 +14,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 
 ---
-I received my Ph.D. degree from the Department of Computer Science at [University of California, Los Angeles (UCLA)](https://www.cs.ucla.edu/). 
-Before that, I obtained dual bachelor degree of Computer Science at [University of Minnesota](https://twin-cities.umn.edu/) and at University of Electronic Science and Technology of China (UESTC). 
-
-My research interests lie in the intersection of statistical machine learning, natural language processing and cognition. Current research themes include:
-- **General Multimodal Perception:** General multimodal understanding, parsing and explainable modeling.
-- **Natural Language Reasoning:** Neural-symbolic reasoning and planning with language models.
+I received my Ph.D. degree (21') from the Department of Computer Science at [University of California, Los Angeles (UCLA)](https://www.cs.ucla.edu/). My research interests lie in the intersection of statistical machine learning, natural language processing and cognition. Current research themes include:
+<!-- - **General Multimodal Perception:** General multimodal understanding, parsing and explainable modeling. -->
+- **Human AI Alignment**: Building interactive models that align with human values and social norms.
+- **Long-context Language Models:** Efficient training and inference of long-context language models.
 - **Generative Modeling:** Statistical generative modeling (e.g. EBMs, diffusions) on high-dimensional data.
-- **Human Robot Cooperation**: Building dialogue and planning models that are capable of interating with humans in realisitc environments.
 
 I am always looking for self-motivated **interns** and long-term **collaborators**. Please contact me if you have excellent background or share similar research interests with me.
 

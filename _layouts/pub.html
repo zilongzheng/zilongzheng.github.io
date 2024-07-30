@@ -8,7 +8,7 @@
     <img class="img-fluid" src="{{ page.img | prepend: '/projects/' | relative_url }}" alt="project thumbnail">
     {% elsif page.type == "journal" %}
     <span class="conf badge">Journal</span>
-    {% endif %}    
+    {%- endif -%}    
 
   </div> -->
 
@@ -19,15 +19,15 @@
     <div class="title">{{page.title}}
       {% if page.award%}
       <span class="award"><abbr class="badge">{{page.award}}</abbr></span>
-      {% endif %}
+      {%- endif -%}
       <span class="abbr">
         {% if page.abbr %}
         {% if site.data.venues[page.abbr] %}
         <abbr class="badge"><a href="{{site.data.venues[page.abbr].url}}" target="_blank">{{page.abbr}}</a></abbr>
         {% else %}
         <abbr class="badge">{{page.abbr}}</abbr>
-        {% endif %}
-        {% endif %}
+        {%- endif -%}
+        {%- endif -%}
       </span>
     </div>
     <div class="author">
@@ -40,17 +40,17 @@
       {% if last_name == site.scholar.last_name%}
       {% if site.scholar.first_name contains first_name%}
       {% assign author_is_self = true %}
-      {% endif %}
-      {% endif %}
+      {%- endif -%}
+      {%- endif -%}
       {% assign coauthor_url = nil %}
       {% if site.data.coauthors[last_name] %}
       {% for coauthor in site.data.coauthors[last_name] %}
       {% if coauthor.firstname contains first_name %}
       {% assign coauthor_url = coauthor.url %}
       {% break %}
-      {% endif %}
+      {%- endif -%}
       {% endfor %}
-      {% endif %}
+      {%- endif -%}
       {% assign is_equal_author = false %}
       {% assign is_corr_author = false %}
       {% assign author_name = last_name | append: ', ' | append: first_name %}
@@ -61,9 +61,9 @@
       {% if eauthor == author_name %}
       {% assign is_equal_author = true %}
       {% break %}
-      {% endif %}
+      {%- endif -%}
       {% endfor %}
-      {% endif %}
+      {%- endif -%}
       {% if page.correspondence %}
       {% assign corr_author_array = page.correspondence | split: 'and' %}
       {% for e in corr_author_array %}
@@ -71,9 +71,9 @@
       {% if cauthor == author_name %}
       {% assign is_corr_author = true %}
       {% break %}
-      {% endif %}
+      {%- endif -%}
       {% endfor %}
-      {% endif %}
+      {%- endif -%}
 
 
       {% if forloop.length == 1 %}
@@ -81,111 +81,118 @@
       <b>{{first_name}} {{last_name}}</b>
       {% else %}
       {{first_name}} {{last_name}}
-      {% endif %}
+      {%- endif -%}
       {% else %}
       {% unless forloop.last %}
       {% if author_is_self %}
-      <b>{{first_name}} {{last_name}}</b>{% if is_equal_author %}*{% endif %}{% if is_corr_author
-      %}<sup>&#x2709;</sup>{% endif %},
+      <b>{{first_name}} {{last_name}}</b>{% if is_equal_author %}*{%- endif -%}{% if is_corr_author
+      %}<sup>&#x2709;</sup>{%- endif -%},
       {% else %}
       {% if coauthor_url %}
-      <a href="{{coauthor_url}}" target="_blank">{{first_name}} {{last_name}}</a>{% if is_equal_author %}*{% endif %}{%
-      if is_corr_author %}<sup>&#x2709;</sup>{% endif %},
+      <a href="{{coauthor_url}}" target="_blank">{{first_name}} {{last_name}}</a>{% if is_equal_author %}*{%- endif
+      -%}{%
+      if is_corr_author %}<sup>&#x2709;</sup>{%- endif -%},
       {% else %}
-      {{first_name}} {{last_name}}{% if is_equal_author %}*{% endif %}{% if is_corr_author %}<sup>&#x2709;</sup>{% endif
+      {{first_name}} {{last_name}}{% if is_equal_author %}*{%- endif -%}{% if is_corr_author %}<sup>&#x2709;</sup>{%
+      endif
       %},
-      {% endif %}
-      {% endif %}
+      {%- endif -%}
+      {%- endif -%}
       {% else %}
       {% if author_is_self %}
-      and <b>{{first_name}} {{last_name}}</b>{% if is_equal_author %}*{% endif %}{% if is_corr_author
-      %}<sup>&#x2709;</sup>{% endif %}
+      and <b>{{first_name}} {{last_name}}</b>{% if is_equal_author %}*{%- endif -%}{% if is_corr_author
+      %}<sup>&#x2709;</sup>{%- endif -%}
       {% else %}
       {% if coauthor_url %}
       and <a href="{{coauthor_url}}" target="_blank">{{first_name}} {{last_name}}</a>{% if is_equal_author %}*{% endif
-      %}{% if is_corr_author %}<sup>&#x2709;</sup>{% endif %}
+      %}{% if is_corr_author %}<sup>&#x2709;</sup>{%- endif -%}
       {% else %}
-      and {{first_name}} {{last_name}}{% if is_equal_author %}*{% endif %}{% if is_corr_author %}<sup>&#x2709;</sup>{%
+      and {{first_name}} {{last_name}}{% if is_equal_author %}*{%- endif -%}{% if is_corr_author
+      %}<sup>&#x2709;</sup>{%
       endif %}
-      {% endif %}
-      {% endif %}
-      {% endunless %}
-      {% endif %}
-      {% endfor %}
-      {% if page.preprint != true %}
-      <div class="periodical">
-        {% if page.type == "inproceedings" %}, in <em>{{page.booktitle}}</em>{% elsif page.type == "journal" %},
-        <em>{{page.journal}}</em>{% else %}, in <em>{{page.journal}}</em>{% endif %}{% if page.year %}, {{page.year}}{%
-        endif %}
-      </div>
-      {% endif %}
-      {% endif %}
-
+      {%- endif -%}
+      {%- endif -%}
+      {%- endunless -%}
+      {%- endif -%}
+      {%- endfor -%}
+      {%- if page.preprint != true -%}<span class="periodical">
+        {%- if page.type == "inproceedings" -%}, in <em>{{page.booktitle}}</em>{%- elsif page.type == "journal" -%},
+        <em>{{page.journal}}</em>{%- else -%}, in <em>{{page.journal}}</em>{%- endif -%}{% if page.year %},
+        {{page.year}}{%- endif -%}
+      </span>
+      {%- endif -%}.
+      {% if page.misc %}{{ page.misc }}{%- endif -%}
+      {%- endif -%}
     </div>
 
     <div class="links">
       {% if page.abstract %}
       <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-      {% endif %}
+      {%- endif -%}
       {% if page.arxiv %}
       <a href="http://arxiv.org/abs/{{ page.arxiv }}" class="btn btn-sm z-depth-0" role="button"
         target="_blank">arXiv</a>
-      {% endif %}
+      {%- endif -%}
       {% if page.html %}
       <a href="{{ page.html }}" class="btn btn-sm z-depth-0" role="button" target="_blank">HTML</a>
-      {% endif %}
+      {%- endif -%}
       {% if page.pdf %}
       {% if page.pdf contains '://' %}
       <a href="{{ page.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
       {% else %}
       <a href="{{ page.pdf | prepend: '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button"
         target="_blank">PDF</a>
-      {% endif %}
-      {% endif %}
+      {%- endif -%}
+      {%- endif -%}
       {% if page.supp %}
       {% if page.supp contains '://' %}
       <a href="{{ page.supp }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Supp</a>
       {% else %}
       <a href="{{ page.supp | prepend: '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button"
         target="_blank">Supp</a>
-      {% endif %}
-      {% endif %}
+      {%- endif -%}
+      {%- endif -%}
       {% if page.blog %}
       <a href="{{ page.blog }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Blog</a>
-      {% endif %}
+      {%- endif -%}
       {% if page.code %}
       <a href="{{ page.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
-      {% endif %}
+      {%- endif -%}
       {% if page.poster %}
       {% if page.poster contains '://' %}
       <a href="{{ page.poster }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Poster</a>
       {% else %}
       <a href="{{ page.poster | prepend: '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button"
         target="_blank">Poster</a>
-      {% endif %}
-      {% endif %}
+      {%- endif -%}
+      {%- endif -%}
       {% if page.slides %}
       {% if page.slides contains '://' %}
       <a href="{{ page.slides }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Slides</a>
       {% else %}
       <a href="{{ page.slides | prepend: '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button"
         target="_blank">Slides</a>
-      {% endif %}
-      {% endif %}
+      {%- endif -%}
+      {%- endif -%}
       {% if page.video %}
       {% if page.video contains '://' %}
       <a href="{{ page.video }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Video</a>
       {% else %}
       <a href="{{ page.video | prepend: '/projects/' | relative_url }}" class="btn btn-sm z-depth-0" role="button"
         target="_blank">Video</a>
-      {% endif %}
-      {% endif %}
+      {%- endif -%}
+      {%- endif -%}
       {% if page.website %}
       <a href="{{ page.website }}" class="btn btn-sm z-depth-0" role="button" target="_blank">Website</a>
-      {% endif %}
+      {%- endif -%}
       {% if page.bibtex %}
       <a class="bibtex btn btn-sm z-depth-0" role="button" data-toggle="modal" data-target="#bibtex-modal">Bibtex</a>
-      {% endif %}
+      {%- endif -%}
+      {% if page.medias %}
+      {% for media in page.medias %}
+      <a href="{{ media.url }}" class="btn btn-sm z-depth-0" role="button" target="_blank">{{ media.name }}</a>
+      {% endfor %}
+      {%- endif -%}
     </div>
 
     <!-- Hidden abstract block -->
@@ -193,12 +200,12 @@
     <div class="abstract hidden">
       <p>{{ page.abstract }}</p>
     </div>
-    {% endif %}
+    {%- endif -%}
     <!-- Hidden bibtex block -->
     {% if page.bibtex %}
     <div class="bibtex hidden">
       {{ page.bibtex }}
     </div>
-    {% endif %}
+    {%- endif -%}
   </div>
 </div>
