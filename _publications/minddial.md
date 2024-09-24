@@ -12,7 +12,7 @@ booktitle: SIGDIAL
 award: Oral
 correspondence: Zheng, Zilong
 year: 2024
-selected: true
+selected: false
 arxiv: 2306.15253
 abstract: >
     Humans talk in daily conversations while aligning and negotiating the expressed meanings or common ground. Despite the impressive conversational abilities of the large generative language models, they do not consider the individual differences in contextual understanding in a shared situated environment. In this work, we propose MindDial, a novel conversational framework that can generate situated free-form responses to align and negotiate common ground. We design an explicit mind module that can track three-level beliefs -- the speaker's belief, the speaker's prediction of the listener's belief, and the belief gap between the first two. Then the next response is generated to resolve the belief difference and take task-related action. Our framework is applied to both prompting and fine-tuning-based models, and is evaluated across scenarios involving both common ground alignment and negotiation. Experiments show that models with mind modeling can generate more human-like responses when aligning and negotiating common ground. The ablation study further validates the three-level belief design can aggregate information and improve task outcomes in both cooperative and negotiating settings.

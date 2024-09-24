@@ -10,7 +10,7 @@ equalauthor: Li, Junpeng and Jia, Zixia
 # pdf: https://aclanthology.org/2023.emnlp-main.334.pdf
 # booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
 booktitle: CoLM
-# arxiv: 2311.07314
+arxiv: 2408.02210
 code: https://github.com/bigai-nlco/ExoViP
 year: 2024
 selected: true
