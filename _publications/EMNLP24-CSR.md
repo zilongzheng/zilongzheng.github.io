@@ -3,7 +3,7 @@ layout: pub
 type: inproceedings
 title: >
     Varying Sentence Representations via Condition-Specified Routers
-author: Lin Ziyong, Quansen Wang, Zixia Jia, Zilong Zheng
+author: Lin, Ziyong and Wang, Quansen and Jia, Zixia and Zheng, Zilong
 abbr: EMNLP'24
 correspondence: Jia, Zixia and Zheng, Zilong
 # equalauthor: Li, Junpeng and Jia, Zixia
@@ -19,7 +19,7 @@ abstract: >
 bibtex: >
     @inproceedings{lin2024csr,
         title={Varying Sentence Representations via Condition-Specified Routers},
-        author={Lin Ziyong, Quansen Wang, Zixia Jia, Zilong Zheng},
+        author={Lin, Ziyong and Wang, Quansen and Jia, Zixia and Zheng, Zilong},
         booktitle={The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
         year={2024}
     }
