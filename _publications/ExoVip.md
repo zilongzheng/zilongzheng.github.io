@@ -6,7 +6,7 @@ title: >
 author: Wang, Yuxuan and Yuille, Alan and Li, Zhuowan and Zheng, Zilong
 abbr: CoLM'24
 correspondence: Li, Zhuowan and Zheng, Zilong
-equalauthor: Li, Junpeng and Jia, Zixia
+pdf: https://openreview.net/pdf?id=6U1FEKP7Ar
 # pdf: https://aclanthology.org/2023.emnlp-main.334.pdf
 # booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
 booktitle: CoLM

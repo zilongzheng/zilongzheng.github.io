@@ -7,6 +7,7 @@ author: Lin, Ziyong and Wang, Quansen and Jia, Zixia and Zheng, Zilong
 abbr: EMNLP'24
 correspondence: Jia, Zixia and Zheng, Zilong
 # equalauthor: Li, Junpeng and Jia, Zixia
+pdf: https://aclanthology.org/2024.emnlp-main.963.pdf
 # pdf: https://aclanthology.org/2023.emnlp-main.334.pdf
 # booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
 booktitle: EMNLP
