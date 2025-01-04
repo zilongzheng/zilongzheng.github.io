@@ -20,7 +20,7 @@ I received my Ph.D. degree (21') from the Department of Computer Science at [Uni
 - **Long-context Language Models:** Efficient training and inference of long-context language models.
 - **Generative Modeling:** Statistical generative modeling (e.g. EBMs, diffusions) on high-dimensional data.
 
-I am always looking for self-motivated **interns** and long-term **collaborators**. Please contact me if you have excellent background or share similar research interests with me.
+I am always looking for self-motivated **students** and long-term **collaborators**. Please contact me if you have excellent background or share similar research interests with me.
 
 
 <div id="news" class="section_break"></div>
@@ -46,8 +46,8 @@ I am always looking for self-motivated **interns** and long-term **collaborators
 
 <div id="services" class="section_break"></div>
 
-## Professional Services
+<!-- ## Professional Services
 
 - <b>Conference reviewer</b> for ICML 2022-2023; ICLR 2022-2023; CVPR 2019-2022; NeurIPS 2020-2022; AAAI 2020-2022; ICCV 2019-2023; ECCV 2020-2022; BMVC 2020; WACV 2021
-- <b>Journal reviewer</b> for International Journal of Computer Vision (IJCV), Pattern Recognition (PR), Neurocomputing
+- <b>Journal reviewer</b> for International Journal of Computer Vision (IJCV), Pattern Recognition (PR), Neurocomputing -->
 

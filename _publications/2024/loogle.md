@@ -10,7 +10,7 @@ correspondence: Zheng, Zilong and Zhang, Muhan
 #     Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL
 booktitle: ACL
 arxiv: 2311.04939
-selected: true
+selected: false
 abbr: ACL'24
 code: https://github.com/bigai-nlco/LooGLE
 abstract: >
