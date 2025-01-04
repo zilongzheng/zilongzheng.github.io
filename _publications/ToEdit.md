@@ -23,5 +23,5 @@ bibtex: >
     }
 medias:
     - name: X
-    - url:  https://x.com/ZilongZheng/status/1870366949907349576
+      url:  https://x.com/ZilongZheng/status/1870366949907349576
 ---
