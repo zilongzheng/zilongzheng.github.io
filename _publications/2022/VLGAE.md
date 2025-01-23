@@ -6,7 +6,8 @@ title: >
     Unsupervised Vision-Language Parsing: Seamlessly Bridging Visual Scene Graphs with Language Structures via Dependency Relationships
 author: Lou, Chao and Han, Wenjuan and Lin, Yuhuan and Zheng, Zilong
 equalauthor: Lou, Chao and Zheng, Zilong
-arxiv: 2203.14260
+arxiv: >
+    2203.14260
 abbr: CVPR'22
 # booktitle: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
 booktitle: CVPR
