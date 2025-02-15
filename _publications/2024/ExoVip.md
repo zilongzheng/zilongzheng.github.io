@@ -10,7 +10,8 @@ pdf: https://openreview.net/pdf?id=6U1FEKP7Ar
 # pdf: https://aclanthology.org/2023.emnlp-main.334.pdf
 # booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
 booktitle: CoLM
-arxiv: 2408.02210
+arxiv: > 
+    2408.02210
 code: https://github.com/bigai-nlco/ExoViP
 year: 2024
 selected: false

@@ -9,6 +9,7 @@ correspondence: Zheng, Zilong
 pdf: https://aclanthology.org/2024.acl-long.731v2.pdf
 # booktitle: >
 #     Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL
+code: https://github.com/bigai-nlco/mlpac
 arxiv: >
     2406.16293
 booktitle: ACL

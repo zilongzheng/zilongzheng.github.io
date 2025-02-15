@@ -7,6 +7,7 @@ author: Wang, Zihao  and Cai, Shaofei and Liu, Anji and Jin, Yonggang and Hou, J
 year: 2024
 journal: TPAMI
 abbr: TPAMI'24
+arxiv: 2311.05997
 # preprint: true
 website: https://craftjarvis-jarvis1.github.io/
 abstract: >
