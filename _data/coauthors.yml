@@ -64,6 +64,10 @@
   - firstname: "Yitao"
     url: https://web.cs.ucla.edu/~yliang/
 
+"Lin":
+  - firstname: "Zhouhan"
+    url: https://hantek.github.io/
+
 "Liu":
   - firstname: "Hangxin"
     url: https://liuhx111.github.io/
@@ -158,9 +162,16 @@
   - firstname: Lei
     url: https://www.icst.pku.edu.cn/leizou/en/index.htm
 
+"Zhou":
+  - firstname: Bowen
+    url: https://c3i.ee.tsinghua.edu.cn/en/author/bowen-zhou/
+
 "Zhu":
   - firstname: "Song-Chun"
     url: http://www.stat.ucla.edu/~sczhu/
 
   - firstname: "Yixin"
     url: https://yzhu.io/
+
+  - firstname: Xuekai
+    url: https://xuekai-zhu.github.io/Xuekai-Zhu/
