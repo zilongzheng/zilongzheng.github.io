@@ -14,7 +14,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/publications/";
+            window.location.href = "/publications";
           },
         },{id: "news-one-paper-is-accepted-to-iclr-22-as-an-oral-paper",
           title: 'One paper is accepted to ICLR’22 as an Oral paper!',
@@ -154,16 +154,6 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/2024/MultiTaskPartialLabel/";
-            },},{id: "publications-an-efficient-recipe-for-long-context-extension-via-middle-focused-positional-encoding",
-          title: 'An Efficient Recipe for Long Context Extension via Middle-Focused Positional Encoding',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/2024/NeurIPS24-CREAM/";
-            },},{id: "publications-mars-situated-inductive-reasoning-in-an-open-world-environment",
-          title: 'Mars: Situated Inductive Reasoning in an Open-World Environment',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/2024/NeurIPS24-Mars/";
             },},{id: "publications-efficient-temporal-extrapolation-of-multimodal-large-language-models-with-temporal-grounding-bridge-for-long-video-understanding",
           title: 'Efficient Temporal Extrapolation of Multimodal Large Language Models with Temporal Grounding Bridge for...',
           description: "",
@@ -199,11 +189,21 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/2024/recon/";
+            },},{id: "publications-mars-situated-inductive-reasoning-in-an-open-world-environment",
+          title: 'Mars: Situated Inductive Reasoning in an Open-World Environment',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2024/tang2024mars/";
             },},{id: "publications-exovip-step-by-step-verification-and-exploration-with-exoskeleton-modules-for-compositional-visual-reasoning",
           title: 'ExoViP: Step-by-step Verification and Exploration with Exoskeleton Modules for Compositional Visual Reasoning',
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/2024/wang2024ExoVip/";
+            },},{id: "publications-an-efficient-recipe-for-long-context-extension-via-middle-focused-positional-encoding",
+          title: 'An Efficient Recipe for Long Context Extension via Middle-Focused Positional Encoding',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2024/wu2024cream/";
             },},{id: "publications-learning-descriptor-networks-for-3d-shape-synthesis-and-analysis",
           title: 'Learning Descriptor Networks for 3D Shape Synthesis and Analysis',
           description: "",
