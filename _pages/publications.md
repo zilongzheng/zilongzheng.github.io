@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /publications/
+permalink: /publications
 title: publication
 nav: true
 nav_order: 2
@@ -21,7 +21,7 @@ nav_order: 2
     <h2 class="bibliography">{{y.name}}</h2>
     <ol class="bibliography">
         {% for item in yearConfSorted %}
-        <li>{% include bib.liquid entry=item %}</li>
+        <li>{% include bib.liquid entry=item key=item.slug %}</li>
         {% endfor %}
     </ol>
 </div>

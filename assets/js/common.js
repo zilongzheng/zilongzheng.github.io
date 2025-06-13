@@ -56,4 +56,21 @@ $(document).ready(function () {
   $('[data-toggle="popover"]').popover({
     trigger: "hover",
   });
+
+  if (window.location.hash) {
+    // scroll to the element with the id from the hash
+    const hash = window.location.hash;
+    var navHeight = $(".navbar").outerHeight() || 0;
+    const targetElement = $(hash);
+    if (targetElement.length) {
+      const offsetTop = Math.max(0, targetElement.offset().top - navHeight);
+      $("html, body").animate(
+        {
+          scrollTop: offsetTop,
+        },
+        1500, 'easeInOutExpo'
+      );
+    }
+  }
+
 });
