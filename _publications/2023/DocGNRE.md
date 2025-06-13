@@ -1,12 +1,10 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 title: >
     Semi-automatic Data Enhancement for Document-Level Relation Extraction with Distant Supervision from Large Language Models
-author: Li, Junpeng and Jia, Zixia and Zheng, Zilong
+author: Li*, Junpeng and Jia*, Zixia and Zheng#, Zilong
 abbr: EMNLP'23
-correspondence: Zheng, Zilong
-equalauthor: Li, Junpeng and Jia, Zixia
 pdf: https://aclanthology.org/2023.emnlp-main.334.pdf
 # booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
 booktitle: EMNLP

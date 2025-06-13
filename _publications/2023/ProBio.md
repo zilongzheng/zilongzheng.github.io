@@ -1,12 +1,10 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 title: >
     ProBio: A Protocol-guided Multimodal Dataset for Molecular Biology Lab
-author: Cui, Jieming and Gong, Ziren and Jia, Baoxiong and Huang, Siyuan and Zheng, Zilong and Ma, Jianzhu and Zhu, Yixin 
+author: Cui*, Jieming and Gong*, Ziren and Jia*, Baoxiong and Huang, Siyuan and Zheng#, Zilong and Ma#, Jianzhu and Zhu#, Yixin
 abbr: NeurIPS'23
-equalauthor: Cui, Jieming and Gong, Ziren and Jia, Baoxiong
-correspondence: Zheng, Zilong and Ma, Jianzhu and Zhu, Yixin 
 website: https://probio-dataset.github.io/
 # booktitle: The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B Track)
 booktitle: NeurIPS D&B Track
@@ -21,5 +19,5 @@ bibtex: >
         author={Cui, Jieming and Gong, Ziren and Jia, Baoxiong and Huang, Siyuan and Zheng, Zilong and Ma, Jianzhu and Zhu, Yixin},
         booktitle={The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B 2023)},
         year={2023}
-    } 
+    }
 ---

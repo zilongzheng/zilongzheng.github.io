@@ -1,18 +1,14 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 title: >
     Varying Sentence Representations via Condition-Specified Routers
-author: Lin, Ziyong and Wang, Quansen and Jia, Zixia and Zheng, Zilong
+author: Lin, Ziyong and Wang, Quansen and Jia#, Zixia and Zheng#, Zilong
 abbr: EMNLP'24
-correspondence: Jia, Zixia and Zheng, Zilong
-# equalauthor: Li, Junpeng and Jia, Zixia
 pdf: https://aclanthology.org/2024.emnlp-main.963.pdf
-# pdf: https://aclanthology.org/2023.emnlp-main.334.pdf
-# booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
 booktitle: EMNLP
 # arxiv: 2311.07314
-# code: https://github.com/bigai-nlco/DocGNRE
+code: https://github.com/bigai-nlco/CSR
 year: 2024
 selected: false
 abstract: >

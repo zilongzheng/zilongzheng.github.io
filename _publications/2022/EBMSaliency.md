@@ -1,10 +1,10 @@
 ---
-layout: pub
+layout: publication
 type: article
 key: SalCoopNets
 title: >
     Energy-Based Generative Cooperative Saliency Prediction
-author: Zhang, Jing and Xie, Jianwen and Zheng, Zilong and Barnes, Nick 
+author: Zhang, Jing and Xie, Jianwen and Zheng, Zilong and Barnes, Nick
 arxiv: 2106.13389
 abbr: AAAI'22
 # journal: The Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI)

@@ -1,11 +1,12 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 key: xie2021GPointent
 title: >
     Generative PointNet: Deep Energy-Based Learning on Unordered Point Sets for 3D Generation, Reconstruction and Classification
 author: Xie, Jianwen and Xu, Yifei and Zheng, Zilong and Zhu, Song-Chun and Wu, Ying Nian
 arxiv: 2004.01301
+code: https://github.com/fei960922/GPointNet
 pdf: https://openaccess.thecvf.com/content/CVPR2021/papers/Xie_Generative_PointNet_Deep_Energy-Based_Learning_on_Unordered_Point_Sets_for_CVPR_2021_paper.pdf
 abbr: CVPR'21
 img: GPointNet/gen_res.png
@@ -21,5 +22,5 @@ bibtex: >
         author={Xie, Jianwen and Xu, Yifei and Zheng, Zilong and Zhu, Song-Chun and Wu, Ying Nian},
         booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)},
         year={2021}
-    } 
+    }
 ---

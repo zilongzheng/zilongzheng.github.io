@@ -1,5 +1,5 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 key: vgstore22iswc
 title: >
@@ -18,5 +18,5 @@ bibtex: >
         author={Li, Yanzeng and Zheng, Zilong and Han, Wenjuan and Zou, Lei},
         booktitle={The 21st International Semantic Web Conference (ISWC) Poster & Demo Track},
         year={2022}
-    } 
+    }
 ---

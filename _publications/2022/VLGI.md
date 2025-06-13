@@ -1,5 +1,5 @@
 ---
-layout: pub
+layout: publication
 type: article
 key: vlgi
 title: >
@@ -30,5 +30,5 @@ bibtex: >
         author={Wan, Bo and Han, Wenjuan and Zheng, Zilong and  Tuytelaars, Tinne},
         journal={The Tenth International Conference on Learning Representations (ICLR)},
         year={2022}
-    } 
+    }
 ---

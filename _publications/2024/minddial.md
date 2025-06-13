@@ -1,16 +1,15 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 key: highie
 title: >
     MindDial: Belief Dynamics Tracking with Theory-of-Mind Modeling for Situated Neural Dialogue Generation
-author: Qiu, Shuwen and Liu, Mingdian and Li, Hengli and Zhu, Song-Chun and Zheng, Zilong
+author: Qiu, Shuwen and Liu, Mingdian and Li, Hengli and Zhu, Song-Chun and Zheng#, Zilong
 abbr: SIGDIAL'24
 misc: (also in <a href="https://tomworkshop.github.io/" >Workshop on Theory-of-Mind at ICML 2023</a>)
 # booktitle: Workshop on Theory-of-Mind at Fortieth International Conference on Machine Learning (ICML)
 booktitle: SIGDIAL
 award: Oral
-correspondence: Zheng, Zilong
 year: 2024
 selected: false
 arxiv: 2306.15253

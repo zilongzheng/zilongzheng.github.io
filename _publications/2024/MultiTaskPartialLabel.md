@@ -1,11 +1,10 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 title: >
     Combining Supervised Learning and Reinforcement Learning for Multi-Label Classification Tasks with Partial Labels
-author: Jia, Zixia and Li, Junpeng and Zhang, Shichuan and Zheng, Zilong
+author: Jia, Zixia and Li, Junpeng and Zhang, Shichuan and Zheng#, Zilong
 year: 2024
-correspondence: Zheng, Zilong
 pdf: https://aclanthology.org/2024.acl-long.731v2.pdf
 # booktitle: >
 #     Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL

@@ -1,16 +1,14 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 title: >
     Efficient Temporal Extrapolation of Multimodal Large Language Models with Temporal Grounding Bridge for Long Video Understanding
-author: Wang, Yuxuan and Wang, Yueqian and Wu, Pengfei and Liang, Jianxin and Zhao, Dongyan and Liu, Yang and Zheng, Zilong
+author: Wang, Yuxuan and Wang, Yueqian and Wu, Pengfei and Liang, Jianxin and Zhao, Dongyan and Liu, Yang and Zheng#, Zilong
 abbr: EMNLP'24
-correspondence: Zheng, Zilong
 # pdf: https://aclanthology.org/2023.emnlp-main.334.pdf
 # booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
 booktitle: EMNLP
-arxiv: >
-    2402.16050
+arxiv: "2402.16050"
 code: https://github.com/bigai-nlco/VideoTGB
 year: 2024
 selected: false

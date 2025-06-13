@@ -1,5 +1,5 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 key: zheng2021implicature
 title: >

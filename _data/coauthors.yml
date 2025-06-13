@@ -1,20 +1,20 @@
-"Barnes":
+"barnes":
   - firstname: "Nick"
     url: http://users.cecs.anu.edu.au/~nmb/
 
-"Edmonds":
+"edmonds":
   - firstname: Mark
     url: https://mjedmonds.com/
 
-"Fan":
+"fan":
   - firstname: "Lifeng"
     url: https://lifengfan.github.io/
 
-"Fang":
+"fang":
   - firstname: "Xiaolin"
     url: https://fang-xiaolin.github.io/
 
-"Gao":
+"gao":
   - firstname: "Jianfeng"
     url: https://www.microsoft.com/en-us/research/people/jfgao/
 
@@ -27,24 +27,24 @@
   - firstname: "Xiaofeng"
     url: https://xfgao.github.io/
 
-"Han":
+"han":
   - firstname: "Wenjuan"
     url: https://scholar.google.com/citations?user=rfVLLfAAAAAJ&hl=en
 
-"Huang":
-  - firstname: Gao
+"huang":
+  - firstname: ["Gao"]
     url: http://www.gaohuang.net/
   - firstname: Siyuan
     url: https://siyuanhuang.com/
 
-"Jia":
+"jia":
   - firstname: "Baoxiong"
     url: https://baoxiongjia.github.io/
 
   - firstname: Zixia
     url: https://jzxxx.github.io/
 
-"Li":
+"li":
   - firstname: "Fei-Fei"
     url: https://profiles.stanford.edu/fei-fei-li
 
@@ -60,115 +60,115 @@
   - firstname: "Zhuowan"
     url: https://lizw14.github.io/
 
-"Liang":
+"liang":
   - firstname: "Yitao"
     url: https://web.cs.ucla.edu/~yliang/
 
-"Lin":
+"lin":
   - firstname: "Zhouhan"
     url: https://hantek.github.io/
 
-"Liu":
+"liu":
   - firstname: "Hangxin"
     url: https://liuhx111.github.io/
 
-"Lu":
+"lu":
   - firstname: "Hongjing"
     url: https://www.psych.ucla.edu/faculty-page/hongjing/
 
-"Ma":
+"ma":
   - firstname: "Xiaojian"
     url: https://web.cs.ucla.edu/~xm/
 
-"Qi":
+"qi":
   - firstname: "Siyuan"
     url: https://web.cs.ucla.edu/~syqi/
 
-"Qiu":
+"qiu":
   - firstname: "Shuwen"
     url: https://janetalready.github.io/
 
-"Rossano":
+"rossano":
   - firstname: "Federico"
     url: https://scholar.google.com/citations?user=tkbxHjsAAAAJ&hl=en
 
-"Song":
+"song":
   - firstname: "Shiji"
     url: https://www.au.tsinghua.edu.cn/info/1075/3206.htm
 
-"Tu":
+"tu":
   - firstname: "Kewei"
     url: https://faculty.sist.shanghaitech.edu.cn/faculty/tukw/
 
-"Terzopoulos":
+"terzopoulos":
   - firstname: "Demetri"
     url: http://www.cs.ucla.edu/~dt/
 
-"Tuytelaars":
+"tuytelaars":
   - firstname: "Tinne"
     url: https://homes.esat.kuleuven.be/~tuytelaa/
 
-"Wan":
+"wan":
   - firstname: Bo
     url: http://plus.sist.shanghaitech.edu.cn/author/bo-wan/
 
-"Wang":
+"wang":
   - firstname: "Wenguan"
     url: https://sites.google.com/view/wenguanwang/
 
   - firstname: "Yuxuan"
     url: https://patrick-tssn.github.io/
 
-"Wu":
+"wu":
   - firstname: "Tong"
     url: https://wutong4012.github.io/
   - firstname: "Ying Nian"
     url: http://www.stat.ucla.edu/~ywu/research.html
 
-"Xie":
+"xie":
   - firstname: "Jianwen"
     url: http://www.stat.ucla.edu/~jxie/
 
-"Xu":
+"xu":
   - firstname: "Yifei"
     url: https://yfxu.me/
 
-"Yang":
+"yang":
   - firstname: Yaodong
     url: https://www.yangyaodong.com/
 
-"Yuan":
+"yuan":
   - firstname: Luyao
     url: https://yuanluya.github.io/
 
   - firstname: "Tao"
     url: https://ytyt.yt/
 
-"Yuille":
+"yuille":
   - firstname: "Alan"
     url: http://www.cs.jhu.edu/~ayuille/
 
-"Zhang":
+"zhang":
   - firstname: "Jing"
     url: https://jingzhang617.github.io/
   - firstname: "Muhan"
     url: https://muhanzhang.github.io/
 
-"Zhao":
+"zhao":
   - firstname: "Andrew"
     url: https://andrewzh112.github.io/
   - firstname: "Dongyan"
     url: https://www.wict.pku.edu.cn/zhaodongyan/en/
 
-"Zou":
+"zou":
   - firstname: Lei
     url: https://www.icst.pku.edu.cn/leizou/en/index.htm
 
-"Zhou":
+"zhou":
   - firstname: Bowen
     url: https://c3i.ee.tsinghua.edu.cn/en/author/bowen-zhou/
 
-"Zhu":
+"zhu":
   - firstname: "Song-Chun"
     url: http://www.stat.ucla.edu/~sczhu/
 

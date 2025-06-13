@@ -1,11 +1,9 @@
 ---
-layout: pub
+layout: publication
 type: article
-key: xie2021cycle
 title: >
      Learning Cycle-Consistent Cooperative Networks via Alternating MCMC Teaching for Unsupervised Cross-Domain Translation
-author: Xie, Jianwen and Zheng, Zilong and Fang, Xiaolin and Zhu, Song-Chun and Wu, Ying Nian
-equalauthor: Xie, Jianwen and Zheng, Zilong
+author: Xie*, Jianwen and Zheng*, Zilong and Fang, Xiaolin and Zhu, Song-Chun and Wu, Ying Nian
 abbr: AAAI'21
 img: CycleCoop/style_transfer.png
 pdf: https://ojs.aaai.org/index.php/AAAI/article/view/17249/17056
@@ -22,6 +20,6 @@ bibtex: >
         author={Xie, Jianwen and Zheng, Zilong and Fang, Xiaolin and Zhu, Song-Chun and Wu, Ying Nian},
         journal={The Thirty-Third AAAI Conference on Artificial Intelligence (AAAI)},
         year={2021}
-    } 
- 
+    }
+
 ---

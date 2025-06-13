@@ -1,7 +1,6 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
-key: icra20_tom
 title: >
     Joint Inference of States, Robot Knowledge, and Human (False-)Beliefs
 author: Yuan, Tao and Liu, Hangxin and Fan, Lifeng and Zheng, Zilong and Gao, Tao and Zhu, Yixin and Zhu, Song-Chun

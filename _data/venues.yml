@@ -1,31 +1,35 @@
-TPAMI:
-  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34
+"ICML":
+  name: International Conference on Machine Learning
+  type: proceedings
 
-ACL'21:
-  url: https://2021.aclweb.org/
+"NeurIPS":
+  name: Conference on Neural Information Processing Systems
+  type: proceedings
 
-CVPR'21:
-  url: http://cvpr2021.thecvf.com/
+"CVPR":
+  name: Conference on Computer Vision and Pattern Recognition
+  type: proceedings
 
-AAAI'22:
-  url: https://aaai.org/Conferences/AAAI-22/
-AAAI'21:
-  url: https://aaai.org/Conferences/AAAI-21/
+"ICLR":
+  name: International Conference on Learning Representations
+  type: proceedings
 
-AAAI'20:
-  url: https://aaai.org/Conferences/AAAI-20/
+"ACL":
+  name: Annual Meeting of the Association for Computational Linguistics
+  type: proceedings
 
-AAAI'19:
-  url: https://aaai.org/Conferences/AAAI-19/
+"EMNLP":
+  name: Conference on Empirical Methods in Natural Language Processing
+  type: proceedings
 
+"NAACL":
+  name: North American Chapter of the Association for Computational Linguistics
+  type: proceedings
 
-CVPR'19:
-  url: https://cvpr2019.thecvf.com/
+"COLING":
+  name: International Conference on Computational Linguistics
+  type: proceedings
 
-CVPR'18:
-  url: https://cvpr2018.thecvf.com/
-
-
-ICLR'22:
-  url: https://iclr.cc/
-
+"AAAI":
+  name: Association for the Advancement of Artificial Intelligence
+  type: article

@@ -1,5 +1,5 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 title: >
     MindAgent: Emergent Gaming Interaction

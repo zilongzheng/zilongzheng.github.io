@@ -1,10 +1,10 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 key: sharp
 title: >
     SHARP: Search-Based Adversarial Attack for Structured Prediction
-author: Zhang, Liwen and Jia, Zixia and Han, Wenjuan and Zheng, Zilong and Tu, Kewei
+author: Zhang, Liwen and Jia, Zixia and Han, Wenjuan and Zheng, Zilong and Tu#, Kewei
 abbr: NAACL'22
 booktitle: NAACL Findings
 year: 2022

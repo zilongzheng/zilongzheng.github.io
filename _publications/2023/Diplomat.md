@@ -1,12 +1,11 @@
 ---
-layout: pub
+layout: publication
 type: inproceedings
 title: >
     DiPlomat: A Dialogue Dataset for Situated Pragmatic Reasoning
-author: Li, Hengli and Zhu, Song-Chun and Zheng, Zilong
+author: Li, Hengli and Zhu, Song-Chun and Zheng#, Zilong
 arxiv: '2306.09030'
 abbr: NeurIPS'23
-correspondence: Zheng, Zilong
 website: https://diplomat-dataset.github.io/
 booktitle: NeurIPS D&B Track
 # booktitle: The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B Track)
@@ -21,5 +20,5 @@ bibtex: >
         author={Li, Hengli and Zhu, Song-Chun and Zheng, Zilong},
         booktitle={The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B 2023)},
         year={2023}
-    } 
+    }
 ---

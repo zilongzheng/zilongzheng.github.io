@@ -1,0 +1,16 @@
+<div class="publications">
+  <div class="alert alert-primary"><a href="{{ 'publications' | relative_url }}">SEE ALL PUBLICATIONS <i
+        class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+
+  <ol class="bibliography">
+    {% assign selected_publications = site.publications | where: "selected", "true" | group_by: "year" | sort: "name" %}
+    {% for year in selected_publications reversed %}
+      {% assign yearSorted = year.items | sort: "abbr" | reverse %}
+      {% if yearSorted.size > 0 %}
+        {% for publication in yearSorted %}
+            <li>{%  include bib.liquid key=publication.slug entry=publication %}</li>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </ol>
+</div>
