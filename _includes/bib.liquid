@@ -46,7 +46,7 @@
   <!-- Entry bib key -->
   <div id="{{ include.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ include.entry.title }}
+    <div class="title">{% if include.entry.show_details and include.entry.show_details == true %}<a href="{{ include.entry.id  }}" >{{ include.entry.title }}</a>{% else %}{{ include.entry.title }}{% endif %}
     {%- if include.entry.abbr -%}
       <span class="abbr">
       {%- if site.data.venues[include.entry.abbr] -%}
@@ -98,8 +98,8 @@
           {%- assign author_first_name = author_name_array.last | strip -%}
         {%- else -%}
           {%- assign author_name_array = author | split: " " -%}
-          {%- assign author_last_name = author_name_array[author_name_array.size-1] | strip | regex_replace: '[*∗†‡§¶‖&^#]', '' -%}
-          {%- assign author_last_html = author_name_array[author_name_array.size-1]| strip | regex_replace: '([*∗†‡§¶‖&^#]+)', '<sup>\1</sup>' -%}
+          {%- assign author_last_name = author_name_array.last | strip | regex_replace: '[*∗†‡§¶‖&^#]', '' -%}
+          {%- assign author_last_html = author_name_array.last| strip | regex_replace: '([*∗†‡§¶‖&^#]+)', '<sup>\1</sup>' -%}
           {%- assign author_first_name = author_name_array | slice: 0, author_name_array.size-1 | join: " " | strip -%}
         {%- endif -%}
           {% if site.scholar.last_name contains author_last_name %}

@@ -12,6 +12,7 @@ code: https://github.com/LeapLabTHU/Absolute-Zero-Reasoner
 website: https://andrewzh112.github.io/absolute-zero-reasoner/
 model: https://huggingface.co/collections/andrewzh/absolute-zero-reasoner-68139b2bca82afb00bc69e5b
 github_star: true
+show_details: true
 medias:
   - name: X
     url: https://x.com/_AndrewZhao/status/1919920459748909288

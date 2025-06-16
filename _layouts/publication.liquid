@@ -16,6 +16,20 @@ layout: default
 
 <div class="post">
   <header class="post-header">
+    <div class="flex justify-content-between align-items-center mt-2 mb-4" style="display: flex;">
+      <div class="flex align-items-center">
+        <span class="post-route"><a href="/publications/">PUBLICATION</a></span>
+        {% if page.abbr %}
+        &nbsp; <span class="post-meta">|</span> &nbsp;
+          <span class="post-route">{{ page.abbr }}</span>
+      {% endif %}
+        </div>
+    <div class="flex align-items-center">
+        <a class="mx-1" href="https://www.facebook.com/sharer/sharer.php?t={{ page.title | strip }}&u={{ page.url  | absolute_url }}" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a class="mx-1" href="https://x.com/intent/post?text={{ page.title | strip }}+{{ page.url  | absolute_url }}" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a class="mx-1" href="https://service.weibo.com/share/share.php?title={{ page.title | strip }}&url={{ page.url  | absolute_url }}" title="Weibo"><i class="fa-brands fa-weibo"></i></a>
+      </div>
+    </div>
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
       <div class="author">
@@ -75,29 +89,120 @@ layout: default
       </div>
       {% if page.meta %}• {{ page.meta }}{% endif %}
     </p>
-    <p class="post-tags">
-      <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
-      {% if tags != '' %}
-        &nbsp; &middot; &nbsp;
-        {% for tag in page.tags %}
-          <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
-          {% unless forloop.last %}
-            &nbsp;
-          {% endunless %}
-        {% endfor %}
+    <div class="post-perodical">
+    <p>
+    {% if page.journal %}
+        {% capture entrytype %}<span property="perodical">{{ page.journal }}</span>{% endcapture %}
+      {% elsif page.booktitle %}
+        {% capture entrytype %}<span property="perodical">{{ page.booktitle }}</span>{% endcapture %}
       {% endif %}
+      {% if page.month %}
+      {% capture entrymonth %}• {{ page.month | capitalize }}{% endcapture %}
+    {% endif %}
+      {% if page.year %}
+        {% capture entrydate %}{% if entrymonth != "" %}{{ entrymonth }}{% endif %}<span property="year">{{ page.year }}</span>{% endcapture %}
+      {% endif %}
+      {% assign entrytype_text = entrytype | strip_html | strip %}
+{{ entrytype }}{% if entrytype_text != "" and entrydate != "" %}&nbsp; &middot; &nbsp;{% endif %}{{ entrydate }}
+      {% if page.volume %}
+      &nbsp; &middot; &nbsp;<span property="volume">Vol {{ page.volume }}</span>
+      {% if page.number %}
+        <span property="number">({{ page.number }})</span>
+      {% endif %}
+      {% if page.issue %}
+        <span property="issue">, Issue {{ page.issue }}</span>
+      {% endif %}
+      {% if page.pages %}
+        <span property="pages">{{ page.pages }}</span>
+      {% endif %}
+    {% endif %}
+      {% if page.arxiv %}
+      {% capture entryurl %}<a href="http://arxiv.org/abs/{{ page.arxiv }}">arXiv: arxiv.org/abs/{{ page.arxiv }}</a>{% endcapture %}
+      {% elsif page.doi %}
+      {% capture entryurl %}<a href="https://doi.org/{{ page.doi }}">DOI: {{ page.doi }}</a>{% endcapture %}
+      {% endif %}
+          {% if entryurl and entryurl != "" %}
+            &nbsp; &middot; &nbsp;{{ entryurl }}
+          {% endif %}
+      </p>
+      <p class="post-tags">
+        {% if tags != '' %}
+          {% for tag in page.tags %}
+            <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
+            {% unless forloop.last %}
+              &nbsp;
+            {% endunless %}
+          {% endfor %}
+        {% endif %}
 
-      {% if categories != '' %}
-        &nbsp; &middot; &nbsp;
-        {% for category in page.categories %}
-            <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
-          {% unless forloop.last %}
-            &nbsp;
-          {% endunless %}
+        {% if categories != '' %}
+          {% for category in page.categories %}
+              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
+            {% unless forloop.last %}
+              &nbsp;
+            {% endunless %}
+          {% endfor %}
+        {% endif %}
+      </p>
+    <div class="links">
+      {% if page.pdf %}
+        {% if page.pdf contains '://' %}
+          <a href="{{ page.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+        {% else %}
+          <a href="{{ page.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+        {% endif %}
+      {% endif %}
+      {% if page.supp %}
+        {% if page.supp contains '://' %}
+          <a href="{{ page.supp }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
+        {% else %}
+          <a href="{{ page.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
+        {% endif %}
+      {% endif %}
+      {% if page.video and site.enable_video_embedding %}
+        <a class="abstract btn btn-sm z-depth-0" role="button">Video</a>
+      {% elsif page.video %}
+        <a href="{{ page.video }}" class="btn btn-sm z-depth-0" role="button">Video</a>
+      {% endif %}
+      {% if page.blog %}
+        <a href="{{ page.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
+      {% endif %}
+      {% if page.code %}
+        <a href="{{ page.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+      {% endif %}
+      {% if page.poster %}
+        {% if page.poster contains '://' %}
+          <a href="{{ page.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+        {% else %}
+          <a href="{{ page.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
+        {% endif %}
+      {% endif %}
+      {% if page.slides %}
+        {% if page.slides contains '://' %}
+          <a href="{{ page.slides }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+        {% else %}
+          <a href="{{ page.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
+        {% endif %}
+      {% endif %}
+      {% if page.website %}
+        <a href="{{ page.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+      {% endif %}
+      {% if page.model %}
+        <a href="{{ page.model }}" class="btn btn-sm z-depth-0" role="button">Model</a>
+      {% endif %}
+      {% if page.data %}
+        <a href="{{ page.data }}" class="btn btn-sm z-depth-0" role="button">Data</a>
+      {% endif %}
+      {% if page.medias %}
+        {% for media in page.medias %}
+          <a href="{{ media.url }}" class="btn btn-sm z-depth-0" role="button">{{ media.name }}</a>
         {% endfor %}
       {% endif %}
+    </div>
     </p>
   </header>
+
+  <hr>
 
   <article class="post-content">
     {% if page.toc and page.toc.beginning %}
@@ -108,7 +213,7 @@ layout: default
     {% endif %}
     <div id="markdown-content">
     {% if page.abstract %}
-    {{ "## Abstract" | markdownify }}
+    {{ "### Abstract" | markdownify }}
     {{ page.abstract | markdownify }}
     {% endif %}
 
@@ -116,8 +221,13 @@ layout: default
     </div>
   </article>
 
-  {% if page.citation %}
-    {% include citation.liquid %}
+  {% if page.bibtex %}
+<h3 id="citation">Citation</h3>
+
+    {% capture citation_code -%}```bibtex
+{{ page.bibtex | strip }}
+```{%- endcapture %}
+    {{ citation_code | markdownify }}
   {% endif %}
 
   {% if page.related_publications %}

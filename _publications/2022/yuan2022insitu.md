@@ -1,11 +1,10 @@
 ---
 layout: publication
 type: journal
-key: bidirectional22scirob
 title: >
     In situ bidirectional human-robot value alignment
-author: Yuan*#, Luyao and Gao*, Xiaofeng and Zheng*, Zilong and Edmonds, Mark and Wu, Ying Nian and Rossano, Federico and Lu#, Hongjing and Zhu#, Yixin and Zhu#, Song-Chun
-website: https://yzhu.io/publication/teaming2022scirob/
+author: Yuan*#, Luyao and Gao*, Xiaofeng and Zheng*, Zilong and Edmonds#, Mark and Wu, Ying Nian and Rossano, Federico and Lu#, Hongjing and Zhu#, Yixin and Zhu#, Song-Chun
+website: publications/2022/yuan2022insitu/
 abbr: ScienceRobotics
 journal: Science Robotics
 supp: https://www.science.org/action/downloadSupplement?doi=10.1126%2Fscirobotics.abm4183&file=scirobotics.abm4183_sm.pdf
@@ -13,6 +12,15 @@ video: https://vimeo.com/730025438
 code: https://doi.org/10.5068/D1XT3V
 year: 2022
 selected: true
+altmetric: "132382219"
+volume: 7
+issue: 68
+doi: 10.1126/scirobotics.abm4183
+tags:
+    - XAI
+    - Value Alignment
+    - Human-Robot Collaboration
+show_details: true
 medias:
     - name: TechXplore
       url: https://techxplore.com/news/2022-08-ai-paradigm-human-robot-collaboration.html
@@ -35,3 +43,9 @@ bibtex: >
         eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.abm4183}
     }
 ---
+
+
+<div class="figure-block">
+<img src="/assets/img/projects/yuan2022insitu/teaser.webp" width="300px"/>
+<figcaption>Illustration of human-robot value alignment. Image credit: Mrs. Zhen Chen.</figcaption>
+</div>
