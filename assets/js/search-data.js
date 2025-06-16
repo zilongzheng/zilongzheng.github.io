@@ -79,6 +79,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-will-be-serving-as-senior-area-chair-for-emnlp",
           title: 'I will be serving as Senior Area Chair for EMNLP.',
           description: "",
+          section: "News",},{id: "news-in-context-value-alignment-and-navi2gaze-are-accepted-to-iros-25-for-oral-presentations",
+          title: 'In-context Value Alignment and Navi2Gaze are accepted to IROS’25 for Oral Presentations!',
+          description: "",
           section: "News",},{id: "publications-energy-based-generative-cooperative-saliency-prediction",
           title: 'Energy-Based Generative Cooperative Saliency Prediction',
           description: "",
@@ -108,7 +111,7 @@ ninja.data = [{
           title: 'In situ bidirectional human-robot value alignment',
           description: "",
           section: "Publications",handler: () => {
-              window.location.href = "/publications/2022/bidirectional22scirob/";
+              window.location.href = "/publications/2022/yuan2022insitu/";
             },},{id: "publications-diplomat-a-dialogue-dataset-for-situated-pragmatic-reasoning",
           title: 'DiPlomat: A Dialogue Dataset for Situated Pragmatic Reasoning',
           description: "",
@@ -279,6 +282,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/kang2025values/";
+            },},{id: "publications-in-situ-value-aligned-human-robot-interactions-with-physical-constraints",
+          title: 'In-situ Value-aligned Human-Robot Interactions with Physical Constraints',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/li2025iclhf/";
             },},{id: "publications-seek-in-the-dark-reasoning-via-test-time-instance-level-policy-gradient-in-latent-space",
           title: 'Seek in the Dark: Reasoning via Test-Time Instance-Level Policy Gradient in Latent Space...',
           description: "",
@@ -334,6 +342,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/zheng2025mcu/";
+            },},{id: "publications-navi2gaze-leveraging-foundation-models-for-navigation-and-target-gazing",
+          title: 'Navi2Gaze: Leveraging Foundation Models for Navigation and Target Gazing',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/zhu2025navi2gaze/";
             },},{id: "publications-how-to-synthesize-text-data-without-model-collapse",
           title: 'How to Synthesize Text Data without Model Collapse?',
           description: "",
