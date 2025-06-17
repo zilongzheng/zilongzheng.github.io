@@ -1,0 +1,20 @@
+{% assign have_related_publications = false %}
+{% for post in include.related_publications %}
+  {% unless have_related_publications %}
+    {% assign have_related_publications = true %}
+    <br>
+    <hr>
+    <br>
+    <ul class="list-disc pl-8"></ul>
+
+    <!-- Adds related posts to the end of an article -->
+    <h3 class="text-3xl font-semibold mb-4 mt-12">Related Publications</h3>
+  {% endunless %}
+
+  {% assign publication = site.publications | where_exp: "publication", "publication.slug == post" | first %}
+  {% if publication %}
+  <li class="my-2">
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ publication.url | relative_url }}">{{ publication.title }}</a>
+  </li>
+  {% endif %}
+{% endfor %}

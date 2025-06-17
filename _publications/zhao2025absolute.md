@@ -30,4 +30,20 @@ bibtex: >
           primaryClass={cs.LG},
           url={https://arxiv.org/abs/2505.03335},
     }
+related_publications:
+  - li2025latentseek
 ---
+
+### Out-of-Distribution General Reasoning Performance
+
+<div class="figure-block">
+<img src="{{ "/assets/img/projects/zhao2025absolute/azr_teaser.jpg" }}" />
+<figcaption>Absolute Zero Reasoner achieves state-of-the-art performance with <span class="highlight">ZERO DATA</span>. Without relying on any gold labels or human-defined queries, our Absolute Zero Reasoner trained using our proposed self-play approach demonstrates remarkable out-of-distribution reasoning capabilities, even outperforming models trained on tens of thousands of expert-labeled in-domain examples.</figcaption>
+</div>
+
+### Absolute Zero Reasoner
+
+<div class="figure-block">
+<img src="{{ "/assets/img/projects/zhao2025absolute/azr.png" }}" />
+<figcaption>Absolute Zero Reasoner Training Overview. At every iteration, Absolute Zero Reasoner first PROPOSES a batch of tasks, conditioned on past self-generated triplets stored in a buffer and a particular task type: abduction, deduction, or induction. From these generated tasks, Python is used to filter and construct valid code-based reasoning questions. A learnability reward $r_{\rm propose}$ is also calculated for each proposed task. The Absolute Zero Reasoner then SOLVES the batch of reasoning questions. Python is used again to verify the generated responses and compute the accuracy reward $r_{\rm resolve}$. Finally, the Absolute Zero Reasoner is jointly updated using both $r_{\rm propose}$ and $r_{\rm resolve}$ across all three task types, using TRR++.</figcaption>
+</div>

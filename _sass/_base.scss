@@ -976,6 +976,11 @@ html.transition *:after {
     margin-bottom: 0;
   }
 
+  .highlight {
+    color: var(--global-award-bg-color);
+    font-weight: 500;
+  }
+
   .post-content {
     text-align: justify;
 
