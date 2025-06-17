@@ -14,7 +14,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/publications";
+            window.location.href = "/publications/";
           },
         },{id: "news-one-paper-is-accepted-to-iclr-22-as-an-oral-paper",
           title: 'One paper is accepted to ICLR’22 as an Oral paper!',
