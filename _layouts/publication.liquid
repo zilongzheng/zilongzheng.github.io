@@ -43,12 +43,12 @@ layout: default
             {%- assign author_first_name = author_name_array.last | strip -%}
           {%- else -%}
             {%- assign author_name_array = author | split: " " -%}
-            {%- assign author_last_name = author_name_array[author_name_array.size-1] | strip | regex_replace: '[*∗†‡§¶‖&^#]', '' -%}
-            {%- assign author_last_html = author_name_array[author_name_array.size-1]| strip | regex_replace: '([*∗†‡§¶‖&^#]+)', '<sup>\1</sup>' -%}
+            {%- assign author_last_name = author_name_array.last | strip | regex_replace: '[*∗†‡§¶‖&^#]', '' -%}
+            {%- assign author_last_html = author_name_array.last| strip | regex_replace: '([*∗†‡§¶‖&^#]+)', '<sup>\1</sup>' -%}
             {%- assign author_first_name = author_name_array | slice: 0, author_name_array.size-1 | join: " " | strip -%}
           {%- endif -%}
-            {% if site.scholar.last_name contains author_last_name %}
-            {% if site.scholar.first_name contains author_first_name %}
+            {% if site.last_name contains author_last_name %}
+            {% if site.first_name contains author_first_name %}
               {% assign author_is_self = true %}
             {% endif %}
           {%- endif -%}
@@ -91,14 +91,16 @@ layout: default
     </p>
     <div class="post-perodical">
     <p>
-    {% if page.journal %}
+      {% if page.journal %}
         {% capture entrytype %}<span property="perodical">{{ page.journal }}</span>{% endcapture %}
       {% elsif page.booktitle %}
         {% capture entrytype %}<span property="perodical">{{ page.booktitle }}</span>{% endcapture %}
+      {% elsif page.venue %}
+        {% capture entrytype %}<span property="perodical">{{ page.venue }}</span>{% endcapture %}
       {% endif %}
       {% if page.month %}
-      {% capture entrymonth %}• {{ page.month | capitalize }}{% endcapture %}
-    {% endif %}
+        {% capture entrymonth %}• {{ page.month | capitalize }}{% endcapture %}
+      {% endif %}
       {% if page.year %}
         {% capture entrydate %}{% if entrymonth != "" %}{{ entrymonth }}{% endif %}<span property="year">{{ page.year }}</span>{% endcapture %}
       {% endif %}
@@ -222,6 +224,9 @@ layout: default
   </article>
 
   {% if page.bibtex %}
+    <br>
+    <hr>
+    <br>
 <h3 id="citation">Citation</h3>
 
     {% capture citation_code -%}```bibtex

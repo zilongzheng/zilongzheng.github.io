@@ -102,8 +102,8 @@
           {%- assign author_last_html = author_name_array.last| strip | regex_replace: '([*∗†‡§¶‖&^#]+)', '<sup>\1</sup>' -%}
           {%- assign author_first_name = author_name_array | slice: 0, author_name_array.size-1 | join: " " | strip -%}
         {%- endif -%}
-          {% if site.scholar.last_name contains author_last_name %}
-          {% if site.scholar.first_name contains author_first_name %}
+          {% if site.last_name == author_last_name %}
+          {% if site.first_name == author_first_name %}
             {% assign author_is_self = true %}
           {% endif %}
         {%- endif -%}

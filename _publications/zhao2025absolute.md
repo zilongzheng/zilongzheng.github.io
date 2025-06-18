@@ -32,6 +32,7 @@ bibtex: >
     }
 related_publications:
   - li2025latentseek
+  - zhao2025diverct
 ---
 
 ### Out-of-Distribution General Reasoning Performance

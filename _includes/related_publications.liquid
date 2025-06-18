@@ -3,8 +3,6 @@
   {% unless have_related_publications %}
     {% assign have_related_publications = true %}
     <br>
-    <hr>
-    <br>
     <ul class="list-disc pl-8"></ul>
 
     <!-- Adds related posts to the end of an article -->
@@ -14,7 +12,21 @@
   {% assign publication = site.publications | where_exp: "publication", "publication.slug == post" | first %}
   {% if publication %}
   <li class="my-2">
-      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ publication.url | relative_url }}">{{ publication.title }}</a>
+    {% assign author_array = publication.author | split: 'and' %}
+    {% assign first_author = author_array | first %}
+    {% if first_author %}
+      {% if first_author contains "," %}
+        {%  assign first_author_lastname = first_author | split: ',' | first | strip %}
+      {% else %}
+        {% assign first_author_lastname = first_author | split: ' ' | last | strip %}
+      {% endif %}
+    {% endif %}
+      {% if first_author_lastname and author_array.size >= 3 %}
+      {{ first_author_lastname | strip | regex_replace: '([*∗†‡§¶‖&^#]+)', '' }} <em>et al.</em>,
+      {% else %}
+        {{ publication.author | strip | regex_replace: '([*∗†‡§¶‖&^#]+)', '<sup>\1</sup>'  }}
+      {% endif %}
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="{{ publication.url | relative_url }}">{{ publication.title | strip }}</a>, {% if publication.preprint %} arXiv{% elsif publication.venue %}in {{ publication.venue }}{% elsif publication.journal %}{{ publication.journal }}{% elsif publication.booktitle %}in {{ publication.booktitle }}{% endif %}, {% if publication.year %}{{ publication.year }}{% else %}unknown year{% endif %}.
   </li>
   {% endif %}
 {% endfor %}

@@ -8,6 +8,7 @@ arxiv: 2505.13308
 year: 2025
 preprint: true
 selected: true
+show_details: true
 code: https://github.com/bigai-nlco/LatentSeek
 website: https://bigai-nlco.github.io/LatentSeek/
 abstract: >
@@ -22,4 +23,12 @@ bibtex: >
           primaryClass={cs.LG},
           url={https://arxiv.org/abs/2505.13308},
     }
+related_publications:
+    - zhao2025absolute
+    - zhang2025amulet
 ---
+
+<div class="figure-block">
+<img src="{{ "/assets/img/projects/li2025latentseek/latentseek.jpg" }}" />
+<figcaption>Figure 1. <span style="font-weight: 400">Comparison of LatentSeek with RL-based fine-tuning and Prompt Engineering.</span> RL-based fine-tuning methods generally require iterative updates to model parameters guided by reward signals. Prompt engineering approaches depend heavily on manually designed prompts. In contrast, LatentSeek performs optimization within the latent space.</figcaption>
+</div>
