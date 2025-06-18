@@ -157,16 +157,6 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/2024/MultiTaskPartialLabel/";
-            },},{id: "publications-efficient-temporal-extrapolation-of-multimodal-large-language-models-with-temporal-grounding-bridge-for-long-video-understanding",
-          title: 'Efficient Temporal Extrapolation of Multimodal Large Language Models with Temporal Grounding Bridge for...',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/2024/VideoTGB/";
-            },},{id: "publications-jarvis-1-open-world-multi-task-agents-with-memory-augmented-multimodal-language-models",
-          title: 'JARVIS-1: Open-world Multi-task Agents with Memory-Augmented Multimodal Language Models',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/2024/jarvis-1/";
             },},{id: "publications-langsuit-e-controlling-planning-and-interacting-with-large-language-models-in-embodied-text-environments",
           title: 'LangSuit⋅E: Controlling, Planning, and Interacting with Large Language Models in Embodied Text Environments...',
           description: "",
@@ -201,7 +191,17 @@ ninja.data = [{
           title: 'ExoViP: Step-by-step Verification and Exploration with Exoskeleton Modules for Compositional Visual Reasoning',
           description: "",
           section: "Publications",handler: () => {
-              window.location.href = "/publications/2024/wang2024ExoVip/";
+              window.location.href = "/publications/2024/wang2024exovip/";
+            },},{id: "publications-jarvis-1-open-world-multi-task-agents-with-memory-augmented-multimodal-language-models",
+          title: 'JARVIS-1: Open-world Multi-task Agents with Memory-Augmented Multimodal Language Models',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2024/wang2024jarvis1/";
+            },},{id: "publications-efficient-temporal-extrapolation-of-multimodal-large-language-models-with-temporal-grounding-bridge-for-long-video-understanding",
+          title: 'Efficient Temporal Extrapolation of Multimodal Large Language Models with Temporal Grounding Bridge for...',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2024/wang2024videotgb/";
             },},{id: "publications-an-efficient-recipe-for-long-context-extension-via-middle-focused-positional-encoding",
           title: 'An Efficient Recipe for Long Context Extension via Middle-Focused Positional Encoding',
           description: "",
@@ -302,6 +302,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/lin2025converting/";
+            },},{id: "publications-rulereasoner-reinforced-rule-based-reasoning-via-domain-aware-dynamic-sampling",
+          title: 'RuleReasoner: Reinforced Rule-based Reasoning via Domain-aware Dynamic Sampling',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/liu2025rulereasoner/";
             },},{id: "publications-probing-and-inducing-combinational-creativity-in-vision-language-models",
           title: 'Probing and Inducing Combinational Creativity in Vision-Language Models',
           description: "",
@@ -322,16 +327,16 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/wu2025tokenswift/";
+            },},{id: "publications-amulet-realignment-during-test-time-for-personalized-preference-adaptation-of-llms",
+          title: 'Amulet: ReAlignment During Test Time for Personalized Preference Adaptation of LLMs',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/zhang2025amulet/";
             },},{id: "publications-absolute-zero-reinforced-self-play-reasoning-with-zero-data",
           title: 'Absolute Zero: Reinforced Self-play Reasoning with Zero Data',
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/zhao2025absolute/";
-            },},{id: "publications-amulet-realignment-during-test-time-for-personalized-preference-adaptation-of-llms",
-          title: 'Amulet: ReAlignment During Test Time for Personalized Preference Adaptation of LLMs',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/zhao2025amulet/";
             },},{id: "publications-diver-ct-diversity-enhanced-red-teaming-large-language-model-assistants-with-relaxing-constraints",
           title: 'DiveR-CT: Diversity-enhanced Red Teaming Large Language Model Assistants with Relaxing Constraints',
           description: "",
