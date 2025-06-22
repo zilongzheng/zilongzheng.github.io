@@ -1,6 +1,6 @@
 <div class="publications">
-  <div class="alert alert-primary"><a href="{{ 'publications' | relative_url }}">SEE ALL PUBLICATIONS <i
-        class="fas fa-angle-right" aria-hidden="true"></i></a></div>
+  <a href="{{ 'publications' | relative_url }}"><div class="router">SEE ALL PUBLICATIONS <i
+        class="fas fa-angle-right" aria-hidden="true"></i></div></a>
 
   <ol class="bibliography">
     {% assign selected_publications = site.publications | where: "selected", "true" | group_by: "year" | sort: "name" %}

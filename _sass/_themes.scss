@@ -25,6 +25,8 @@
   --global-newsletter-bg-color: #{$white-color};
   --global-newsletter-text-color: #{$black-color};
   --global-award-bg-color: #{$bigai-red-color};
+  --global-shadow-color: rgba(0, 0, 0, 0.2);
+  --global-shadow-color-active: rgba(0, 0, 0, 0.5);
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -78,8 +80,8 @@ html[data-theme="dark"] {
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
+  --global-theme-color: #{$mint-color};
+  --global-hover-color: #{$mint-color};
   --global-hover-text-color: #{$white-color};
   --global-footer-bg-color: #{$grey-color-light};
   --global-footer-text-color: #{$grey-color-dark};
@@ -87,11 +89,14 @@ html[data-theme="dark"] {
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
-  --global-back-to-top-bg-color: rgba(255, 255, 255, 0.5);
+  --global-back-to-top-bg-color: rgba(255, 255, 255, 0.845);
+  --global-shadow-color: rgba(209, 209, 209, 0.8);
+  --global-shadow-color-active: rgba(209, 209, 209, 1.0);
 
   --global-back-to-top-text-color: #{$black-color};
   --global-newsletter-bg-color: #{$grey-color-light};
   --global-newsletter-text-color: #{$grey-color-dark};
+  --global-award-bg-color: #{$bigai-red-color-light};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
