@@ -82,6 +82,9 @@ ninja.data = [{
           section: "News",},{id: "news-in-context-value-alignment-and-navi2gaze-are-accepted-to-iros-25-for-oral-presentations",
           title: 'In-context Value Alignment and Navi2Gaze are accepted to IROS’25 for Oral Presentations!',
           description: "",
+          section: "News",},{id: "news-videollamb-is-accepted-to-iccv-2025-congratulations-to-yuxuan-and-yiqi",
+          title: 'VideoLLaMB is accepted to ICCV 2025. Congratulations to Yuxuan and Yiqi!',
+          description: "",
           section: "News",},{id: "publications-energy-based-generative-cooperative-saliency-prediction",
           title: 'Energy-Based Generative Cooperative Saliency Prediction',
           description: "",
@@ -147,26 +150,26 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/2023/vstar/";
-            },},{id: "publications-varying-sentence-representations-via-condition-specified-routers",
-          title: 'Varying Sentence Representations via Condition-Specified Routers',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/2024/EMNLP24-CSR/";
             },},{id: "publications-combining-supervised-learning-and-reinforcement-learning-for-multi-label-classification-tasks-with-partial-labels",
           title: 'Combining Supervised Learning and Reinforcement Learning for Multi-Label Classification Tasks with Partial Labels...',
           description: "",
           section: "Publications",handler: () => {
-              window.location.href = "/publications/2024/MultiTaskPartialLabel/";
+              window.location.href = "/publications/2024/jia2024combining/";
             },},{id: "publications-langsuit-e-controlling-planning-and-interacting-with-large-language-models-in-embodied-text-environments",
           title: 'LangSuit⋅E: Controlling, Planning, and Interacting with Large Language Models in Embodied Text Environments...',
           description: "",
           section: "Publications",handler: () => {
-              window.location.href = "/publications/2024/langsuite/";
+              window.location.href = "/publications/2024/jia2024langsuite/";
             },},{id: "publications-loogle-can-long-context-language-models-understand-long-contexts",
           title: 'LooGLE: Can Long-Context Language Models Understand Long Contexts?',
           description: "",
           section: "Publications",handler: () => {
-              window.location.href = "/publications/2024/loogle/";
+              window.location.href = "/publications/2024/li2024loogle/";
+            },},{id: "publications-varying-sentence-representations-via-condition-specified-routers",
+          title: 'Varying Sentence Representations via Condition-Specified Routers',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2024/lin2024csr/";
             },},{id: "publications-mindagent-emergent-gaming-interaction",
           title: 'MindAgent: Emergent Gaming Interaction',
           description: "",
@@ -177,11 +180,6 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/2024/minddial/";
-            },},{id: "publications-boosting-llm-agents-with-recursive-contemplation-for-effective-deception-handling",
-          title: 'Boosting LLM Agents with Recursive Contemplation for Effective Deception Handling',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/2024/recon/";
             },},{id: "publications-mars-situated-inductive-reasoning-in-an-open-world-environment",
           title: 'Mars: Situated Inductive Reasoning in an Open-World Environment',
           description: "",
@@ -197,6 +195,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/2024/wang2024jarvis1/";
+            },},{id: "publications-boosting-llm-agents-with-recursive-contemplation-for-effective-deception-handling",
+          title: 'Boosting LLM Agents with Recursive Contemplation for Effective Deception Handling',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2024/wang2024recon/";
             },},{id: "publications-efficient-temporal-extrapolation-of-multimodal-large-language-models-with-temporal-grounding-bridge-for-long-video-understanding",
           title: 'Efficient Temporal Extrapolation of Multimodal Large Language Models with Temporal Grounding Bridge for...',
           description: "",
@@ -322,6 +325,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/wang2025omnimmi/";
+            },},{id: "publications-videollamb-long-context-video-understanding-with-recurrent-memory-bridges",
+          title: 'VideoLLaMB: Long-context Video Understanding with Recurrent Memory Bridges',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/wang2025videollamb/";
             },},{id: "publications-lossless-acceleration-of-ultra-long-sequence-generation",
           title: 'Lossless Acceleration of Ultra Long Sequence Generation',
           description: "",
