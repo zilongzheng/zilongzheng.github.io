@@ -61,10 +61,25 @@
       <d-title>
         <h1>{{ page.title }}</h1>
         <p>{{ page.description }}</p>
-      </d-title>
-      {% if page.authors %}
-        <d-byline></d-byline>
-      {% endif %}
+        <p class="d-meta">
+          {% if page.date %}
+            Date: <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %d, %Y' }}</time>
+            {% endif %}
+            {% assign read_time = page.content | number_of_words | divided_by: 180 | plus: 1 %}
+            {% if read_time %}
+              &nbsp;|&nbsp; Estimated Reading time: {{ read_time }} min
+            {% endif %}
+            {% if page.authors %}
+              &nbsp;|&nbsp; Author{% if page.authors.size > 1 %}s{% endif %}: 
+              {% for author in page.authors %}
+                <span class="d-author">
+                  <a href="{{ author.url | default: '#' }}">{{ author.name }}</a>
+                  {% if forloop.last == false %}, {% endif %}
+                </span>
+              {% endfor %}
+            {% endif %}      
+        </p>
+        </d-title>
 
       <d-article>
         {% if page.toc %}
@@ -95,8 +110,8 @@
         <d-footnote-list></d-footnote-list>
         <d-citation-list></d-citation-list>
       </d-appendix>
-
-      <d-bibliography src="{{ page.bibliography | prepend: '/assets/bibliography/' | relative_url }}"></d-bibliography>
+      
+      <d-bibliography src="{{ page.bibliography | prepend: page.url | prepend: "/assets/" | relative_url }}"></d-bibliography>
 
       {% if site.disqus_shortname and page.disqus_comments %}{% include disqus.liquid %}{% endif %}
       {% if site.giscus.repo and page.giscus_comments %}
