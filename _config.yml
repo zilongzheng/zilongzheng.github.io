@@ -88,6 +88,8 @@ blog_description: a simple whitespace theme for academics
 permalink: /posts/:year/:title/
 lsi: false # produce an index for related posts
 
+cv: /assets/pdf/Zilong_CV.pdf
+
 # Pagination
 pagination:
   enabled: true

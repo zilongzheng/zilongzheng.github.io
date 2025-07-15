@@ -109,6 +109,13 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+          {% if site.cv %}
+            <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
+              <a class="nav-link" href="{{ site.cv | relative_url }}" style="text-transform: capitalize;">
+                CV
+              </a>
+            </li>
+          {% endif %}
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">
