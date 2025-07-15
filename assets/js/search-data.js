@@ -330,8 +330,8 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/wang2025videollamb/";
-            },},{id: "publications-lossless-acceleration-of-ultra-long-sequence-generation",
-          title: 'Lossless Acceleration of Ultra Long Sequence Generation',
+            },},{id: "publications-tokenswift-lossless-acceleration-of-ultra-long-sequence-generation",
+          title: 'TokenSwift: Lossless Acceleration of Ultra Long Sequence Generation',
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/wu2025tokenswift/";
