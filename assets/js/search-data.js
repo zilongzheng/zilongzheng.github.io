@@ -76,14 +76,20 @@ ninja.data = [{
           section: "News",},{id: "news-fire-three-papers-on-bidirectional-llm-encoder-reflectevo-meta-reflection-learning-and-causal-value-steering-are-accepted-to-acl-25-one-paper-on-combinational-creativity-in-vlms-is-accepted-to-cogsci-25-for-oral-presentation-congratulations-to-ziyong-jiaqi-yipeng-and-yongqian",
           title: ':fire: Three papers on bidirectional LLM Encoder, ReflectEvo (Meta Reflection Learning) and Causal...',
           description: "",
-          section: "News",},{id: "news-i-will-be-serving-as-senior-area-chair-for-emnlp",
-          title: 'I will be serving as Senior Area Chair for EMNLP.',
+          section: "News",},{id: "news-i-will-be-serving-as-senior-area-chair-for-emnlp-2025",
+          title: 'I will be serving as Senior Area Chair for EMNLP 2025.',
           description: "",
           section: "News",},{id: "news-in-context-value-alignment-and-navi2gaze-are-accepted-to-iros-25-for-oral-presentations",
           title: 'In-context Value Alignment and Navi2Gaze are accepted to IROS’25 for Oral Presentations!',
           description: "",
           section: "News",},{id: "news-videollamb-is-accepted-to-iccv-2025-congratulations-to-yuxuan-and-yiqi",
           title: 'VideoLLaMB is accepted to ICCV 2025. Congratulations to Yuxuan and Yiqi!',
+          description: "",
+          section: "News",},{id: "news-fire-three-papers-on-moe-routers-routerlens-reinforced-query-reasoners-for-deep-retrieval-tongsearch-new-preference-optimization-formula-with-utility-anchors-uapo-are-accepted-to-emnlp-2025",
+          title: ':fire: Three papers on MoE routers (RouterLens), reinforced query reasoners for deep retrieval...',
+          description: "",
+          section: "News",},{id: "news-i-will-be-serving-as-area-chair-for-iclr-2026",
+          title: 'I will be serving as Area Chair for ICLR 2026.',
           description: "",
           section: "News",},{id: "publications-energy-based-generative-cooperative-saliency-prediction",
           title: 'Energy-Based Generative Cooperative Saliency Prediction',
@@ -210,6 +216,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/2024/wu2024cream/";
+            },},{id: "publications-understanding-and-leveraging-the-expert-specialization-of-context-faithfulness-in-mixture-of-experts-llms",
+          title: 'Understanding and Leveraging the Expert Specialization of Context Faithfulness in Mixture-of-Experts LLMs',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/bai2025routerlens/";
             },},{id: "publications-learning-descriptor-networks-for-3d-shape-synthesis-and-analysis",
           title: 'Learning Descriptor Networks for 3D Shape Synthesis and Analysis',
           description: "",
@@ -320,11 +331,21 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/qi2025ice/";
+            },},{id: "publications-reinforced-query-reasoners-for-reasoning-intensive-retrieval-tasks",
+          title: 'Reinforced Query Reasoners for Reasoning-intensive Retrieval Tasks',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/qin2025rqr/";
             },},{id: "publications-omnimmi-a-comprehensive-multi-modal-interaction-benchmark-in-streaming-video-contexts",
           title: 'OmniMMI: A Comprehensive Multi-modal Interaction Benchmark in Streaming Video Contexts',
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/wang2025omnimmi/";
+            },},{id: "publications-adaptive-preference-optimization-with-uncertainty-aware-utility-anchor",
+          title: 'Adaptive Preference Optimization with Uncertainty-aware Utility Anchor',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/wang2025uapo/";
             },},{id: "publications-videollamb-long-context-video-understanding-with-recurrent-memory-bridges",
           title: 'VideoLLaMB: Long-context Video Understanding with Recurrent Memory Bridges',
           description: "",
@@ -384,7 +405,7 @@ ninja.data = [{
         title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://github.com/zilongzheng", "_blank");
+          window.open("https://github.com/bigai-nlco", "_blank");
         },
       },{
         id: 'social-linkedin',
