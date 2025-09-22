@@ -6,7 +6,7 @@ title: >
 author: Lin, Ziyong and Wang, Quansen and Jia#, Zixia and Zheng#, Zilong
 abbr: EMNLP'24
 pdf: https://aclanthology.org/2024.emnlp-main.963.pdf
-booktitle: EMNLP
+venue: EMNLP
 # arxiv: 2311.07314
 code: https://github.com/bigai-nlco/CSR
 year: 2024

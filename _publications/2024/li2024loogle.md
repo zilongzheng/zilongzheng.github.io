@@ -5,9 +5,9 @@ title: >
     LooGLE: Can Long-Context Language Models Understand Long Contexts?
 author: Li, Jiaqi and Wang, Mengmeng and Zheng#, Zilong and Zhang#, Muhan
 year: 2024
-# booktitle: >
+# venue: >
 #     Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL
-booktitle: ACL
+venue: ACL
 arxiv: 2311.04939
 selected: false
 abbr: ACL'24

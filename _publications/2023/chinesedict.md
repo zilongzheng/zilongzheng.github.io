@@ -5,8 +5,8 @@ title: >
     Shuo&#772; We&#769;n Jie&#780; Zi&#768;: Rethinking Dictionaries and Glyphs for Chinese Language Pre-training
 author: Wang, Yuxuan and Wang, Jianghui and Zhao#, Dongyan and Zheng#, Zilong
 abbr: ACL'23
-# booktitle: Findings of the 61st Annual Meeting of the Association for Computational Linguistics (ACL-Findings)
-booktitle: ACL Findings
+# venue: Findings of the 61st Annual Meeting of the Association for Computational Linguistics (ACL-Findings)
+venue: ACL Findings
 year: 2023
 arxiv: 2305.18760
 code: https://github.com/patrick-tssn/cdbert

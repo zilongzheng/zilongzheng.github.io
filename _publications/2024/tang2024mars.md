@@ -6,10 +6,10 @@ title: >
 author: Tang, Xiaojuan and Li, Jiaqi and Liang, Yitao and Zhang#, Muhan and Zheng#, Zilong
 abbr: NeurIPS'24
 website: https://marscrafter.github.io/
-booktitle: NeurIPS D&B Track
+venue: NeurIPS D&B Track
 arxiv: 2410.08126
 code: https://github.com/XiaojuanTang/Mars
-# booktitle: The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B Track)
+# venue: The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B Track)
 year: 2024
 selected: false
 abstract: >

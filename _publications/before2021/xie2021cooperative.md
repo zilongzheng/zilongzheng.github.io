@@ -7,7 +7,7 @@ author: Xie*, Jianwen and Zheng*, Zilong and Fang, Xiaolin and Zhu, Song-Chun an
 pdf: 3DDescriptorNet/3DGConvNet_pami.pdf
 abbr: TPAMI
 arxiv: 1902.02812
-journal: IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
+venue: TPAMI
 year: 2021
 selected: false
 abstract: >

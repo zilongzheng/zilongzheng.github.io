@@ -6,12 +6,12 @@ title: >
 author: Jia, Zixia and Li, Junpeng and Zhang, Shichuan and Zheng#, Zilong
 year: 2024
 pdf: https://aclanthology.org/2024.acl-long.731v2.pdf
-# booktitle: >
+# venue: >
 #     Proceedings of the Annual Meeting of the Association for Computational Linguistics: ACL
 code: https://github.com/bigai-nlco/mlpac
 arxiv: >
     2406.16293
-booktitle: ACL
+venue: ACL
 abbr: ACL'24
 selected: false
 abstract: >

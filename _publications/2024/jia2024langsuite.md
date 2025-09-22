@@ -8,9 +8,9 @@ year: 2024
 abbr: ACL'24
 misc: (also in SpLU-RoboNLP Workshop at ACL 2024)
 selected: false
-# booktitle: >
+# venue: >
 #     Findings of the Annual Meeting of the Association for Computational Linguistics: ACL-Findings
-booktitle: ACL Findings
+venue: ACL Findings
 arxiv: >
     2406.16294
 code: https://github.com/bigai-nlco/langsuite

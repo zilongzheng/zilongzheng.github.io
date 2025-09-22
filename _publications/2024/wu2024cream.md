@@ -7,7 +7,7 @@ title: >
 author: Wu, Tong and Zhao, Yanpeng and Zheng#, Zilong
 abbr: NeurIPS'24
 # pdf: https://aclanthology.org/2023.emnlp-main.334.pdf
-booktitle: NeurIPS
+venue: NeurIPS
 arxiv: 2406.07138v1
 year: 2024
 code: https://github.com/bigai-nlco/cream

@@ -10,7 +10,7 @@ abbr: AAAI'19
 award: Spotlight
 img: DynamicGenerator/dynamic_generator.gif
 code: https://github.com/jianwen-xie/Dynamic_generator
-# journal: The Thirty-Third AAAI Conference on Artificial Intelligence (AAAI)
+# venue: The Thirty-Third AAAI Conference on Artificial Intelligence (AAAI)
 venue: AAAI
 year: 2019
 abstract: >

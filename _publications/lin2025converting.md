@@ -7,6 +7,8 @@ author: Lin*, Ziyong and Wu*, Haoyi and Wang, Shu and Tu#, Kewei and Zheng#, Zil
 year: 2025
 venue: ACL
 selected: false
+pdf: https://aclanthology.org/2025.acl-long.1113.pdf
+code: https://github.com/bigai-nlco/Look-Both-Ways-and-No-Sink
 abbr: ACL'25
 abstract: >
     Recent advancements have demonstrated the advantage of converting pretrained large language models into powerful text encoders by enabling bidirectional attention in transformer layers.

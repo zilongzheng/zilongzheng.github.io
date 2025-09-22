@@ -10,7 +10,7 @@ abbr: AAAI'20
 award: Oral
 img: Motion-DynGen/deform.gif
 code: https://github.com/jianwen-xie/Dynamic_generator
-# journal: The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI)
+# venue: The Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI)
 venue: AAAI
 year: 2020
 abstract: >

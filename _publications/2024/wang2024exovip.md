@@ -6,7 +6,7 @@ title: >
 author: Wang, Yuxuan and Yuille, Alan and Li#, Zhuowan and Zheng#, Zilong
 abbr: CoLM'24
 pdf: https://openreview.net/pdf?id=6U1FEKP7Ar
-booktitle: CoLM
+venue: CoLM
 arxiv: "2408.02210"
 code: https://github.com/bigai-nlco/ExoViP
 year: 2024

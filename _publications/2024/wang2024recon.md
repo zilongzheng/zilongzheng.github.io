@@ -5,9 +5,9 @@ title: >
     Boosting LLM Agents with Recursive Contemplation for Effective Deception Handling
 author: Wang, Shenzhi and Liu, Chang and Zheng#, Zilong and Qi, Siyuan and Chen, Shuo and Yang, Qisen and Zhao, Andrew and Wang, Shaofei and Song, Shiji and Huang#, Gao
 year: 2024
-# booktitle: >
+# venue: >
 #     Findings of the Annual Meeting of the Association for Computational Linguistics: ACL-Findings
-booktitle: ACL Findings
+venue: ACL Findings
 abbr: ACL'24
 arxiv: >
     2310.01320

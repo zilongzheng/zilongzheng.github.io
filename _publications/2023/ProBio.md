@@ -6,8 +6,8 @@ title: >
 author: Cui*, Jieming and Gong*, Ziren and Jia*, Baoxiong and Huang, Siyuan and Zheng#, Zilong and Ma#, Jianzhu and Zhu#, Yixin
 abbr: NeurIPS'23
 website: https://probio-dataset.github.io/
-# booktitle: The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B Track)
-booktitle: NeurIPS D&B Track
+# venue: The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B Track)
+venue: NeurIPS D&B Track
 year: 2023
 selected: false
 code: https://github.com/jiemingcui/probio/

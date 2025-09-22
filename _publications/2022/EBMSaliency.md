@@ -7,8 +7,8 @@ title: >
 author: Zhang, Jing and Xie, Jianwen and Zheng, Zilong and Barnes, Nick
 arxiv: 2106.13389
 abbr: AAAI'22
-# journal: The Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI)
-journal: AAAI
+# venue: The Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI)
+venue: AAAI
 year: 2022
 award: Oral
 selected: false

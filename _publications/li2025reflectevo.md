@@ -7,7 +7,7 @@ author: Li, Jiaqi and Dong, Xinyi and Liu, Yang and Yang, Zhizhuo and Wang, Quan
 year: 2025
 abbr: ACL'25
 selected: false
-booktitle: ACL Findings
+venue: ACL Findings
 arxiv: >
     2505.16475
 data: https://huggingface.co/datasets/bigai-nlco/ReflectionEvo

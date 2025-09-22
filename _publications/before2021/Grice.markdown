@@ -7,8 +7,8 @@ title: >
 author: Zheng, Zilong and Qiu, Shuwen and Fan, Lifeng and Zhu, Yixin and Zhu, Song-Chun
 abbr: ACL'21
 img: Grice/grice.png
-# booktitle: Findings of the Association for Computational Linguistics: ACL-IJCNLP (ACL-Findings), 2021
-booktitle: ACL Findings
+# venue: Findings of the Association for Computational Linguistics: ACL-IJCNLP (ACL-Findings), 2021
+venue: ACL Findings
 pdf: Grice/ACL21_GRICE.pdf
 code: https://github.com/zilongzheng/grice-dataset
 year: 2021

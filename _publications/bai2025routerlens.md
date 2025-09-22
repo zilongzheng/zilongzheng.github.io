@@ -5,7 +5,7 @@ title: >
     Understanding and Leveraging the Expert Specialization of Context Faithfulness in Mixture-of-Experts LLMs
 author: Bai, Jun and Tong, Minghao and Liu, Yang and Jia#, Zixia and Zheng#, Zilong
 abbr: EMNLP'25
-booktitle: EMNLP
+venue: EMNLP
 arxiv: "2508.19594"
 year: 2025
 code: https://github.com/bigai-nlco/RouterLens

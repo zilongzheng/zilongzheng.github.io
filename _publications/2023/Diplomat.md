@@ -7,8 +7,8 @@ author: Li, Hengli and Zhu, Song-Chun and Zheng#, Zilong
 arxiv: '2306.09030'
 abbr: NeurIPS'23
 website: https://diplomat-dataset.github.io/
-booktitle: NeurIPS D&B Track
-# booktitle: The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B Track)
+venue: NeurIPS D&B Track
+# venue: The Thirty-Seventh Annual Conference on Neural Information Processing Systems Datasets and Benchmarks Track (NeurIPS D&B Track)
 year: 2023
 selected: false
 code: https://github.com/diplomat-dataset/diplomat

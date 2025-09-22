@@ -6,7 +6,7 @@ title: >
 author: Xie, Jianwen and Zheng, Zilong and Li, Ping
 abbr: AAAI'21
 img: VaeEBM/mcmc_teaching.jpg
-# journal: The Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI)
+# venue: The Thirty-Fifth AAAI Conference on Artificial Intelligence (AAAI)
 venue: AAAI
 year: 2021
 arxiv: 2012.14936

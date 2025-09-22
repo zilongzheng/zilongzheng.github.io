@@ -1,35 +1,94 @@
 "ICML":
   name: International Conference on Machine Learning
   type: proceedings
+  order: "07"
 
 "NeurIPS":
   name: Conference on Neural Information Processing Systems
   type: proceedings
+  order: 12-1
+
+"NeurIPS D&B Track":
+  name: Conference on Neural Information Processing Systems
+  type: proceedings
+  order: 12-0
+
 
 "CVPR":
   name: Conference on Computer Vision and Pattern Recognition
   type: proceedings
+  order: "06"
+
+"ICCV":
+  name: International Conference on Computer Vision
+  type: proceedings
+  order: 10-1
 
 "ICLR":
   name: International Conference on Learning Representations
   type: proceedings
+  order: "04"
 
 "ACL":
   name: Annual Meeting of the Association for Computational Linguistics
   type: proceedings
+  order: "08" # 2 + 6
+
+"ACL Findings":
+  name: Annual Meeting of the Association for Computational Linguistics
+  type: proceedings
+  order: "08" # 2 + 6
+
 
 "EMNLP":
   name: Conference on Empirical Methods in Natural Language Processing
   type: proceedings
+  order: 11-1 # 5 + 6
+
+"EMNLP Findings":
+  name: Conference on Empirical Methods in Natural Language Processing
+  type: proceedings
+  order: 11-0 # 5 + 6
+
 
 "NAACL":
   name: North American Chapter of the Association for Computational Linguistics
   type: proceedings
+  order: "05"
 
-"COLING":
-  name: International Conference on Computational Linguistics
+"NAACL Findings":
+  name: North American Chapter of the Association for Computational Linguistics
   type: proceedings
+  order: "05"
 
 "AAAI":
   name: Association for the Advancement of Artificial Intelligence
   type: article
+  order: "03"
+
+"IROS":
+  name: IEEE/RSJ International Conference on Intelligent Robots and Systems
+  type: proceedings
+  order: 10-0
+
+
+"ICRA":
+  name: International Conference on Robotics and Automation
+  type: proceedings
+  order: "05"
+
+"CogSci":
+  name: Cognitive Science Society
+  type: proceedings
+  order: "08"
+
+
+"Science Robotics":
+  name: Science Robotics
+  type: journal
+  order: 50
+
+"TPAMI":
+  name: IEEE Transactions on Pattern Analysis and Machine Intelligence
+  type: journal
+  order: 30

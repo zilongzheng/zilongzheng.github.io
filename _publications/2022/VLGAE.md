@@ -7,8 +7,8 @@ title: >
 author: Lou, Chao and Han#, Wenjuan and Lin, Yuhuan and Zheng#, Zilong
 arxiv: "2203.14260"
 abbr: CVPR'22
-# booktitle: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
-booktitle: CVPR
+# venue: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
+venue: CVPR
 year: 2022
 selected: false
 abstract: >

@@ -5,7 +5,7 @@ title: >
     Reinforced Query Reasoners for Reasoning-intensive Retrieval Tasks
 author: Xubo Qin and Jun Bai and Jiaqi Li and Zixia Jia# and Zilong Zheng#
 abbr: EMNLP'25
-booktitle: EMNLP
+venue: EMNLP
 arxiv: "2506.11603"
 year: 2025
 code: https://github.com/bigai-nlco/TongSearch-QR

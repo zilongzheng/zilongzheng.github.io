@@ -5,7 +5,7 @@ title: >
     JARVIS-1: Open-world Multi-task Agents with Memory-Augmented Multimodal Language Models
 author: Wang, Zihao  and Cai, Shaofei and Liu, Anji and Jin, Yonggang and Hou, Jinbing and Zhang, Bowei and Lin, Haowei and He, Zhaofeng and Zheng, Zilong and Yang, Yaodong and Ma#, Xiaojian and Liang#, Yitao
 year: 2024
-journal: TPAMI
+venue: TPAMI
 abbr: TPAMI'24
 arxiv: 2311.05997
 # preprint: true

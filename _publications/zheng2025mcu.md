@@ -9,7 +9,7 @@ arxiv: 2310.08367
 code: https://github.com/CraftJarvis/MCU
 venue: ICML
 year: 2025
-award: Spotlight Paper
+award: Spotlight
 website: https://craftjarvis.github.io/MCU/
 show_details: true
 selected: true

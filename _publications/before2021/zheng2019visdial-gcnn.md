@@ -9,7 +9,7 @@ abbr: CVPR'19
 award: Oral
 img: VisDial-GNN/visdial.jpg
 code: https://github.com/zilongzheng/visdial-gnn
-# booktitle: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
+# venue: Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)
 venue: CVPR
 year: 2019
 selected: true

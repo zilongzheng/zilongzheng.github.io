@@ -8,7 +8,7 @@ pdf: https://openreview.net/pdf?id=N0n_QyQ5lBF
 abbr: ICLR'23
 arxiv: 2210.07474
 code: https://github.com/SilongYong/SQA3D
-# journal: The Tenth International Conference on Learning Representations (ICLR)
+# venue: The Tenth International Conference on Learning Representations (ICLR)
 venue: ICLR
 year: 2023
 website: https://sqa3d.github.io/

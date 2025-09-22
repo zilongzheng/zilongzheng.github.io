@@ -5,7 +5,7 @@ title: >
     In-situ Value-aligned Human-Robot Interactions with Physical Constraints
 author: Hongtao Li and Ziyuan Jiao and Xiaofeng Liu# and Hangxin Liu# and Zilong Zheng#
 abbr: IROS'25
-booktitle: IROS
+venue: IROS
 year: 2025
 website: https://iclhf.github.io/
 arxiv: "2508.07606"

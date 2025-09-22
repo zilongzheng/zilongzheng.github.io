@@ -6,8 +6,8 @@ title: >
 author: Li*, Junpeng and Jia*, Zixia and Zheng#, Zilong
 abbr: EMNLP'23
 pdf: https://aclanthology.org/2023.emnlp-main.334.pdf
-# booktitle: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
-booktitle: EMNLP
+# venue: The Conference on Empirical Methods in Natural Language Processing (EMNLP)
+venue: EMNLP
 arxiv: 2311.07314
 code: https://github.com/bigai-nlco/DocGNRE
 year: 2023

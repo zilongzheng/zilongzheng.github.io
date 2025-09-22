@@ -5,7 +5,7 @@ title: >
     Navi2Gaze: Leveraging Foundation Models for Navigation and Target Gazing
 author: Jun Zhu and Zihao Du and Haotian Xu and Fengbo Lan and Zilong Zheng and Bo Ma and Shengjie Wang and Tao Zhang
 abbr: IROS'25
-booktitle: IROS
+venue: IROS
 year: 2025
 arxiv: "2407.09053"
 website: https://sites.google.com/view/navi2gaze/
