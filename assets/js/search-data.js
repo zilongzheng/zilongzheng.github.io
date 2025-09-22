@@ -91,6 +91,9 @@ ninja.data = [{
           section: "News",},{id: "news-i-will-be-serving-as-area-chair-for-iclr-2026",
           title: 'I will be serving as Area Chair for ICLR 2026.',
           description: "",
+          section: "News",},{id: "news-fire-two-papers-are-accepted-to-neurips-2025-absolute-zero-is-selected-as-spolight-top-3-2",
+          title: ':fire: Two papers are accepted to NeurIPS 2025! Absolute Zero is selected as...',
+          description: "",
           section: "News",},{id: "publications-energy-based-generative-cooperative-saliency-prediction",
           title: 'Energy-Based Generative Cooperative Saliency Prediction',
           description: "",
@@ -286,6 +289,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/before2021/zheng2021patchgconvNet/";
+            },},{id: "publications-evaluating-generalization-capabilities-of-llm-based-agents-in-mixed-motive-scenarios-using-concordia",
+          title: 'Evaluating Generalization Capabilities of LLM-Based Agents in Mixed-Motive Scenarios Using Concordia',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/concordia2025/";
             },},{id: "publications-mmke-bench-a-multimodal-editing-benchmark-for-diverse-visual-knowledge",
           title: 'MMKE-Bench: A Multimodal Editing Benchmark for Diverse Visual Knowledge',
           description: "",
