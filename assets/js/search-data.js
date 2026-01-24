@@ -94,6 +94,12 @@ ninja.data = [{
           section: "News",},{id: "news-fire-two-papers-are-accepted-to-neurips-2025-absolute-zero-is-selected-as-spolight-top-3-2",
           title: ':fire: Two papers are accepted to NeurIPS 2025! Absolute Zero is selected as...',
           description: "",
+          section: "News",},{id: "news-i-will-be-serving-as-area-chair-for-icml-2026",
+          title: 'I will be serving as Area Chair for ICML 2026.',
+          description: "",
+          section: "News",},{id: "news-our-absolute-zero-is-featured-by-wired-as-headline-on-business-on-1-7",
+          title: 'Our Absolute Zero is featured by WIRED as headline on Business on 1/7....',
+          description: "",
           section: "News",},{id: "publications-energy-based-generative-cooperative-saliency-prediction",
           title: 'Energy-Based Generative Cooperative Saliency Prediction',
           description: "",
@@ -359,6 +365,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/wang2025videollamb/";
+            },},{id: "publications-native-parallel-reasoner-reasoning-in-parallelism-via-self-distilled-reinforcement-learning",
+          title: 'Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/wu2025npr/";
             },},{id: "publications-tokenswift-lossless-acceleration-of-ultra-long-sequence-generation",
           title: 'TokenSwift: Lossless Acceleration of Ultra Long Sequence Generation',
           description: "",
