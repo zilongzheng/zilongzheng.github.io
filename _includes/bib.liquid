@@ -330,7 +330,7 @@
       {% if include.entry.inspirehep_id %}
         {% assign entry_has_inspirehep_badge = true %}
       {% endif %}
-      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge or entry_has_inspirehep_badge or entry_has_github_star_badge %}
+      {% if entry_has_altmetric_badge or entry_has_dimensions_badge or entry_has_google_scholar_badge or entry_has_inspirehep_badge or entry_has_github_star_badge or entry.badges %}
         <div class="badges">
           {% if site.enable_publication_badges.altmetric and entry_has_altmetric_badge %}
             <span
@@ -391,16 +391,21 @@
               >
             </a>
           {% endif %}
+          {% if entry_has_github_star_badge and include.entry.code and include.entry.code contains "https://github.com/"%}
+            <a
+              href="{{ include.entry.code }}"
+              aria-label="GitHub link"
+              role="button"
+            >
+              <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/{{ include.entry.code |  replace: "https://github.com/", ""  }}">
+            </a>
+          {% endif %}
+          {% if include.entry.badges %}
+            {% for badge in include.entry.badges %}
+              <a href="{{ badge.url }}" role="button">{% if badge.img-url %}<img alt="GitHub Repo stars" src="{{badge.img-url}} />{% elsif badge.src %}{{ badge.src }}{% endif %}</a>
+            {% endfor %}
+          {% endif %}
         </div>
-      {% endif %}
-      {% if entry_has_github_star_badge and include.entry.code and include.entry.code contains "https://github.com/"%}
-        <a
-          href="{{ include.entry.code }}"
-          aria-label="GitHub link"
-          role="button"
-        >
-          <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/{{ include.entry.code |  replace: "https://github.com/", ""  }}">
-        </a>
       {% endif %}
     {% endif %}
 

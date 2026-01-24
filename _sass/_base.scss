@@ -897,6 +897,39 @@ footer.sticky-bottom {
             text-decoration: underline;
           }
         }
+
+        .hf-paper-badge {
+          // Layout & sizing
+          max-width: 175px;
+          padding: 0.125rem 0.25rem; // Reduced padding to make it smaller
+          border-radius: 0.375rem; // rounded-md
+          width: auto;
+
+          // Typography (smaller font)
+          font-size: 0.75rem; // text-sm -> smaller size for a tighter badge
+          font-weight: 600; // font-semibold
+          line-height: 1rem; // leading-snug -> reduced line-height for compactness
+          color: #3b82f6; // blue-500
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          // Colors
+          background-color: rgba(37, 99, 235, 0.1); // blue-600/10
+          border: 1px solid #bfdbfe; // blue-200
+
+          @media (min-width: 640px) {
+            // sm:max-w-xs
+            max-width: 20rem;
+          }
+
+          @media (max-width: 639px) {
+            // max-sm:w-fit
+            width: fit-content;
+          }
+
+        }
+
       }
 
       .hidden {
@@ -947,6 +980,7 @@ footer.sticky-bottom {
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
     }
+
   }
 }
 
