@@ -94,8 +94,8 @@ ninja.data = [{
           section: "News",},{id: "news-fire-two-papers-are-accepted-to-neurips-2025-absolute-zero-is-selected-as-spolight-top-3-2",
           title: ':fire: Two papers are accepted to NeurIPS 2025! Absolute Zero is selected as...',
           description: "",
-          section: "News",},{id: "news-i-will-be-serving-as-area-chair-for-icml-2026",
-          title: 'I will be serving as Area Chair for ICML 2026.',
+          section: "News",},{id: "news-i-will-be-serving-as-area-chair-for-icml-2026-and-senior-area-chair-for-acl-2026",
+          title: 'I will be serving as Area Chair for ICML 2026 and Senior Area...',
           description: "",
           section: "News",},{id: "news-our-absolute-zero-is-featured-by-wired-as-headline-on-business-on-1-7",
           title: 'Our Absolute Zero is featured by WIRED as headline on Business on 1/7....',
@@ -229,7 +229,107 @@ ninja.data = [{
           title: 'Understanding and Leveraging the Expert Specialization of Context Faithfulness in Mixture-of-Experts LLMs',
           description: "",
           section: "Publications",handler: () => {
-              window.location.href = "/publications/bai2025routerlens/";
+              window.location.href = "/publications/2025/bai2025routerlens/";
+            },},{id: "publications-evaluating-generalization-capabilities-of-llm-based-agents-in-mixed-motive-scenarios-using-concordia",
+          title: 'Evaluating Generalization Capabilities of LLM-Based Agents in Mixed-Motive Scenarios Using Concordia',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/concordia2025/";
+            },},{id: "publications-mmke-bench-a-multimodal-editing-benchmark-for-diverse-visual-knowledge",
+          title: 'MMKE-Bench: A Multimodal Editing Benchmark for Diverse Visual Knowledge',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/du2025mmke/";
+            },},{id: "publications-the-ai-hippocampus-how-far-are-we-from-human-memory",
+          title: 'The AI Hippocampus: How Far are We From Human Memory?',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/jia2025memory/";
+            },},{id: "publications-are-the-values-of-llms-structurally-aligned-with-humans-a-causal-perspective",
+          title: 'Are the Values of LLMs Structurally Aligned with Humans? A Causal Perspective',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/kang2025values/";
+            },},{id: "publications-in-situ-value-aligned-human-robot-interactions-with-physical-constraints",
+          title: 'In-situ Value-aligned Human-Robot Interactions with Physical Constraints',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/li2025iclhf/";
+            },},{id: "publications-reflectevo-improving-meta-introspection-of-small-llms-by-learning-self-reflection",
+          title: 'ReflectEvo: Improving Meta Introspection of Small LLMs by Learning Self-Reflection',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/li2025reflectevo/";
+            },},{id: "publications-look-both-ways-and-no-sink-converting-llms-into-text-encoders-without-training",
+          title: 'Look Both Ways and No Sink: Converting LLMs into Text Encoders without Training...',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/lin2025converting/";
+            },},{id: "publications-probing-and-inducing-combinational-creativity-in-vision-language-models",
+          title: 'Probing and Inducing Combinational Creativity in Vision-Language Models',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/peng2025probing/";
+            },},{id: "publications-in-context-editing-learning-knowledge-from-self-induced-distributions",
+          title: 'In-Context Editing: Learning Knowledge from Self-Induced Distributions',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/qi2025ice/";
+            },},{id: "publications-reinforced-query-reasoners-for-reasoning-intensive-retrieval-tasks",
+          title: 'Reinforced Query Reasoners for Reasoning-intensive Retrieval Tasks',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/qin2025rqr/";
+            },},{id: "publications-omnimmi-a-comprehensive-multi-modal-interaction-benchmark-in-streaming-video-contexts",
+          title: 'OmniMMI: A Comprehensive Multi-modal Interaction Benchmark in Streaming Video Contexts',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/wang2025omnimmi/";
+            },},{id: "publications-adaptive-preference-optimization-with-uncertainty-aware-utility-anchor",
+          title: 'Adaptive Preference Optimization with Uncertainty-aware Utility Anchor',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/wang2025uapo/";
+            },},{id: "publications-videollamb-long-context-video-understanding-with-recurrent-memory-bridges",
+          title: 'VideoLLaMB: Long-context Video Understanding with Recurrent Memory Bridges',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/wang2025videollamb/";
+            },},{id: "publications-tokenswift-lossless-acceleration-of-ultra-long-sequence-generation",
+          title: 'TokenSwift: Lossless Acceleration of Ultra Long Sequence Generation',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/wu2025tokenswift/";
+            },},{id: "publications-amulet-realignment-during-test-time-for-personalized-preference-adaptation-of-llms",
+          title: 'Amulet: ReAlignment During Test Time for Personalized Preference Adaptation of LLMs',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/zhang2025amulet/";
+            },},{id: "publications-absolute-zero-reinforced-self-play-reasoning-with-zero-data",
+          title: 'Absolute Zero: Reinforced Self-play Reasoning with Zero Data',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/zhao2025absolute/";
+            },},{id: "publications-diver-ct-diversity-enhanced-red-teaming-large-language-model-assistants-with-relaxing-constraints",
+          title: 'DiveR-CT: Diversity-enhanced Red Teaming Large Language Model Assistants with Relaxing Constraints',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/zhao2025diverct/";
+            },},{id: "publications-mcu-an-evaluation-framework-for-open-ended-game-agents",
+          title: 'MCU: An Evaluation Framework for Open-Ended Game Agents',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/zheng2025mcu/";
+            },},{id: "publications-navi2gaze-leveraging-foundation-models-for-navigation-and-target-gazing",
+          title: 'Navi2Gaze: Leveraging Foundation Models for Navigation and Target Gazing',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/zhu2025navi2gaze/";
+            },},{id: "publications-how-to-synthesize-text-data-without-model-collapse",
+          title: 'How to Synthesize Text Data without Model Collapse?',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/zhu2025toedit/";
             },},{id: "publications-learning-descriptor-networks-for-3d-shape-synthesis-and-analysis",
           title: 'Learning Descriptor Networks for 3D Shape Synthesis and Analysis',
           description: "",
@@ -295,116 +395,31 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/before2021/zheng2021patchgconvNet/";
-            },},{id: "publications-evaluating-generalization-capabilities-of-llm-based-agents-in-mixed-motive-scenarios-using-concordia",
-          title: 'Evaluating Generalization Capabilities of LLM-Based Agents in Mixed-Motive Scenarios Using Concordia',
+            },},{id: "publications-imtalker-efficient-audio-driven-talking-face-generation-with-implicit-motion-transfer",
+          title: 'IMTalker: Efficient Audio-driven Talking Face Generation with Implicit Motion Transfer',
           description: "",
           section: "Publications",handler: () => {
-              window.location.href = "/publications/concordia2025/";
-            },},{id: "publications-mmke-bench-a-multimodal-editing-benchmark-for-diverse-visual-knowledge",
-          title: 'MMKE-Bench: A Multimodal Editing Benchmark for Diverse Visual Knowledge',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/du2025mmke/";
-            },},{id: "publications-are-the-values-of-llms-structurally-aligned-with-humans-a-causal-perspective",
-          title: 'Are the Values of LLMs Structurally Aligned with Humans? A Causal Perspective',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/kang2025values/";
-            },},{id: "publications-in-situ-value-aligned-human-robot-interactions-with-physical-constraints",
-          title: 'In-situ Value-aligned Human-Robot Interactions with Physical Constraints',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/li2025iclhf/";
+              window.location.href = "/publications/chen2025imtalker/";
             },},{id: "publications-seek-in-the-dark-reasoning-via-test-time-instance-level-policy-gradient-in-latent-space",
           title: 'Seek in the Dark: Reasoning via Test-Time Instance-Level Policy Gradient in Latent Space...',
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/li2025latentseek/";
-            },},{id: "publications-reflectevo-improving-meta-introspection-of-small-llms-by-learning-self-reflection",
-          title: 'ReflectEvo: Improving Meta Introspection of Small LLMs by Learning Self-Reflection',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/li2025reflectevo/";
-            },},{id: "publications-look-both-ways-and-no-sink-converting-llms-into-text-encoders-without-training",
-          title: 'Look Both Ways and No Sink: Converting LLMs into Text Encoders without Training...',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/lin2025converting/";
             },},{id: "publications-rulereasoner-reinforced-rule-based-reasoning-via-domain-aware-dynamic-sampling",
           title: 'RuleReasoner: Reinforced Rule-based Reasoning via Domain-aware Dynamic Sampling',
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/liu2025rulereasoner/";
-            },},{id: "publications-probing-and-inducing-combinational-creativity-in-vision-language-models",
-          title: 'Probing and Inducing Combinational Creativity in Vision-Language Models',
+            },},{id: "publications-narrativeloom-enhancing-creative-storytelling-through-multi-persona-collaborative-improvisation",
+          title: 'NarrativeLoom: Enhancing Creative Storytelling through Multi-Persona Collaborative Improvisation',
           description: "",
           section: "Publications",handler: () => {
-              window.location.href = "/publications/peng2025probing/";
-            },},{id: "publications-in-context-editing-learning-knowledge-from-self-induced-distributions",
-          title: 'In-Context Editing: Learning Knowledge from Self-Induced Distributions',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/qi2025ice/";
-            },},{id: "publications-reinforced-query-reasoners-for-reasoning-intensive-retrieval-tasks",
-          title: 'Reinforced Query Reasoners for Reasoning-intensive Retrieval Tasks',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/qin2025rqr/";
-            },},{id: "publications-omnimmi-a-comprehensive-multi-modal-interaction-benchmark-in-streaming-video-contexts",
-          title: 'OmniMMI: A Comprehensive Multi-modal Interaction Benchmark in Streaming Video Contexts',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/wang2025omnimmi/";
-            },},{id: "publications-adaptive-preference-optimization-with-uncertainty-aware-utility-anchor",
-          title: 'Adaptive Preference Optimization with Uncertainty-aware Utility Anchor',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/wang2025uapo/";
-            },},{id: "publications-videollamb-long-context-video-understanding-with-recurrent-memory-bridges",
-          title: 'VideoLLaMB: Long-context Video Understanding with Recurrent Memory Bridges',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/wang2025videollamb/";
+              window.location.href = "/publications/ma2026narrativeloom/";
             },},{id: "publications-native-parallel-reasoner-reasoning-in-parallelism-via-self-distilled-reinforcement-learning",
           title: 'Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning',
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/wu2025npr/";
-            },},{id: "publications-tokenswift-lossless-acceleration-of-ultra-long-sequence-generation",
-          title: 'TokenSwift: Lossless Acceleration of Ultra Long Sequence Generation',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/wu2025tokenswift/";
-            },},{id: "publications-amulet-realignment-during-test-time-for-personalized-preference-adaptation-of-llms",
-          title: 'Amulet: ReAlignment During Test Time for Personalized Preference Adaptation of LLMs',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/zhang2025amulet/";
-            },},{id: "publications-absolute-zero-reinforced-self-play-reasoning-with-zero-data",
-          title: 'Absolute Zero: Reinforced Self-play Reasoning with Zero Data',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/zhao2025absolute/";
-            },},{id: "publications-diver-ct-diversity-enhanced-red-teaming-large-language-model-assistants-with-relaxing-constraints",
-          title: 'DiveR-CT: Diversity-enhanced Red Teaming Large Language Model Assistants with Relaxing Constraints',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/zhao2025diverct/";
-            },},{id: "publications-mcu-an-evaluation-framework-for-open-ended-game-agents",
-          title: 'MCU: An Evaluation Framework for Open-Ended Game Agents',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/zheng2025mcu/";
-            },},{id: "publications-navi2gaze-leveraging-foundation-models-for-navigation-and-target-gazing",
-          title: 'Navi2Gaze: Leveraging Foundation Models for Navigation and Target Gazing',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/zhu2025navi2gaze/";
-            },},{id: "publications-how-to-synthesize-text-data-without-model-collapse",
-          title: 'How to Synthesize Text Data without Model Collapse?',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/zhu2025toedit/";
             },},{
         id: 'social-email',
         title: 'email',
