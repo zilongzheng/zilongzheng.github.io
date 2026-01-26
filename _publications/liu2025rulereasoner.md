@@ -5,10 +5,8 @@ title: >
     RuleReasoner: Reinforced Rule-based Reasoning via Domain-aware Dynamic Sampling
 author: Yang Liu and Jiaqi Li and Zilong Zheng#
 arxiv: "2506.08672"
-year: 2025
+year: 2026
 preprint: true
-selected: true
-show_details: true
 code: https://github.com/bigai-nlco/RuleReasoner
 data: https://huggingface.co/datasets/RuleReasoner/rule-reasoning
 model: https://huggingface.co/RuleReasoner

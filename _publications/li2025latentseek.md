@@ -5,7 +5,7 @@ title: >
     Seek in the Dark: Reasoning via Test-Time Instance-Level Policy Gradient in Latent Space
 author: Li, Hengli and Li, Chenxi and Wu, Tong and Zhu, Xuekai and Wang, Yuxuan and Yu, Zhaoxin and Jiang, Eric Hanchen and Zhu, Song-Chun and Jia, Zixia and Wu#, Ying Nian and Zheng#, Zilong
 arxiv: 2505.13308
-year: 2025
+year: 2026
 preprint: true
 selected: true
 show_details: true

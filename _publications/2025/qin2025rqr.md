@@ -9,7 +9,6 @@ venue: EMNLP
 arxiv: "2506.11603"
 year: 2025
 code: https://github.com/bigai-nlco/TongSearch-QR
-selected: true
 medias:
     - name: Technical Report
       url: https://bigai-nlco.notion.site/TongSearch-QR-Reinforced-Query-Reasoning-for-Retrieval-Tasks-1d6df56b182c80349d71ebfca4c55c1d
