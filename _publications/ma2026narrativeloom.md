@@ -6,7 +6,6 @@ title: >
 author: Ma*, Yuxi and Peng*, Yongqian and Yang, Fengyuan and Zha, Siyu and Zhang, Chi and Jia, Zixia and Zheng#, Zilong and Zhu#, Yixin
 year: 2026
 venue: CHI
-show_details: true
 website: https://ppyyqq.github.io/narrativeloom
 abbr: CHI'26
 abstract: >
