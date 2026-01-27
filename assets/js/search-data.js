@@ -100,6 +100,9 @@ ninja.data = [{
           section: "News",},{id: "news-our-absolute-zero-is-featured-by-wired-as-headline-on-business-on-1-7",
           title: 'Our Absolute Zero is featured by WIRED as headline on Business on 1/7....',
           description: "",
+          section: "News",},{id: "news-fire-four-papers-are-accepted-to-iclr-2026-congratulations-to-yang-zhaowei-and-teams",
+          title: ':fire: Four papers are accepted to ICLR 2026! Congratulations to Yang, Zhaowei and...',
+          description: "",
           section: "News",},{id: "publications-energy-based-generative-cooperative-saliency-prediction",
           title: 'Energy-Based Generative Cooperative Saliency Prediction',
           description: "",
@@ -400,6 +403,16 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/chen2025imtalker/";
+            },},{id: "publications-can-llms-reason-soundly-in-law-auditing-inference-patterns-for-legal-judgment",
+          title: 'Can LLMs Reason Soundly in Law? Auditing Inference Patterns for Legal Judgment',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/chen2026legaljudgment/";
+            },},{id: "publications-when-large-multimodal-models-confront-evolving-knowledge-challenges-and-explorations",
+          title: 'When Large Multimodal Models Confront Evolving Knowledge: Challenges and Explorations',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/jiang2026mmevoke/";
             },},{id: "publications-seek-in-the-dark-reasoning-via-test-time-instance-level-policy-gradient-in-latent-space",
           title: 'Seek in the Dark: Reasoning via Test-Time Instance-Level Policy Gradient in Latent Space...',
           description: "",
@@ -420,6 +433,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/wu2025npr/";
+            },},{id: "publications-policon-evaluating-llms-on-achieving-diverse-political-consensus-objectives",
+          title: 'PoliCon: Evaluating LLMs on Achieving Diverse Political Consensus Objectives',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/zhang2026policon/";
             },},{
         id: 'social-email',
         title: 'email',
