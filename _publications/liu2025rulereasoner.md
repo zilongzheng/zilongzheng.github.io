@@ -9,6 +9,7 @@ year: 2026
 abbr: ICLR'26
 venue: ICLR
 show_details: true
+selected: true
 code: https://github.com/bigai-nlco/RuleReasoner
 data: https://huggingface.co/datasets/RuleReasoner/rule-reasoning
 model: https://huggingface.co/RuleReasoner

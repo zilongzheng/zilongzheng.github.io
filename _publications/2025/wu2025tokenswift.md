@@ -8,7 +8,6 @@ abbr: ICML'25
 venue: ICML
 arxiv: "2502.18890"
 year: 2025
-selected: true
 website: https://bigai-nlco.github.io/TokenSwift/
 github_star: true
 show_details: true
