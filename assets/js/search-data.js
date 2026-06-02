@@ -103,6 +103,9 @@ ninja.data = [{
           section: "News",},{id: "news-fire-four-papers-are-accepted-to-iclr-2026-congratulations-to-yang-zhaowei-and-teams",
           title: ':fire: Four papers are accepted to ICLR 2026! Congratulations to Yang, Zhaowei and...',
           description: "",
+          section: "News",},{id: "news-fire-three-papers-on-native-parallel-reasoner-unicode-and-long-input-fine-tuning-lift-are-accepted-to-icml-26",
+          title: ':fire: Three papers on Native Parallel Reasoner, UniCode and Long Input Fine-Tuning (LIFT)...',
+          description: "",
           section: "News",},{id: "publications-energy-based-generative-cooperative-saliency-prediction",
           title: 'Energy-Based Generative Cooperative Saliency Prediction',
           description: "",
@@ -408,6 +411,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/chen2026legaljudgment/";
+            },},{id: "publications-the-ai-hippocampus-how-far-are-we-from-human-memory",
+          title: 'The AI Hippocampus: How Far are We From Human Memory?',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/jia2026aihippocampus/";
             },},{id: "publications-when-large-multimodal-models-confront-evolving-knowledge-challenges-and-explorations",
           title: 'When Large Multimodal Models Confront Evolving Knowledge: Challenges and Explorations',
           description: "",
@@ -423,11 +431,26 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/liu2025rulereasoner/";
+            },},{id: "publications-x-talk-on-the-underestimated-potential-of-modular-speech-to-speech-dialogue-system",
+          title: 'X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/liu2026xtalk/";
             },},{id: "publications-narrativeloom-enhancing-creative-storytelling-through-multi-persona-collaborative-improvisation",
           title: 'NarrativeLoom: Enhancing Creative Storytelling through Multi-Persona Collaborative Improvisation',
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/ma2026narrativeloom/";
+            },},{id: "publications-lift-a-novel-framework-for-enhancing-long-context-understanding-of-llms-via-long-input-fine-tuning",
+          title: 'LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input...',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/mao2026lift/";
+            },},{id: "publications-onemillion-bench-how-far-are-language-agents-from-human-experts",
+          title: '$OneMillion-Bench: How Far are Language Agents from Human Experts?',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/onemillionbench/";
             },},{id: "publications-native-parallel-reasoner-reasoning-in-parallelism-via-self-distilled-reinforcement-learning",
           title: 'Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning',
           description: "",
@@ -438,6 +461,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/zhang2026policon/";
+            },},{id: "publications-unicode-augmenting-evaluation-for-code-reasoning",
+          title: 'UniCode: Augmenting Evaluation for Code Reasoning',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/zheng2026unicode/";
             },},{
         id: 'social-email',
         title: 'email',
