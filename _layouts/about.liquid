@@ -8,7 +8,6 @@ layout: default
     </h1>
     <p class="desc">{{ page.subtitle }}</p>
   </header>
-
   <article>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
@@ -35,6 +34,7 @@ layout: default
     <!-- Social -->
     {% if page.social %}
       <div class="social">
+        <a href="https://x.com/ZilongZheng?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @ZilongZheng</a><script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
         <div class="contact-icons">{% include social.liquid %}</div>
       </div>
     {% endif %}

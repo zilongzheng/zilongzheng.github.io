@@ -5,7 +5,6 @@ title: >
     UniCode: Augmenting Evaluation for Code Reasoning
 author: Xinyue Zheng* and Haowei Lin* and Shaofei Cai and Yaodong Yang and Zilong Zheng# and Yitao Liang#
 year: 2026
-selected: true
 arxiv: "2510.17868"
 code: https://github.com/grandsmile/UniCode
 venue: ICML

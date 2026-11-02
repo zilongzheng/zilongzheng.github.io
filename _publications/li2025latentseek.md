@@ -6,7 +6,8 @@ title: >
 author: Li*, Hengli and Li*, Chenxi and Wu, Tong and Zhu, Xuekai and Wang, Yuxuan and Yu, Zhaoxin and Jiang, Eric Hanchen and Zhu, Song-Chun and Jia, Zixia and Wu#, Ying Nian and Zheng#, Zilong
 arxiv: 2505.13308
 year: 2026
-preprint: true
+abbr: NeurIPS'26
+venue: NeurIPS
 selected: true
 show_details: true
 github_star: true

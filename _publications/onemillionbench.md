@@ -3,10 +3,11 @@ layout: publication
 type: article
 title: >
     $OneMillion-Bench: How Far are Language Agents from Human Experts?
-author: Qianyu Yang* and Yang Liu* and Jiaqi Li* and Jun Bai* and Hao Chen and Kaiyuan Chen and Tiliang Duan and Jiayun Dong and Xiaobo Hu and Zixia Jia and Yang Liu and Tao Peng and Yixin Ren and Ran Tian and Zaiyuan Wang and Yanglihong Xiao and Gang Yao and Lingyue Yin and Ge Zhang and Chun Zhang and Jianpeng Jiao# and Zilong Zheng# and Yuan Gong#
+author: Yang Liu* and Jiaqi Li* and Jun Bai* and Qianyu Yang* and Xiaobo Hu and Tao Peng and Zaiyuan Wang and Ran Tian and Jiayun Dong and Chun Zhang and Zixia Jia and and Kaiyuan Chen and Yixin Ren, and Yang Liu and Yanglihong Xiao and Lingyue Yin and Yiliang Duan and Ge Zhang and Gang Yao and Hao Chen and Yuan Gong# and Jianpeng Jiao# and Zilong Zheng#
 arxiv: "2603.07980"
+venue: NeurIPS D&B Track
+abbr: NeurIPS'26
 year: 2026
-preprint: true
 selected: true
 code: https://github.com/humanlaya/OneMillion-Bench
 website: https://xbench.org/profession/onemillion
