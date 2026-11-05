@@ -70,11 +70,11 @@ ninja.data = [{
           section: "News",},{id: "news-omnimmi-is-accepted-to-cvpr-25-fire-we-devised-the-first-ever-benchmark-for-streaming-interactive-omni-understanding-please-try-your-models-on-omnimmi-leaderboard",
           title: 'OmniMMI is accepted to CVPR’25 :fire:. We devised the first-ever benchmark for streaming...',
           description: "",
-          section: "News",},{id: "news-fire-three-papers-on-tokenswift-long-sequence-acceleration-toedit-llm-model-collapse-and-mcu-open-ended-agent-evaluation-are-accepted-to-icml-25-mcu-is-awarded-as-spotlight-poster-congratulations-to-tong-xuekai-and-xinyue",
-          title: ':fire: Three papers on TokenSwift (long sequence acceleration), ToEdit (LLM model collapse) and...',
+          section: "News",},{id: "news-three-papers-on-tokenswift-long-sequence-acceleration-toedit-llm-model-collapse-and-mcu-open-ended-agent-evaluation-are-accepted-to-icml-25-mcu-is-awarded-as-spotlight-poster-congratulations-to-tong-xuekai-and-xinyue",
+          title: 'Three papers on TokenSwift (long sequence acceleration), ToEdit (LLM model collapse) and MCU...',
           description: "",
-          section: "News",},{id: "news-fire-three-papers-on-bidirectional-llm-encoder-reflectevo-meta-reflection-learning-and-causal-value-steering-are-accepted-to-acl-25-one-paper-on-combinational-creativity-in-vlms-is-accepted-to-cogsci-25-for-oral-presentation-congratulations-to-ziyong-jiaqi-yipeng-and-yongqian",
-          title: ':fire: Three papers on bidirectional LLM Encoder, ReflectEvo (Meta Reflection Learning) and Causal...',
+          section: "News",},{id: "news-three-papers-on-bidirectional-llm-encoder-reflectevo-meta-reflection-learning-and-causal-value-steering-are-accepted-to-acl-25-one-paper-on-combinational-creativity-in-vlms-is-accepted-to-cogsci-25-for-oral-presentation-congratulations-to-ziyong-jiaqi-yipeng-and-yongqian",
+          title: 'Three papers on bidirectional LLM Encoder, ReflectEvo (Meta Reflection Learning) and Causal Value...',
           description: "",
           section: "News",},{id: "news-i-will-be-serving-as-senior-area-chair-for-emnlp-2025",
           title: 'I will be serving as Senior Area Chair for EMNLP 2025.',
@@ -85,14 +85,14 @@ ninja.data = [{
           section: "News",},{id: "news-videollamb-is-accepted-to-iccv-2025-congratulations-to-yuxuan-and-yiqi",
           title: 'VideoLLaMB is accepted to ICCV 2025. Congratulations to Yuxuan and Yiqi!',
           description: "",
-          section: "News",},{id: "news-fire-three-papers-on-moe-routers-routerlens-reinforced-query-reasoners-for-deep-retrieval-tongsearch-new-preference-optimization-formula-with-utility-anchors-uapo-are-accepted-to-emnlp-2025",
-          title: ':fire: Three papers on MoE routers (RouterLens), reinforced query reasoners for deep retrieval...',
+          section: "News",},{id: "news-three-papers-on-moe-routers-routerlens-reinforced-query-reasoners-for-deep-retrieval-tongsearch-new-preference-optimization-formula-with-utility-anchors-uapo-are-accepted-to-emnlp-2025",
+          title: 'Three papers on MoE routers (RouterLens), reinforced query reasoners for deep retrieval (TongSearch),...',
           description: "",
           section: "News",},{id: "news-i-will-be-serving-as-area-chair-for-iclr-2026",
           title: 'I will be serving as Area Chair for ICLR 2026.',
           description: "",
-          section: "News",},{id: "news-fire-two-papers-are-accepted-to-neurips-2025-absolute-zero-is-selected-as-spolight-top-3-2",
-          title: ':fire: Two papers are accepted to NeurIPS 2025! Absolute Zero is selected as...',
+          section: "News",},{id: "news-two-papers-are-accepted-to-neurips-2025-absolute-zero-is-selected-as-spolight-top-3-2",
+          title: 'Two papers are accepted to NeurIPS 2025! Absolute Zero is selected as Spolight...',
           description: "",
           section: "News",},{id: "news-i-will-be-serving-as-area-chair-for-icml-2026-and-senior-area-chair-for-acl-2026",
           title: 'I will be serving as Area Chair for ICML 2026 and Senior Area...',
@@ -100,11 +100,20 @@ ninja.data = [{
           section: "News",},{id: "news-our-absolute-zero-is-featured-by-wired-as-headline-on-business-on-1-7",
           title: 'Our Absolute Zero is featured by WIRED as headline on Business on 1/7....',
           description: "",
-          section: "News",},{id: "news-fire-four-papers-are-accepted-to-iclr-2026-congratulations-to-yang-zhaowei-and-teams",
-          title: ':fire: Four papers are accepted to ICLR 2026! Congratulations to Yang, Zhaowei and...',
+          section: "News",},{id: "news-four-papers-are-accepted-to-iclr-2026-congratulations-to-yang-zhaowei-and-teams",
+          title: 'Four papers are accepted to ICLR 2026! Congratulations to Yang, Zhaowei and teams!...',
           description: "",
           section: "News",},{id: "news-fire-three-papers-on-native-parallel-reasoner-unicode-and-long-input-fine-tuning-lift-are-accepted-to-icml-26",
           title: ':fire: Three papers on Native Parallel Reasoner, UniCode and Long Input Fine-Tuning (LIFT)...',
+          description: "",
+          section: "News",},{id: "news-we-released-rsi-exam-1-0-a-comprehensive-benchmark-that-evaluates-whether-an-ai-agent-can-improve-itself-over-a-long-horizon-and-generalize-to-unseen-data-details-at-https-rsi-exam-ai",
+          title: 'We released RSI-Exam 1.0, a comprehensive benchmark that evaluates whether an AI agent...',
+          description: "",
+          section: "News",},{id: "news-fire-two-papers-on-latent-reasoning-latentseek-and-agentic-benchmark-onemillionbench-are-accepted-to-neurips-26",
+          title: ':fire: Two papers on latent reasoning LatentSeek and agentic benchmark $OneMillionBench are accepted...',
+          description: "",
+          section: "News",},{id: "news-we-released-rsihub-a-composble-framework-for-rsi-recipes",
+          title: 'We released RSIHub, a composble framework for RSI recipes.',
           description: "",
           section: "News",},{id: "publications-energy-based-generative-cooperative-saliency-prediction",
           title: 'Energy-Based Generative Cooperative Saliency Prediction',
@@ -236,6 +245,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/2025/bai2025routerlens/";
+            },},{id: "publications-imtalker-efficient-audio-driven-talking-face-generation-with-implicit-motion-transfer",
+          title: 'IMTalker: Efficient Audio-driven Talking Face Generation with Implicit Motion Transfer',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/chen2025imtalker/";
             },},{id: "publications-evaluating-generalization-capabilities-of-llm-based-agents-in-mixed-motive-scenarios-using-concordia",
           title: 'Evaluating Generalization Capabilities of LLM-Based Agents in Mixed-Motive Scenarios Using Concordia',
           description: "",
@@ -271,6 +285,11 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/2025/lin2025converting/";
+            },},{id: "publications-rulereasoner-reinforced-rule-based-reasoning-via-domain-aware-dynamic-sampling",
+          title: 'RuleReasoner: Reinforced Rule-based Reasoning via Domain-aware Dynamic Sampling',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/2025/liu2025rulereasoner/";
             },},{id: "publications-probing-and-inducing-combinational-creativity-in-vision-language-models",
           title: 'Probing and Inducing Combinational Creativity in Vision-Language Models',
           description: "",
@@ -401,11 +420,6 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/before2021/zheng2021patchgconvNet/";
-            },},{id: "publications-imtalker-efficient-audio-driven-talking-face-generation-with-implicit-motion-transfer",
-          title: 'IMTalker: Efficient Audio-driven Talking Face Generation with Implicit Motion Transfer',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/chen2025imtalker/";
             },},{id: "publications-can-llms-reason-soundly-in-law-auditing-inference-patterns-for-legal-judgment",
           title: 'Can LLMs Reason Soundly in Law? Auditing Inference Patterns for Legal Judgment',
           description: "",
@@ -426,11 +440,6 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/li2025latentseek/";
-            },},{id: "publications-rulereasoner-reinforced-rule-based-reasoning-via-domain-aware-dynamic-sampling",
-          title: 'RuleReasoner: Reinforced Rule-based Reasoning via Domain-aware Dynamic Sampling',
-          description: "",
-          section: "Publications",handler: () => {
-              window.location.href = "/publications/liu2025rulereasoner/";
             },},{id: "publications-x-talk-on-the-underestimated-potential-of-modular-speech-to-speech-dialogue-system",
           title: 'X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System',
           description: "",
@@ -451,11 +460,26 @@ ninja.data = [{
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/onemillionbench/";
+            },},{id: "publications-rsi-exam-benchmarking-recursive-self-improvement-through-executable-research",
+          title: 'RSI-Exam: Benchmarking Recursive Self-Improvement through Executable Research',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/rsiexam/";
+            },},{id: "publications-rsihub-a-composable-framework-for-agent-evolution-methods",
+          title: 'RSIHub: A Composable Framework for Agent-Evolution Methods',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/wang2026rsihub/";
             },},{id: "publications-native-parallel-reasoner-reasoning-in-parallelism-via-self-distilled-reinforcement-learning",
           title: 'Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning',
           description: "",
           section: "Publications",handler: () => {
               window.location.href = "/publications/wu2025npr/";
+            },},{id: "publications-credit-assigned-gradient-flow-enables-robust-and-interpretable-test-time-latent-reasoning",
+          title: 'Credit-Assigned Gradient Flow Enables Robust and Interpretable Test-Time Latent Reasoning',
+          description: "",
+          section: "Publications",handler: () => {
+              window.location.href = "/publications/yu2026gradcuit/";
             },},{id: "publications-policon-evaluating-llms-on-achieving-diverse-political-consensus-objectives",
           title: 'PoliCon: Evaluating LLMs on Achieving Diverse Political Consensus Objectives',
           description: "",
@@ -493,13 +517,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/zlzheng", "_blank");
-        },
-      },{
-        id: 'social-x',
-        title: 'X',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://twitter.com/ZilongZheng", "_blank");
         },
       },{
       id: 'light-theme',
